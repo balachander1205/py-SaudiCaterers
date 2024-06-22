@@ -1,0 +1,230 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "description": "Meal data analysis",
+    "version": "1.0.0",
+    "title": "Meal data analysis"
+  },
+  "tags": [
+    {
+      "name": "Meal data analysis",
+      "description": "Meal data analysis"
+    }
+  ],
+  "servers": [
+    {
+        "url": "/"
+    }
+  ],
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "components": {
+    "schemas": {
+      "salesInsightsRequest": {
+          "type": "object",
+          "properties": {
+            "route": {
+              "type": "string"
+            },
+            "career": {
+              "type": "string"
+            },
+            "date": {
+              "type": "string"
+            },
+            "time": {
+              "type": "string"
+            },
+            "meal_category": {
+              "type": "string"
+            },
+            "meal_type": {
+              "type": "string"
+            },
+            "meal": {
+              "type": "string"
+            },
+            "passenger_class": {
+              "type": "string"
+            }
+          }
+      },
+      "salesInsightsResponse": {
+        "type": "object",
+        "properties": {
+          "imagefile": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "appid": {
+            "type": "string"
+          },
+          "isblur": {
+            "type": "boolean"
+          },
+          "isvalidimage": {
+            "type": "boolean"
+          },
+          "remarks": {
+            "type": "string"
+          },
+          "uid": {
+            "type": "string"
+          },
+          "createdatetime": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          }
+        }
+      },
+      "seasonilityResponse": {
+        "type": "object",
+        "properties": {
+            "month": {
+              "type": "string"
+            },
+            "seasonility": {
+              "type": "string"
+            }
+        }
+      },
+      "ValidateResponse": {
+        "type": "object",
+        "properties": {
+          "green": {
+            "type": "string"
+          },
+          "red": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "paths": {
+    "/upload": {
+      "post": {
+        "tags": [
+          "Upload meal data file for analysis."
+        ],
+        "summary": "Upload meal data file for analysis.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "format": "base64"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/components/schemas/ValidateResponse"
+            }
+          },
+          "404": {
+            "description": "NOT FOUND",
+            "schema": {
+              "$ref": "#/components/schemas/ValidateResponse"
+            }
+          }
+        }
+      }
+    },
+    "/sales": {
+      "post": {
+        "tags": [
+          "Sales data api"
+        ],
+        "summary": "Add todo",
+        "requestBody": {
+          "description": "Sales data api",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/salesInsightsRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/components/schemas/salesInsightsResponse"
+            }
+          },
+          "404": {
+            "description": "NOT FOUND",
+            "schema": {
+              "$ref": "#/components/schemas/salesInsightsResponse"
+            }
+          }
+        }
+      }
+    },
+    "/seasonality": {
+      "get": {
+        "tags": [
+          "Seasonility data api"
+        ],
+        "summary": "Seasonility data api",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/components/schemas/seasonilityResponse"
+            }
+          },
+          "404": {
+            "description": "NOT FOUND",
+            "schema": {
+              "$ref": "#/components/schemas/seasonilityResponse"
+            }
+          }
+        }
+      }
+    },
+    "/trend": {
+      "get": {
+        "tags": [
+          "Trend data api"
+        ],
+        "summary": "Trend data api",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/components/schemas/seasonilityResponse"
+            }
+          },
+          "404": {
+            "description": "NOT FOUND",
+            "schema": {
+              "$ref": "#/components/schemas/seasonilityResponse"
+            }
+          }
+        }
+      }
+    }
+  }
+}

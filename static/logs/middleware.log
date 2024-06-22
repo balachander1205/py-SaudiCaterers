@@ -1,0 +1,724 @@
+2024-06-21 20:51:31,027 INFO root MainThread : Started
+2024-06-21 20:51:31,056 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-21 20:51:31,056 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-21 20:51:31,067 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 20:51:32,138 INFO root MainThread : Started
+2024-06-21 20:51:32,151 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 20:51:32,156 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 20:51:32,233 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 20:51:32] "GET /swagger/ HTTP/1.1" 200 -
+2024-06-21 20:51:32,343 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 20:51:32] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+2024-06-21 20:51:32,494 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 20:51:32] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+2024-06-21 20:51:32,586 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 20:51:32] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2024-06-21 20:51:32,790 INFO werkzeug Thread-9 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 20:51:32] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2024-06-21 20:51:33,158 INFO werkzeug Thread-10 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 20:51:33] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+2024-06-21 20:51:33,420 INFO werkzeug Thread-11 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 20:51:33] "GET /static/swagger.json HTTP/1.1" 200 -
+2024-06-21 20:51:33,545 INFO werkzeug Thread-12 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 20:51:33] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+2024-06-21 20:51:35,432 INFO werkzeug Thread-13 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 20:51:35] "GET /swagger/ HTTP/1.1" 200 -
+2024-06-21 20:51:35,731 INFO werkzeug Thread-14 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 20:51:35] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+2024-06-21 20:51:35,780 INFO werkzeug Thread-15 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 20:51:35] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+2024-06-21 20:51:35,782 INFO werkzeug Thread-16 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 20:51:35] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2024-06-21 20:51:35,783 INFO werkzeug Thread-17 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 20:51:35] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2024-06-21 20:51:36,218 INFO werkzeug Thread-18 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 20:51:36] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+2024-06-21 20:51:36,486 INFO werkzeug Thread-19 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 20:51:36] "[36mGET /static/swagger.json HTTP/1.1[0m" 304 -
+2024-06-21 20:51:36,575 INFO werkzeug Thread-20 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 20:51:36] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+2024-06-21 20:51:38,763 INFO werkzeug Thread-21 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 20:51:38] "GET /swagger/ HTTP/1.1" 200 -
+2024-06-21 20:51:39,101 INFO werkzeug Thread-22 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 20:51:39] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+2024-06-21 20:51:39,102 INFO werkzeug Thread-23 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 20:51:39] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+2024-06-21 20:51:39,103 INFO werkzeug Thread-24 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 20:51:39] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2024-06-21 20:51:39,304 INFO werkzeug Thread-25 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 20:51:39] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2024-06-21 20:51:39,362 INFO werkzeug Thread-26 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 20:51:39] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+2024-06-21 20:51:39,707 INFO werkzeug Thread-27 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 20:51:39] "[36mGET /static/swagger.json HTTP/1.1[0m" 304 -
+2024-06-21 20:52:17,147 INFO werkzeug Thread-28 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 20:52:17] "GET /swagger/ HTTP/1.1" 200 -
+2024-06-21 20:52:17,448 INFO werkzeug Thread-29 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 20:52:17] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+2024-06-21 20:52:17,497 INFO werkzeug Thread-30 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 20:52:17] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+2024-06-21 20:52:17,497 INFO werkzeug Thread-31 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 20:52:17] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2024-06-21 20:52:17,498 INFO werkzeug Thread-32 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 20:52:17] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2024-06-21 20:52:17,896 INFO werkzeug Thread-33 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 20:52:17] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+2024-06-21 20:52:18,161 INFO werkzeug Thread-34 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 20:52:18] "GET /static/swagger.json HTTP/1.1" 200 -
+2024-06-21 20:52:18,238 INFO werkzeug Thread-35 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 20:52:18] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+2024-06-21 20:53:49,410 INFO werkzeug Thread-37 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 20:53:49] "GET /swagger/ HTTP/1.1" 200 -
+2024-06-21 20:53:49,449 INFO werkzeug Thread-38 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 20:53:49] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+2024-06-21 20:53:49,673 INFO werkzeug Thread-39 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 20:53:49] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+2024-06-21 20:53:49,783 INFO werkzeug Thread-40 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 20:53:49] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2024-06-21 20:53:49,787 INFO werkzeug Thread-41 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 20:53:49] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2024-06-21 20:53:50,159 INFO werkzeug Thread-42 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 20:53:50] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+2024-06-21 20:53:50,421 INFO werkzeug Thread-43 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 20:53:50] "GET /static/swagger.json HTTP/1.1" 200 -
+2024-06-21 20:53:50,499 INFO werkzeug Thread-44 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 20:53:50] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+2024-06-21 20:55:11,969 INFO werkzeug Thread-46 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 20:55:11] "GET /swagger/ HTTP/1.1" 200 -
+2024-06-21 20:55:12,000 INFO werkzeug Thread-47 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 20:55:12] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+2024-06-21 20:55:12,231 INFO werkzeug Thread-48 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 20:55:12] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+2024-06-21 20:55:12,309 INFO werkzeug Thread-49 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 20:55:12] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2024-06-21 20:55:12,309 INFO werkzeug Thread-50 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 20:55:12] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2024-06-21 20:55:12,677 INFO werkzeug Thread-51 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 20:55:12] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+2024-06-21 20:55:12,926 INFO werkzeug Thread-52 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 20:55:12] "GET /static/swagger.json HTTP/1.1" 200 -
+2024-06-21 20:55:13,035 INFO werkzeug Thread-53 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 20:55:13] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+2024-06-21 20:55:16,201 INFO werkzeug Thread-54 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 20:55:16] "[36mGET /static/swagger.json HTTP/1.1[0m" 304 -
+2024-06-21 20:56:13,053 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 20:56:13,054 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 20:56:13,194 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 20:56:13,195 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 20:56:14,139 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 20:56:15,185 INFO root MainThread : Started
+2024-06-21 20:56:15,198 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 20:56:15,203 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 20:56:46,874 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 20:56:46,886 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 20:56:47,454 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 20:56:48,463 INFO root MainThread : Started
+2024-06-21 20:56:48,481 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 20:56:48,484 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 20:56:52,062 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 20:56:52,072 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 20:56:52,717 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 20:56:53,709 INFO root MainThread : Started
+2024-06-21 20:56:53,721 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 20:56:53,725 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 20:57:33,062 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 20:57:33,073 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 20:57:33,989 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 20:57:35,066 INFO root MainThread : Started
+2024-06-21 20:57:35,078 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 20:57:35,082 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 20:57:44,608 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 20:57:44,620 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 20:57:45,260 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 20:57:46,264 INFO root MainThread : Started
+2024-06-21 20:57:46,276 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 20:57:46,280 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 20:57:55,659 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 20:57:55,671 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 20:57:56,457 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 20:57:57,433 INFO root MainThread : Started
+2024-06-21 20:57:57,445 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 20:57:57,449 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 20:58:02,592 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 20:58:02,594 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 20:58:03,630 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 20:58:04,634 INFO root MainThread : Started
+2024-06-21 20:58:04,647 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 20:58:04,651 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:01:48,737 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:01:48,738 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:01:49,307 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:01:50,007 INFO root MainThread : Started
+2024-06-21 21:01:50,015 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:01:50,019 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:02:38,796 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:02:38,799 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:02:39,199 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:02:39,793 INFO root MainThread : Started
+2024-06-21 21:02:39,800 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:02:39,803 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:03:03,600 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:03:03,610 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:03:03,932 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:03:04,465 INFO root MainThread : Started
+2024-06-21 21:03:04,472 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:03:04,475 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:03:27,403 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:03:27,406 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:03:27,605 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:03:28,157 INFO root MainThread : Started
+2024-06-21 21:03:28,164 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:03:28,166 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:03:47,600 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:03:47,601 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:03:48,292 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:03:48,828 INFO root MainThread : Started
+2024-06-21 21:03:48,835 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:03:48,837 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:04:08,499 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:04:08,509 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:04:09,032 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:04:09,602 INFO root MainThread : Started
+2024-06-21 21:04:09,609 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:04:09,611 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:04:27,068 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:04:27,076 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:04:27,744 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:04:28,341 INFO root MainThread : Started
+2024-06-21 21:04:28,348 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:04:28,351 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:04:43,475 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:04:43,475 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:04:44,327 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:04:44,336 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:04:44,337 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:04:44,475 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:04:45,016 INFO root MainThread : Started
+2024-06-21 21:04:45,023 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:04:45,025 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:09:45,929 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:09:45,937 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:09:45,938 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:09:46,677 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:09:47,237 INFO root MainThread : Started
+2024-06-21 21:09:47,244 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:09:47,247 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:10:29,398 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:10:29,406 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:10:29,407 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:10:30,418 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:10:30,980 INFO root MainThread : Started
+2024-06-21 21:10:30,987 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:10:30,989 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:10:45,893 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:10:45,893 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:10:46,112 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:10:46,664 INFO root MainThread : Started
+2024-06-21 21:10:46,671 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:10:46,673 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:14:23,534 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:14:23,534 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:14:24,171 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:14:24,750 INFO root MainThread : Started
+2024-06-21 21:14:24,758 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:14:24,761 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:15:48,064 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:15:48,073 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:15:48,074 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:15:48,998 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:15:49,571 INFO root MainThread : Started
+2024-06-21 21:15:49,578 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:15:49,580 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:18:46,041 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:18:46,041 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:18:47,001 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:18:47,551 INFO root MainThread : Started
+2024-06-21 21:18:47,559 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:18:47,561 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:18:50,133 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:18:50,142 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:18:50,143 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:18:50,659 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:18:51,208 INFO root MainThread : Started
+2024-06-21 21:18:51,216 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:18:51,218 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:19:17,717 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:19:17,725 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:19:17,726 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:19:18,393 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:19:18,937 INFO root MainThread : Started
+2024-06-21 21:19:18,944 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:19:18,946 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:19:27,480 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:19:27,489 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:19:27,490 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:19:28,044 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:19:28,581 INFO root MainThread : Started
+2024-06-21 21:19:28,588 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:19:28,591 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:22:19,569 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:22:19,577 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:22:19,579 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:22:19,986 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:22:20,531 INFO root MainThread : Started
+2024-06-21 21:22:20,538 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:22:20,540 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:22:54,145 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:22:54,147 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:22:54,681 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:22:55,217 INFO root MainThread : Started
+2024-06-21 21:22:55,224 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:22:55,226 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:23:22,191 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:23:22,199 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:23:22,201 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:23:22,379 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:23:22,914 INFO root MainThread : Started
+2024-06-21 21:23:22,922 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:23:22,924 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:23:46,258 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:23:46,266 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:23:46,267 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:23:47,049 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:23:47,594 INFO root MainThread : Started
+2024-06-21 21:23:47,601 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:23:47,603 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:23:55,426 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:23:55,434 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:23:55,435 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:23:55,705 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:23:56,272 INFO root MainThread : Started
+2024-06-21 21:23:56,279 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:23:56,281 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:23:58,803 INFO werkzeug Thread-1 :  * Detected change in 'C:\\Users\\balac\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\pandas\\core\\computation\\scope.py', reloading
+2024-06-21 21:23:58,803 INFO werkzeug Thread-1 :  * Detected change in 'C:\\Users\\balac\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\collections\\__init__.py', reloading
+2024-06-21 21:23:58,806 INFO werkzeug Thread-1 :  * Detected change in 'C:\\Users\\balac\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\pandas\\core\\frame.py', reloading
+2024-06-21 21:23:58,807 INFO werkzeug Thread-1 :  * Detected change in 'C:\\Users\\balac\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\pandas\\core\\computation\\eval.py', reloading
+2024-06-21 21:23:58,808 INFO werkzeug Thread-1 :  * Detected change in 'C:\\Users\\balac\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\pandas\\core\\computation\\expr.py', reloading
+2024-06-21 21:23:58,811 INFO werkzeug Thread-1 :  * Detected change in 'C:\\Users\\balac\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\pandas\\core\\computation\\ops.py', reloading
+2024-06-21 21:23:59,372 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:23:59,979 INFO root MainThread : Started
+2024-06-21 21:23:59,986 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:23:59,988 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:24:36,733 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:24:36,741 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:24:36,742 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:24:37,153 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:24:37,745 INFO root MainThread : Started
+2024-06-21 21:24:37,757 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:24:37,759 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:24:41,466 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:24:41,474 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:24:41,475 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:24:41,881 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:24:42,446 INFO root MainThread : Started
+2024-06-21 21:24:42,452 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:24:42,454 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:24:44,337 INFO werkzeug Thread-1 :  * Detected change in 'C:\\Users\\balac\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\ast.py', reloading
+2024-06-21 21:24:44,546 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:24:45,096 INFO root MainThread : Started
+2024-06-21 21:24:45,103 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:24:45,105 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:24:49,933 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:24:49,934 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:24:50,202 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:24:50,743 INFO root MainThread : Started
+2024-06-21 21:24:50,750 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:24:50,752 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:24:53,182 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:24:53,184 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:24:53,843 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:24:54,410 INFO root MainThread : Started
+2024-06-21 21:24:54,417 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:24:54,420 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:25:13,165 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:25:13,173 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:25:13,174 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:25:13,540 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:25:14,080 INFO root MainThread : Started
+2024-06-21 21:25:14,088 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:25:14,090 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:25:17,420 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:25:17,428 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:25:17,429 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:25:18,177 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:25:18,719 INFO root MainThread : Started
+2024-06-21 21:25:18,726 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:25:18,728 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:25:25,670 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:25:25,679 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:25:25,680 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:25:25,835 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:25:26,377 INFO root MainThread : Started
+2024-06-21 21:25:26,384 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:25:26,387 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:25:31,636 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:25:31,645 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:25:31,646 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:25:32,487 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:25:33,031 INFO root MainThread : Started
+2024-06-21 21:25:33,038 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:25:33,040 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:25:39,506 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:25:39,514 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:25:39,516 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:25:40,191 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:25:40,747 INFO root MainThread : Started
+2024-06-21 21:25:40,754 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:25:40,757 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:25:48,755 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:25:48,764 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:25:48,765 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:25:48,865 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:25:49,402 INFO root MainThread : Started
+2024-06-21 21:25:49,409 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:25:49,411 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:26:07,403 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:26:07,411 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:26:07,412 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:26:07,541 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:26:08,102 INFO root MainThread : Started
+2024-06-21 21:26:08,108 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:26:08,111 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:26:10,387 INFO werkzeug Thread-1 :  * Detected change in 'C:\\Users\\balac\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\pandas\\core\\generic.py', reloading
+2024-06-21 21:26:10,387 INFO werkzeug Thread-1 :  * Detected change in 'C:\\Users\\balac\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\pandas\\core\\accessor.py', reloading
+2024-06-21 21:26:10,388 INFO werkzeug Thread-1 :  * Detected change in 'C:\\Users\\balac\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\pandas\\core\\strings\\accessor.py', reloading
+2024-06-21 21:26:11,195 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:26:11,738 INFO root MainThread : Started
+2024-06-21 21:26:11,745 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:26:11,747 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:27:15,501 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:27:15,509 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:27:15,510 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:27:15,977 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:27:16,522 INFO root MainThread : Started
+2024-06-21 21:27:16,529 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:27:16,531 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:27:47,745 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:27:47,746 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:27:47,747 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:27:48,674 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:27:49,227 INFO root MainThread : Started
+2024-06-21 21:27:49,234 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:27:49,236 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:28:00,630 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:28:00,639 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:28:00,640 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:28:01,350 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:28:01,898 INFO root MainThread : Started
+2024-06-21 21:28:01,905 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:28:01,906 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:29:39,607 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:29:39,616 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:29:39,617 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:29:40,201 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:29:40,770 INFO root MainThread : Started
+2024-06-21 21:29:40,778 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:29:40,780 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:29:42,561 INFO werkzeug Thread-1 :  * Detected change in 'C:\\Users\\balac\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\pandas\\core\\series.py', reloading
+2024-06-21 21:29:42,563 INFO werkzeug Thread-1 :  * Detected change in 'C:\\Users\\balac\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\pandas\\core\\algorithms.py', reloading
+2024-06-21 21:29:42,875 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:29:43,413 INFO root MainThread : Started
+2024-06-21 21:29:43,420 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:29:43,422 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:29:56,096 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:29:56,105 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:29:56,106 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:29:56,530 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:29:57,104 INFO root MainThread : Started
+2024-06-21 21:29:57,111 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:29:57,113 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:30:02,926 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:30:02,935 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:30:02,936 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:30:03,209 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:30:03,741 INFO root MainThread : Started
+2024-06-21 21:30:03,748 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:30:03,751 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:30:26,223 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:30:26,231 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:30:26,233 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:30:26,886 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:30:27,445 INFO root MainThread : Started
+2024-06-21 21:30:27,452 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:30:27,455 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:32:04,556 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:32:04,563 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:32:04,564 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:32:04,730 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:32:05,308 INFO root MainThread : Started
+2024-06-21 21:32:05,314 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:32:05,317 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:32:25,098 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:32:25,106 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:32:25,107 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:32:25,436 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:32:25,994 INFO root MainThread : Started
+2024-06-21 21:32:26,001 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:32:26,004 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:34:08,224 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:34:08,232 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:34:08,233 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:34:09,276 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:34:09,841 INFO root MainThread : Started
+2024-06-21 21:34:09,848 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:34:09,851 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:35:20,929 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:35:20,937 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:35:20,939 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:35:21,096 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:35:21,638 INFO root MainThread : Started
+2024-06-21 21:35:21,645 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:35:21,647 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:35:28,629 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:35:28,637 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:35:28,638 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:35:28,753 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:35:29,325 INFO root MainThread : Started
+2024-06-21 21:35:29,333 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:35:29,335 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:35:40,423 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:35:40,424 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:35:41,437 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:35:41,999 INFO root MainThread : Started
+2024-06-21 21:35:42,006 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:35:42,009 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:36:09,747 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:36:09,755 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:36:09,756 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:36:10,146 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:36:10,689 INFO root MainThread : Started
+2024-06-21 21:36:10,696 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:36:10,698 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:36:44,744 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:36:44,753 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:36:44,754 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:36:44,858 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:36:45,425 INFO root MainThread : Started
+2024-06-21 21:36:45,432 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:36:45,434 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:38:34,134 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 21:38:34] "POST /upload HTTP/1.1" 200 -
+2024-06-21 21:38:42,038 INFO root Thread-6 (process_request_thread) : /sales....
+2024-06-21 21:38:42,039 INFO root Thread-6 (process_request_thread) : >>----->>> START:UUID:=8748f765-2fe8-11ef-9269-161333e62825 <<<-----<<
+2024-06-21 21:38:42,049 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 21:38:42] "POST /sales HTTP/1.1" 200 -
+2024-06-21 21:39:11,198 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:39:11,206 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:39:11,207 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:39:11,807 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:39:12,384 INFO root MainThread : Started
+2024-06-21 21:39:12,392 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:39:12,394 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:39:30,698 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:39:30,706 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:39:30,707 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:39:31,511 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:39:32,072 INFO root MainThread : Started
+2024-06-21 21:39:32,079 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:39:32,081 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:40:26,075 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:40:26,083 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:40:26,083 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:40:26,274 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:40:26,831 INFO root MainThread : Started
+2024-06-21 21:40:26,838 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:40:26,840 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:40:45,986 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:40:45,987 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:40:46,959 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:40:47,526 INFO root MainThread : Started
+2024-06-21 21:40:47,532 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:40:47,535 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:42:21,517 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:42:21,526 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:42:21,527 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:42:21,794 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:42:22,358 INFO root MainThread : Started
+2024-06-21 21:42:22,365 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:42:22,368 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:42:41,587 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:42:41,595 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:42:41,597 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:42:42,484 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:42:43,045 INFO root MainThread : Started
+2024-06-21 21:42:43,052 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:42:43,055 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:42:58,886 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:42:58,895 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:42:58,895 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:42:59,174 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:42:59,749 INFO root MainThread : Started
+2024-06-21 21:42:59,756 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:42:59,758 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:44:00,540 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:44:00,541 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:44:00,961 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:44:01,498 INFO root MainThread : Started
+2024-06-21 21:44:01,505 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:44:01,508 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:44:21,984 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:44:21,992 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:44:21,993 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:44:22,631 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:44:23,170 INFO root MainThread : Started
+2024-06-21 21:44:23,177 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:44:23,179 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:44:29,108 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:44:29,109 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:44:29,283 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:44:29,851 INFO root MainThread : Started
+2024-06-21 21:44:29,858 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:44:29,860 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:45:47,186 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:45:47,194 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:45:47,195 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:45:48,092 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:45:48,666 INFO root MainThread : Started
+2024-06-21 21:45:48,673 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:45:48,676 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:45:57,154 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:45:57,162 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:45:57,163 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:45:57,779 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:45:58,397 INFO root MainThread : Started
+2024-06-21 21:45:58,404 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:45:58,407 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:46:26,430 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\app.py', reloading
+2024-06-21 21:46:26,431 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\app.py', reloading
+2024-06-21 21:46:26,551 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:49:19,053 INFO root MainThread : Started
+2024-06-21 21:49:19,078 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-21 21:49:19,078 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-21 21:49:19,084 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:49:19,631 INFO root MainThread : Started
+2024-06-21 21:49:19,638 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:49:19,641 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:49:22,647 INFO root MainThread : Started
+2024-06-21 21:49:22,659 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-21 21:49:22,659 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-21 21:49:22,666 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:49:23,199 INFO root MainThread : Started
+2024-06-21 21:49:23,206 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:49:23,208 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:49:39,422 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 21:49:39] "GET /swagger/ HTTP/1.1" 200 -
+2024-06-21 21:49:39,471 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 21:49:39] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+2024-06-21 21:49:39,656 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 21:49:39] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+2024-06-21 21:49:39,750 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 21:49:39] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2024-06-21 21:49:39,750 INFO werkzeug Thread-9 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 21:49:39] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2024-06-21 21:49:40,175 INFO werkzeug Thread-10 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 21:49:40] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+2024-06-21 21:49:40,425 INFO werkzeug Thread-11 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 21:49:40] "[36mGET /static/swagger.json HTTP/1.1[0m" 304 -
+2024-06-21 21:49:40,504 INFO werkzeug Thread-12 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 21:49:40] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+2024-06-21 21:49:51,326 INFO werkzeug Thread-13 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 21:49:51] "POST /upload HTTP/1.1" 200 -
+2024-06-21 21:50:21,055 INFO root Thread-14 (process_request_thread) : /sales....
+2024-06-21 21:50:21,056 INFO root Thread-14 (process_request_thread) : >>----->>> START:UUID:=27ee78b5-2fea-11ef-80e9-161333e62825 <<<-----<<
+2024-06-21 21:50:21,081 INFO werkzeug Thread-14 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 21:50:21] "POST /sales HTTP/1.1" 200 -
+2024-06-21 21:50:55,371 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\app.py', reloading
+2024-06-21 21:50:55,379 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\app.py', reloading
+2024-06-21 21:50:55,379 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\app.py', reloading
+2024-06-21 21:50:55,515 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:50:56,080 INFO root MainThread : Started
+2024-06-21 21:50:56,087 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:50:56,090 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:50:58,573 INFO root MainThread : Started
+2024-06-21 21:50:58,586 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-21 21:50:58,587 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-21 21:50:58,593 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:50:59,132 INFO root MainThread : Started
+2024-06-21 21:50:59,138 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:50:59,141 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:51:04,427 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 21:51:04] "POST /upload HTTP/1.1" 200 -
+2024-06-21 21:51:07,362 INFO root Thread-6 (process_request_thread) : /sales....
+2024-06-21 21:51:07,363 INFO root Thread-6 (process_request_thread) : >>----->>> START:UUID:=43884322-2fea-11ef-97ef-161333e62825 <<<-----<<
+2024-06-21 21:51:07,385 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 21:51:07] "POST /sales HTTP/1.1" 200 -
+2024-06-21 21:51:27,442 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\app.py', reloading
+2024-06-21 21:51:27,451 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\app.py', reloading
+2024-06-21 21:51:27,452 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\app.py', reloading
+2024-06-21 21:51:28,325 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:51:28,885 INFO root MainThread : Started
+2024-06-21 21:51:28,893 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:51:28,895 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:52:13,814 INFO root MainThread : Started
+2024-06-21 21:52:13,832 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-21 21:52:13,833 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-21 21:52:13,839 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:52:14,384 INFO root MainThread : Started
+2024-06-21 21:52:14,390 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:52:14,393 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:52:16,133 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 21:52:16] "GET /swagger/ HTTP/1.1" 200 -
+2024-06-21 21:52:16,180 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 21:52:16] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+2024-06-21 21:52:16,391 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 21:52:16] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+2024-06-21 21:52:16,453 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 21:52:16] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2024-06-21 21:52:16,453 INFO werkzeug Thread-9 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 21:52:16] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2024-06-21 21:52:16,856 INFO werkzeug Thread-10 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 21:52:16] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+2024-06-21 21:52:17,116 INFO werkzeug Thread-11 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 21:52:17] "[36mGET /static/swagger.json HTTP/1.1[0m" 304 -
+2024-06-21 21:52:17,192 INFO werkzeug Thread-12 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 21:52:17] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+2024-06-21 21:52:57,033 INFO werkzeug Thread-13 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 21:52:57] "POST /upload HTTP/1.1" 200 -
+2024-06-21 21:53:06,803 INFO root Thread-14 (process_request_thread) : /sales....
+2024-06-21 21:53:06,804 INFO root Thread-14 (process_request_thread) : >>----->>> START:UUID:=8ab9922c-2fea-11ef-a49a-161333e62825 <<<-----<<
+2024-06-21 21:53:06,827 INFO werkzeug Thread-14 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 21:53:06] "POST /sales HTTP/1.1" 200 -
+2024-06-21 21:53:21,792 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\app.py', reloading
+2024-06-21 21:53:21,800 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\app.py', reloading
+2024-06-21 21:53:21,801 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\app.py', reloading
+2024-06-21 21:53:22,620 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:53:23,179 INFO root MainThread : Started
+2024-06-21 21:53:23,186 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:53:23,188 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:53:28,566 INFO root Thread-5 (process_request_thread) : /sales....
+2024-06-21 21:53:28,567 INFO root Thread-5 (process_request_thread) : >>----->>> START:UUID:=97b259ea-2fea-11ef-87e3-161333e62825 <<<-----<<
+2024-06-21 21:53:28,569 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 21:53:28] "[31m[1mPOST /sales HTTP/1.1[0m" 400 -
+2024-06-21 21:53:30,774 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 21:53:30] "GET /swagger/ HTTP/1.1" 200 -
+2024-06-21 21:53:31,128 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 21:53:31] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+2024-06-21 21:53:31,182 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 21:53:31] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+2024-06-21 21:53:31,187 INFO werkzeug Thread-10 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 21:53:31] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2024-06-21 21:53:31,188 INFO werkzeug Thread-9 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 21:53:31] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2024-06-21 21:53:31,560 INFO werkzeug Thread-11 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 21:53:31] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+2024-06-21 21:53:31,825 INFO werkzeug Thread-12 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 21:53:31] "[36mGET /static/swagger.json HTTP/1.1[0m" 304 -
+2024-06-21 21:53:31,902 INFO werkzeug Thread-13 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 21:53:31] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+2024-06-21 21:53:37,989 INFO root MainThread : Started
+2024-06-21 21:53:38,001 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-21 21:53:38,001 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-21 21:53:38,007 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:53:38,547 INFO root MainThread : Started
+2024-06-21 21:53:38,554 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:53:38,556 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:53:48,264 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 21:53:48] "POST /upload HTTP/1.1" 200 -
+2024-06-21 21:53:56,155 INFO root Thread-6 (process_request_thread) : /sales....
+2024-06-21 21:53:56,156 INFO root Thread-6 (process_request_thread) : >>----->>> START:UUID:=a8242895-2fea-11ef-b2ff-161333e62825 <<<-----<<
+2024-06-21 21:53:56,179 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 21:53:56] "POST /sales HTTP/1.1" 200 -
+2024-06-21 21:54:24,807 INFO root Thread-7 (process_request_thread) : /sales....
+2024-06-21 21:54:24,808 INFO root Thread-7 (process_request_thread) : >>----->>> START:UUID:=b93814be-2fea-11ef-adeb-161333e62825 <<<-----<<
+2024-06-21 21:54:24,814 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 21:54:24] "POST /sales HTTP/1.1" 200 -
+2024-06-21 21:55:02,395 INFO root Thread-8 (process_request_thread) : /sales....
+2024-06-21 21:55:02,395 INFO root Thread-8 (process_request_thread) : >>----->>> START:UUID:=cf9f66f5-2fea-11ef-811e-161333e62825 <<<-----<<
+2024-06-21 21:55:02,401 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 21:55:02] "POST /sales HTTP/1.1" 200 -
+2024-06-21 21:55:36,920 INFO root Thread-9 (process_request_thread) : /sales....
+2024-06-21 21:55:36,921 INFO root Thread-9 (process_request_thread) : >>----->>> START:UUID:=e4338bc3-2fea-11ef-b4ee-161333e62825 <<<-----<<
+2024-06-21 21:55:36,927 INFO werkzeug Thread-9 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 21:55:36] "POST /sales HTTP/1.1" 200 -
+2024-06-21 21:56:43,275 INFO root Thread-11 (process_request_thread) : /sales....
+2024-06-21 21:56:43,276 INFO root Thread-11 (process_request_thread) : >>----->>> START:UUID:=0bc0a733-2feb-11ef-8f12-161333e62825 <<<-----<<
+2024-06-21 21:56:43,292 INFO werkzeug Thread-11 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 21:56:43] "POST /sales HTTP/1.1" 200 -
+2024-06-21 21:57:00,632 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:57:00,640 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:57:00,640 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:57:01,100 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:57:01,663 INFO root MainThread : Started
+2024-06-21 21:57:01,670 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:57:01,672 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:57:38,327 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:57:38,328 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:57:38,829 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:57:39,455 INFO root MainThread : Started
+2024-06-21 21:57:39,462 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:57:39,464 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:58:15,473 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:58:15,481 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:58:15,483 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:58:15,637 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:58:16,175 INFO root MainThread : Started
+2024-06-21 21:58:16,182 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:58:16,185 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:58:22,736 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:58:22,736 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-FileDataApi\\sales_filter.py', reloading
+2024-06-21 21:58:23,281 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:58:23,824 INFO root MainThread : Started
+2024-06-21 21:58:23,831 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:58:23,833 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:58:45,271 INFO root Thread-5 (process_request_thread) : /seasonality....
+2024-06-21 21:58:45,274 INFO root Thread-5 (process_request_thread) : >>----->>> START:seasonality:UUID:=5477f1d7-2feb-11ef-9ad4-161333e62825 <<<-----<<
+2024-06-21 21:58:45,277 INFO werkzeug Thread-1 :  * Detected change in 'C:\\Users\\balac\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\flask\\app.py', reloading
+2024-06-21 21:58:45,277 INFO werkzeug Thread-1 :  * Detected change in 'C:\\Users\\balac\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\flask_cors\\extension.py', reloading
+2024-06-21 21:58:45,279 INFO werkzeug Thread-1 :  * Detected change in 'C:\\Users\\balac\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\flask_cors\\decorator.py', reloading
+2024-06-21 21:58:45,284 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 21:58:45] "[35m[1mGET /seasonality HTTP/1.1[0m" 500 -
+2024-06-21 21:58:45,957 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:58:46,498 INFO root MainThread : Started
+2024-06-21 21:58:46,505 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:58:46,507 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:59:26,823 INFO root Thread-5 (process_request_thread) : /trend....
+2024-06-21 21:59:26,824 INFO root Thread-5 (process_request_thread) : >>----->>> START:TREND:UUID:=6d3bf892-2feb-11ef-b317-161333e62825 <<<-----<<
+2024-06-21 21:59:26,831 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 21:59:26] "[35m[1mGET /trend HTTP/1.1[0m" 500 -
+2024-06-21 21:59:36,174 INFO root MainThread : Started
+2024-06-21 21:59:36,186 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-21 21:59:36,186 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-21 21:59:36,193 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-21 21:59:36,756 INFO root MainThread : Started
+2024-06-21 21:59:36,764 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-21 21:59:36,766 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-21 21:59:46,170 INFO root Thread-6 (process_request_thread) : /seasonality....
+2024-06-21 21:59:46,171 INFO root Thread-6 (process_request_thread) : >>----->>> START:seasonality:UUID:=78c42644-2feb-11ef-8d9d-161333e62825 <<<-----<<
+2024-06-21 21:59:46,177 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 21:59:46] "[35m[1mGET /seasonality HTTP/1.1[0m" 500 -
+2024-06-21 22:00:36,135 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 22:00:36] "GET /swagger/ HTTP/1.1" 200 -
+2024-06-21 22:00:36,185 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 22:00:36] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+2024-06-21 22:00:36,393 INFO werkzeug Thread-9 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 22:00:36] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+2024-06-21 22:00:36,471 INFO werkzeug Thread-10 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 22:00:36] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2024-06-21 22:00:36,471 INFO werkzeug Thread-11 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 22:00:36] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2024-06-21 22:00:36,842 INFO werkzeug Thread-12 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 22:00:36] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+2024-06-21 22:00:37,106 INFO werkzeug Thread-13 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 22:00:37] "[36mGET /static/swagger.json HTTP/1.1[0m" 304 -
+2024-06-21 22:00:37,184 INFO werkzeug Thread-14 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 22:00:37] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+2024-06-21 22:00:45,940 INFO werkzeug Thread-15 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 22:00:45] "POST /upload HTTP/1.1" 200 -
+2024-06-21 22:00:53,726 INFO root Thread-16 (process_request_thread) : /trend....
+2024-06-21 22:00:53,727 INFO root Thread-16 (process_request_thread) : >>----->>> START:TREND:UUID:=a10857f4-2feb-11ef-91ee-161333e62825 <<<-----<<
+2024-06-21 22:00:53,732 INFO werkzeug Thread-16 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 22:00:53] "GET /trend HTTP/1.1" 200 -
+2024-06-21 22:01:00,039 INFO root Thread-17 (process_request_thread) : /seasonality....
+2024-06-21 22:01:00,040 INFO root Thread-17 (process_request_thread) : >>----->>> START:seasonality:UUID:=a4cbbaa3-2feb-11ef-b941-161333e62825 <<<-----<<
+2024-06-21 22:01:00,042 INFO werkzeug Thread-17 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 22:01:00] "GET /seasonality HTTP/1.1" 200 -
+2024-06-21 22:01:09,576 INFO root Thread-18 (process_request_thread) : /sales....
+2024-06-21 22:01:09,577 INFO root Thread-18 (process_request_thread) : >>----->>> START:UUID:=aa7aea6f-2feb-11ef-ab46-161333e62825 <<<-----<<
+2024-06-21 22:01:09,583 INFO werkzeug Thread-18 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 22:01:09] "POST /sales HTTP/1.1" 200 -
