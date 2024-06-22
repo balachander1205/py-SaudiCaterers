@@ -225,6 +225,28 @@
           }
         }
       }
+    },
+    "/getAllSales": {
+      "get": {
+        "tags": [
+          "Get all sales orders details data api"
+        ],
+        "summary": "Get all sales orders details data api",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/components/schemas/seasonilityResponse"
+            }
+          },
+          "404": {
+            "description": "NOT FOUND",
+            "schema": {
+              "$ref": "#/components/schemas/seasonilityResponse"
+            }
+          }
+        }
+      }
     }
   }
 }

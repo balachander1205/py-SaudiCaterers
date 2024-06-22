@@ -56,7 +56,7 @@ def upload_file():
         path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
         print("PATH=",path)
         file.save(path)
-        # data = pd.read_csv(path, delim_whitespace=False)
+
         global sales_order_details
         global palnned_flights
         global seasonality
@@ -69,7 +69,6 @@ def upload_file():
         trend = pd.read_excel(path,sheet_name='trend')
         Sheet1 = pd.read_excel(path,sheet_name='Sheet1')
 
-        print(sales_order_details)
         return jsonify({"message": "File uploaded successfully", "filename": filename, "data":""}), 200
     else:
         return jsonify({"error": "Invalid file format. Only PDFs are allowed."}), 400
@@ -83,11 +82,15 @@ def sales():
     data = json.loads(request.data)
     # REQUEST BODY
     print(data)
-    global sales_order_details
-    if 'sales_order_details' not in globals():
-        return jsonify({"message": "No CSV file uploaded"}), 400
-    data = get_sales_data(data, sales_order_details)
-    return Response(data , mimetype='application/json')
+    try:
+        global sales_order_details
+        if 'sales_order_details' not in globals():
+            return jsonify({"message": "No CSV file uploaded"}), 400
+        data = get_sales_data(data, sales_order_details)
+        return Response(data , mimetype='application/json')
+    except Exception as e:
+        print(e)
+        logging.debug("Xception:sales="+e)
 
 @app.route('/seasonality', methods=['GET'])    
 @cross_origin()
@@ -123,7 +126,7 @@ def trend():
         global trend
         if 'trend' not in globals():
             return jsonify({"message": "No CSV file uploaded"}), 400
-        print(trend)
+        
         month = trend.date
         trend_data = trend.Trend
         dataset = pd.DataFrame({'date': month, 'trend': trend_data})
@@ -134,10 +137,30 @@ def trend():
         return Response(json.dumps(data),mimetype='application/json')
     except Exception as e:
         print(e)
-        logging.debug("Xception:seasonality="+e)
+        logging.debug("Xception:trend="+e)
+
+@app.route('/getAllSales', methods=['GET'])    
+@cross_origin()
+def getAllSales():
+    logging.info('/getAllSales....')
+    cur_datetime, uid = get_uuid()
+    logging.info(">>----->>> START:getAllSales:UUID:="+str(uid)+" <<<-----<<")
+    try:
+        global sales_order_details
+        if 'sales_order_details' not in globals():
+            return jsonify({"message": "No CSV file uploaded"}), 400
+
+        dataframe = json.loads(sales_order_details.to_json(orient="records"))
+        data = {
+          "data": dataframe
+        }
+        return Response(json.dumps(data), mimetype='application/json')
+    except Exception as e:
+        print(e)
+        logging.debug("Xception:getAllSales="+e)
 
 if __name__ == '__main__':
     logging.basicConfig(format='%(levelname)s:%(message)s', level=logging.DEBUG)    
     logging.info('Started')
-    app.run(host='127.0.0.1', port=5001,debug=True, threaded=True)
-    # run_simple('127.0.0.1', 5001, app)
+    # app.run(host='127.0.0.1', port=5001,debug=True, threaded=True)
+    run_simple('127.0.0.1', 5001, app)

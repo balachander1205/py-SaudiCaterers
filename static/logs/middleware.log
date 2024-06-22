@@ -722,3 +722,116 @@
 2024-06-21 22:01:09,576 INFO root Thread-18 (process_request_thread) : /sales....
 2024-06-21 22:01:09,577 INFO root Thread-18 (process_request_thread) : >>----->>> START:UUID:=aa7aea6f-2feb-11ef-ab46-161333e62825 <<<-----<<
 2024-06-21 22:01:09,583 INFO werkzeug Thread-18 (process_request_thread) : 127.0.0.1 - - [21/Jun/2024 22:01:09] "POST /sales HTTP/1.1" 200 -
+2024-06-22 10:38:47,831 INFO root MainThread : Started
+2024-06-22 10:38:47,874 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-22 10:38:47,875 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-22 10:38:47,889 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-22 10:38:49,000 INFO root MainThread : Started
+2024-06-22 10:38:49,013 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-22 10:38:49,017 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-22 10:38:52,207 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [22/Jun/2024 10:38:52] "GET /swagger/ HTTP/1.1" 200 -
+2024-06-22 10:38:52,346 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [22/Jun/2024 10:38:52] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+2024-06-22 10:38:52,455 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [22/Jun/2024 10:38:52] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+2024-06-22 10:38:52,581 INFO werkzeug Thread-9 (process_request_thread) : 127.0.0.1 - - [22/Jun/2024 10:38:52] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2024-06-22 10:38:52,581 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [22/Jun/2024 10:38:52] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2024-06-22 10:38:53,102 INFO werkzeug Thread-10 (process_request_thread) : 127.0.0.1 - - [22/Jun/2024 10:38:53] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+2024-06-22 10:38:53,349 INFO werkzeug Thread-11 (process_request_thread) : 127.0.0.1 - - [22/Jun/2024 10:38:53] "GET /static/swagger.json HTTP/1.1" 200 -
+2024-06-22 10:39:07,145 INFO werkzeug Thread-12 (process_request_thread) : 127.0.0.1 - - [22/Jun/2024 10:39:07] "POST /upload HTTP/1.1" 200 -
+2024-06-22 10:39:13,427 INFO root Thread-13 (process_request_thread) : /getAllSales....
+2024-06-22 10:39:13,428 INFO root Thread-13 (process_request_thread) : >>----->>> START:getAllSales:UUID:=90f7c78a-3055-11ef-a970-161333e62825 <<<-----<<
+2024-06-22 10:39:13,475 INFO werkzeug Thread-1 :  * Detected change in 'C:\\Users\\balac\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\flask_cors\\extension.py', reloading
+2024-06-22 10:39:13,476 INFO werkzeug Thread-1 :  * Detected change in 'C:\\Users\\balac\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\flask_cors\\decorator.py', reloading
+2024-06-22 10:39:13,482 INFO werkzeug Thread-1 :  * Detected change in 'C:\\Users\\balac\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\pandas\\core\\generic.py', reloading
+2024-06-22 10:39:13,491 INFO werkzeug Thread-13 (process_request_thread) : 127.0.0.1 - - [22/Jun/2024 10:39:13] "[35m[1mGET /getAllSales HTTP/1.1[0m" 500 -
+2024-06-22 10:39:14,405 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-22 10:39:15,484 INFO root MainThread : Started
+2024-06-22 10:39:15,496 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-22 10:39:15,499 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-22 10:39:53,207 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-SaudiCaterers\\app.py', reloading
+2024-06-22 10:39:53,208 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-SaudiCaterers\\app.py', reloading
+2024-06-22 10:39:53,886 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-22 10:39:54,958 INFO root MainThread : Started
+2024-06-22 10:39:54,974 WARNING werkzeug MainThread :  * Debugger is active!
+2024-06-22 10:39:54,979 INFO werkzeug MainThread :  * Debugger PIN: 126-023-841
+2024-06-22 10:39:58,651 INFO root Thread-5 (process_request_thread) : /getAllSales....
+2024-06-22 10:39:58,654 INFO root Thread-5 (process_request_thread) : >>----->>> START:getAllSales:UUID:=abecae3e-3055-11ef-b2bb-161333e62825 <<<-----<<
+2024-06-22 10:39:58,655 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [22/Jun/2024 10:39:58] "[31m[1mGET /getAllSales HTTP/1.1[0m" 400 -
+2024-06-22 10:39:58,915 INFO root Thread-6 (process_request_thread) : /getAllSales....
+2024-06-22 10:39:58,917 INFO root Thread-6 (process_request_thread) : >>----->>> START:getAllSales:UUID:=ac14cbdd-3055-11ef-9f71-161333e62825 <<<-----<<
+2024-06-22 10:39:58,917 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [22/Jun/2024 10:39:58] "[31m[1mGET /getAllSales HTTP/1.1[0m" 400 -
+2024-06-22 10:40:01,830 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [22/Jun/2024 10:40:01] "GET /swagger/ HTTP/1.1" 200 -
+2024-06-22 10:40:02,229 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [22/Jun/2024 10:40:02] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+2024-06-22 10:40:02,330 INFO werkzeug Thread-11 (process_request_thread) : 127.0.0.1 - - [22/Jun/2024 10:40:02] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2024-06-22 10:40:02,353 INFO werkzeug Thread-9 (process_request_thread) : 127.0.0.1 - - [22/Jun/2024 10:40:02] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+2024-06-22 10:40:02,358 INFO werkzeug Thread-10 (process_request_thread) : 127.0.0.1 - - [22/Jun/2024 10:40:02] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2024-06-22 10:40:02,852 INFO werkzeug Thread-12 (process_request_thread) : 127.0.0.1 - - [22/Jun/2024 10:40:02] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+2024-06-22 10:40:03,114 INFO werkzeug Thread-13 (process_request_thread) : 127.0.0.1 - - [22/Jun/2024 10:40:03] "[36mGET /static/swagger.json HTTP/1.1[0m" 304 -
+2024-06-22 10:40:03,208 INFO werkzeug Thread-14 (process_request_thread) : 127.0.0.1 - - [22/Jun/2024 10:40:03] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+2024-06-22 10:40:16,079 INFO werkzeug Thread-15 (process_request_thread) : 127.0.0.1 - - [22/Jun/2024 10:40:16] "POST /upload HTTP/1.1" 200 -
+2024-06-22 10:40:25,164 INFO root Thread-16 (process_request_thread) : /seasonality....
+2024-06-22 10:40:25,165 INFO root Thread-16 (process_request_thread) : >>----->>> START:seasonality:UUID:=bbba009f-3055-11ef-878b-161333e62825 <<<-----<<
+2024-06-22 10:40:25,178 INFO werkzeug Thread-16 (process_request_thread) : 127.0.0.1 - - [22/Jun/2024 10:40:25] "GET /seasonality HTTP/1.1" 200 -
+2024-06-22 10:40:29,267 INFO root Thread-17 (process_request_thread) : /trend....
+2024-06-22 10:40:29,268 INFO root Thread-17 (process_request_thread) : >>----->>> START:TREND:UUID:=be2c0de0-3055-11ef-b9dd-161333e62825 <<<-----<<
+2024-06-22 10:40:29,293 INFO werkzeug Thread-17 (process_request_thread) : 127.0.0.1 - - [22/Jun/2024 10:40:29] "GET /trend HTTP/1.1" 200 -
+2024-06-22 10:40:36,272 INFO root Thread-18 (process_request_thread) : /getAllSales....
+2024-06-22 10:40:36,274 INFO root Thread-18 (process_request_thread) : >>----->>> START:getAllSales:UUID:=c2590b18-3055-11ef-9c45-161333e62825 <<<-----<<
+2024-06-22 10:40:36,311 INFO werkzeug Thread-18 (process_request_thread) : 127.0.0.1 - - [22/Jun/2024 10:40:36] "GET /getAllSales HTTP/1.1" 200 -
+2024-06-22 10:40:45,701 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-SaudiCaterers\\app.py', reloading
+2024-06-22 10:40:45,703 INFO werkzeug Thread-1 :  * Detected change in 'D:\\Projects\\Freelance\\py-SaudiCaterers\\app.py', reloading
+2024-06-22 10:40:46,357 INFO werkzeug MainThread :  * Restarting with watchdog (windowsapi)
+2024-06-22 10:40:47,366 INFO root MainThread : Started
+2024-06-22 10:41:09,330 INFO root MainThread : Started
+2024-06-22 10:41:09,346 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-22 10:41:09,347 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-22 10:41:16,252 INFO werkzeug MainThread : 127.0.0.1 - - [22/Jun/2024 10:41:16] "POST /upload HTTP/1.1" 200 -
+2024-06-22 10:41:18,343 INFO root MainThread : /trend....
+2024-06-22 10:41:18,344 INFO root MainThread : >>----->>> START:TREND:UUID:=db6c6347-3055-11ef-b80d-161333e62825 <<<-----<<
+2024-06-22 10:41:18,358 INFO werkzeug MainThread : 127.0.0.1 - - [22/Jun/2024 10:41:18] "GET /trend HTTP/1.1" 200 -
+2024-06-22 10:41:23,982 INFO root MainThread : /seasonality....
+2024-06-22 10:41:23,983 INFO root MainThread : >>----->>> START:seasonality:UUID:=dec8e7c9-3055-11ef-b6a3-161333e62825 <<<-----<<
+2024-06-22 10:41:23,985 INFO werkzeug MainThread : 127.0.0.1 - - [22/Jun/2024 10:41:23] "GET /seasonality HTTP/1.1" 200 -
+2024-06-22 10:41:27,690 INFO root MainThread : /getAllSales....
+2024-06-22 10:41:27,691 INFO root MainThread : >>----->>> START:getAllSales:UUID:=e0feb1ab-3055-11ef-ac79-161333e62825 <<<-----<<
+2024-06-22 10:41:27,693 INFO werkzeug MainThread : 127.0.0.1 - - [22/Jun/2024 10:41:27] "GET /getAllSales HTTP/1.1" 200 -
+2024-06-22 10:42:43,906 INFO root MainThread : Started
+2024-06-22 10:42:43,914 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-22 10:42:43,915 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-22 10:42:49,487 INFO werkzeug MainThread : 127.0.0.1 - - [22/Jun/2024 10:42:49] "POST /upload HTTP/1.1" 200 -
+2024-06-22 10:42:51,964 INFO root MainThread : /seasonality....
+2024-06-22 10:42:51,965 INFO root MainThread : >>----->>> START:seasonality:UUID:=1339e818-3056-11ef-8e49-161333e62825 <<<-----<<
+2024-06-22 10:42:51,967 INFO werkzeug MainThread : 127.0.0.1 - - [22/Jun/2024 10:42:51] "GET /seasonality HTTP/1.1" 200 -
+2024-06-22 10:42:54,948 INFO root MainThread : /trend....
+2024-06-22 10:42:54,949 INFO root MainThread : >>----->>> START:TREND:UUID:=15012b46-3056-11ef-aede-161333e62825 <<<-----<<
+2024-06-22 10:42:54,951 INFO werkzeug MainThread : 127.0.0.1 - - [22/Jun/2024 10:42:54] "GET /trend HTTP/1.1" 200 -
+2024-06-22 10:42:57,260 INFO root MainThread : /getAllSales....
+2024-06-22 10:42:57,261 INFO root MainThread : >>----->>> START:getAllSales:UUID:=1661ef65-3056-11ef-af50-161333e62825 <<<-----<<
+2024-06-22 10:42:57,264 INFO werkzeug MainThread : 127.0.0.1 - - [22/Jun/2024 10:42:57] "GET /getAllSales HTTP/1.1" 200 -
+2024-06-22 10:43:20,395 INFO root MainThread : Started
+2024-06-22 10:43:20,405 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-22 10:43:20,405 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-22 10:43:24,684 INFO werkzeug MainThread : 127.0.0.1 - - [22/Jun/2024 10:43:24] "POST /upload HTTP/1.1" 200 -
+2024-06-22 10:43:26,476 INFO root MainThread : /seasonality....
+2024-06-22 10:43:26,478 INFO root MainThread : >>----->>> START:seasonality:UUID:=27cc10e4-3056-11ef-b7f9-161333e62825 <<<-----<<
+2024-06-22 10:43:26,480 INFO werkzeug MainThread : 127.0.0.1 - - [22/Jun/2024 10:43:26] "GET /seasonality HTTP/1.1" 200 -
+2024-06-22 10:43:30,801 INFO root MainThread : /trend....
+2024-06-22 10:43:30,802 INFO root MainThread : >>----->>> START:TREND:UUID:=2a5ffdc0-3056-11ef-a7ff-161333e62825 <<<-----<<
+2024-06-22 10:43:30,805 INFO werkzeug MainThread : 127.0.0.1 - - [22/Jun/2024 10:43:30] "GET /trend HTTP/1.1" 200 -
+2024-06-22 10:44:42,513 INFO root MainThread : Started
+2024-06-22 10:44:42,528 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-22 10:44:42,529 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-22 10:44:48,989 INFO werkzeug MainThread : 127.0.0.1 - - [22/Jun/2024 10:44:48] "POST /upload HTTP/1.1" 200 -
+2024-06-22 10:44:51,539 INFO root MainThread : /seasonality....
+2024-06-22 10:44:51,540 INFO root MainThread : >>----->>> START:seasonality:UUID:=5a7f92c7-3056-11ef-82e3-161333e62825 <<<-----<<
+2024-06-22 10:44:51,543 INFO werkzeug MainThread : 127.0.0.1 - - [22/Jun/2024 10:44:51] "GET /seasonality HTTP/1.1" 200 -
+2024-06-22 10:44:57,971 INFO root MainThread : /trend....
+2024-06-22 10:44:57,972 INFO root MainThread : >>----->>> START:TREND:UUID:=5e54f7a9-3056-11ef-bfe0-161333e62825 <<<-----<<
+2024-06-22 10:44:57,974 INFO werkzeug MainThread : 127.0.0.1 - - [22/Jun/2024 10:44:57] "GET /trend HTTP/1.1" 200 -
+2024-06-22 10:45:00,400 INFO root MainThread : /getAllSales....
+2024-06-22 10:45:00,401 INFO root MainThread : >>----->>> START:getAllSales:UUID:=5fc79e1e-3056-11ef-821c-161333e62825 <<<-----<<
+2024-06-22 10:45:00,403 INFO werkzeug MainThread : 127.0.0.1 - - [22/Jun/2024 10:45:00] "GET /getAllSales HTTP/1.1" 200 -
