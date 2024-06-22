@@ -11,6 +11,7 @@ from logging.config import dictConfig
 from logging.handlers import RotatingFileHandler
 from commons import get_uuid
 from sales_filter import get_sales_data
+import numpy as np
 
 app = Flask(__name__)
 CORS(app)
@@ -158,6 +159,142 @@ def getAllSales():
     except Exception as e:
         print(e)
         logging.debug("Xception:getAllSales="+e)
+
+
+@app.route('/getAverageMealsServed', methods=['GET'])    
+@cross_origin()
+def getAverageMealsServed():
+    logging.info('/getAverageMealsServed....')
+    cur_datetime, uid = get_uuid()
+    logging.info(">>----->>> START:getAverageMealsServed:UUID:="+str(uid)+" <<<-----<<")
+    try:
+        global sales_order_details
+        if 'sales_order_details' not in globals():
+            return jsonify({"message": "No CSV file uploaded"}), 400
+        total_records = len(sales_order_details)
+        print(total_records)
+        total_orders = sales_order_details['orders'].sum()
+        data = {
+          "average_orders": total_orders//total_records
+        }
+        return Response(json.dumps(data),mimetype='application/json')
+    except Exception as e:
+        print(e)
+        logging.debug("Xception:getAverageMealsServed="+e)
+
+
+@app.route('/getAllRoutes', methods=['GET'])    
+@cross_origin()
+def getAllRoutes():
+    logging.info('/getAllRoutes....')
+    cur_datetime, uid = get_uuid()
+    logging.info(">>----->>> START:getAllRoutes:UUID:="+str(uid)+" <<<-----<<")
+    try:
+        global sales_order_details
+        if 'sales_order_details' not in globals():
+            return jsonify({"message": "No CSV file uploaded"}), 400
+
+        df2 = sales_order_details.groupby(['Route']).size().reset_index(name='Count')
+        dataframe = json.loads(df2.to_json(orient="records"))
+        data = {
+          "data": dataframe
+        }
+        return Response(json.dumps(data),mimetype='application/json')
+    except Exception as e:
+        print(e)
+        logging.debug("Xception:getAllRoutes="+e)
+
+@app.route('/getMealCatStats', methods=['GET'])    
+@cross_origin()
+def getMealCatStats():
+    logging.info('/getMealCatStats....')
+    cur_datetime, uid = get_uuid()
+    logging.info(">>----->>> START:getMealCatStats:UUID:="+str(uid)+" <<<-----<<")
+    try:
+        global sales_order_details
+        if 'sales_order_details' not in globals():
+            return jsonify({"message": "No CSV file uploaded"}), 400
+
+        df2 = sales_order_details.groupby(['Item category']).size().reset_index(name='Count')
+        dataframe = json.loads(df2.to_json(orient="records"))
+        data = {
+          "data": dataframe
+        }
+        return Response(json.dumps(data),mimetype='application/json')
+    except Exception as e:
+        print(e)
+        logging.debug("Xception:getMealCatStats="+e)
+
+
+@app.route('/getCostOfOrdersPlaces', methods=['GET'])    
+@cross_origin()
+def getCostOfOrdersPlaces():
+    logging.info('/getCostOfOrdersPlaces....')
+    cur_datetime, uid = get_uuid()
+    logging.info(">>----->>> START:getCostOfOrdersPlaces:UUID:="+str(uid)+" <<<-----<<")
+    try:
+        global sales_order_details
+        if 'sales_order_details' not in globals():
+            return jsonify({"message": "No CSV file uploaded"}), 400
+
+        total_cost_per_day = sales_order_details['cost per order'].sum()
+        data = {
+          "total_cost_per_day": total_cost_per_day
+        }
+        return Response(json.dumps(data),mimetype='application/json')
+    except Exception as e:
+        print(e)
+        logging.debug("Xception:getCostOfOrdersPlaces="+e)
+
+
+@app.route('/getMealsMonthly', methods=['GET'])    
+@cross_origin()
+def getMealsMonthly():
+    logging.info('/getMealsMonthly....')
+    cur_datetime, uid = get_uuid()
+    logging.info(">>----->>> START:getMealsMonthly:UUID:="+str(uid)+" <<<-----<<")
+    try:
+        global sales_order_details
+        if 'sales_order_details' not in globals():
+            return jsonify({"message": "No CSV file uploaded"}), 400
+    
+        # sales_order_details['Date'] = pd.to_datetime(sales_order_details['Date'])
+        # totalSum = sales_order_details.groupby([pd.to_datetime(sales_order_details['Date']).dt.month, 'Date']).agg({'orders': sum})
+        final_df = sales_order_details[['Date', 'orders']]
+        # totalSum = final_df.groupby([pd.to_datetime(final_df['Date']).dt.month, 'Date']).agg({'orders': sum})
+        # print(final_df)
+        # print(totalSum)
+        dataframe = json.loads(final_df.to_json(orient="records"))
+        data = {
+          "data": dataframe
+        }
+        return Response(json.dumps(data),mimetype='application/json')
+    except Exception as e:
+        print(e)
+        logging.debug("Xception:getMealsMonthly="+e)
+
+
+@app.route('/getMealsPerDestinatin', methods=['GET'])    
+@cross_origin()
+def getMealsPerDestinatin():
+    logging.info('/getMealsPerDestinatin....')
+    cur_datetime, uid = get_uuid()
+    logging.info(">>----->>> START:getMealsPerDestinatin:UUID:="+str(uid)+" <<<-----<<")
+    try:
+        global sales_order_details
+        if 'sales_order_details' not in globals():
+            return jsonify({"message": "No CSV file uploaded"}), 400
+    
+        total_orders = sales_order_details.groupby('Arrival location')['orders'].sum().reset_index(name='orders')
+        dataframe = json.loads(total_orders.to_json(orient="records"))
+        data = {
+          "data": dataframe
+        }
+        return Response(json.dumps(data),mimetype='application/json')
+    except Exception as e:
+        print(e)
+        logging.debug("Xception:getMealsPerDestinatin="+e)
+
 
 if __name__ == '__main__':
     logging.basicConfig(format='%(levelname)s:%(message)s', level=logging.DEBUG)    
