@@ -3670,3 +3670,1370 @@ TypeError: can only concatenate str (not "SpecificationError") to str
 2024-06-23 00:20:42,148 INFO root MainThread : /getMealsPerDestinatin....
 2024-06-23 00:20:42,149 INFO root MainThread : >>----->>> START:getMealsPerDestinatin:UUID:=5355b83c-30c8-11ef-8144-005056c00008 <<<-----<<
 2024-06-23 00:20:42,153 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 00:20:42] "GET /getMealsPerDestinatin HTTP/1.1" 200 -
+2024-06-23 08:22:22,291 INFO root MainThread : Started
+2024-06-23 08:22:22,304 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-23 08:22:22,304 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-23 08:22:26,884 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:22:26] "GET /swagger/ HTTP/1.1" 200 -
+2024-06-23 08:22:27,044 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:22:27] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+2024-06-23 08:22:27,142 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:22:27] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+2024-06-23 08:22:27,252 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:22:27] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2024-06-23 08:22:27,257 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:22:27] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2024-06-23 08:22:27,849 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:22:27] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+2024-06-23 08:22:28,088 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:22:28] "GET /static/swagger.json HTTP/1.1" 200 -
+2024-06-23 08:22:36,876 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:22:36] "POST /upload HTTP/1.1" 200 -
+2024-06-23 08:22:42,348 INFO root MainThread : /getAvgFlightInTime....
+2024-06-23 08:22:42,349 INFO root MainThread : >>----->>> START:getAvgFlightInTime:UUID:=a91e10f4-310b-11ef-8772-005056c00008 <<<-----<<
+2024-06-23 08:22:42,362 ERROR app MainThread : Exception on /getAvgFlightInTime [GET]
+Traceback (most recent call last):
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 310, in getAvgFlightInTime
+    ts_arrival = pd.to_datetime(sales_order_details['Date'] + ' ' + sales_order_details['Arrival Time'])
+                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\ops\common.py", line 81, in new_method
+    return method(self, other)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\arraylike.py", line 186, in __add__
+    return self._arith_method(other, operator.add)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\series.py", line 6112, in _arith_method
+    return base.IndexOpsMixin._arith_method(self, other, op)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\base.py", line 1348, in _arith_method
+    result = ops.arithmetic_op(lvalues, rvalues, op)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\ops\array_ops.py", line 224, in arithmetic_op
+    res_values = op(left, right)
+                 ^^^^^^^^^^^^^^^
+TypeError: unsupported operand type(s) for +: 'DatetimeArray' and 'str'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 322, in getAvgFlightInTime
+    logging.debug("Xception:getAvgFlightInTime="+e)
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+TypeError: can only concatenate str (not "TypeError") to str
+2024-06-23 08:22:42,377 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:22:42] "[35m[1mGET /getAvgFlightInTime HTTP/1.1[0m" 500 -
+2024-06-23 08:23:44,505 INFO root MainThread : Started
+2024-06-23 08:23:44,525 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-23 08:23:44,526 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-23 08:23:49,039 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:23:49] "POST /upload HTTP/1.1" 200 -
+2024-06-23 08:23:52,394 INFO root MainThread : /getAvgFlightInTime....
+2024-06-23 08:23:52,395 INFO root MainThread : >>----->>> START:getAvgFlightInTime:UUID:=d2de387b-310b-11ef-9769-005056c00008 <<<-----<<
+2024-06-23 08:23:52,396 ERROR app MainThread : Exception on /getAvgFlightInTime [GET]
+Traceback (most recent call last):
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 310, in getAvgFlightInTime
+    ts_arrival = pd.DataFrame(pd.to_datetime(sales_order_details['Date'] + ' ' + sales_order_details['Arrival Time']))
+                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\ops\common.py", line 81, in new_method
+    return method(self, other)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\arraylike.py", line 186, in __add__
+    return self._arith_method(other, operator.add)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\series.py", line 6112, in _arith_method
+    return base.IndexOpsMixin._arith_method(self, other, op)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\base.py", line 1348, in _arith_method
+    result = ops.arithmetic_op(lvalues, rvalues, op)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\ops\array_ops.py", line 224, in arithmetic_op
+    res_values = op(left, right)
+                 ^^^^^^^^^^^^^^^
+TypeError: unsupported operand type(s) for +: 'DatetimeArray' and 'str'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 322, in getAvgFlightInTime
+    logging.debug("Xception:getAvgFlightInTime="+e)
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+TypeError: can only concatenate str (not "TypeError") to str
+2024-06-23 08:23:52,412 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:23:52] "[35m[1mGET /getAvgFlightInTime HTTP/1.1[0m" 500 -
+2024-06-23 08:24:26,921 INFO root MainThread : Started
+2024-06-23 08:24:26,938 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-23 08:24:26,939 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-23 08:24:30,029 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:24:30] "POST /upload HTTP/1.1" 200 -
+2024-06-23 08:24:31,813 INFO root MainThread : /getAvgFlightInTime....
+2024-06-23 08:24:31,815 INFO root MainThread : >>----->>> START:getAvgFlightInTime:UUID:=ea5d29e3-310b-11ef-87fa-005056c00008 <<<-----<<
+2024-06-23 08:24:31,817 ERROR app MainThread : Exception on /getAvgFlightInTime [GET]
+Traceback (most recent call last):
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 310, in getAvgFlightInTime
+    ts_arrival = pd.DataFrame(sales_order_details['Date'] + ' ' + sales_order_details['Arrival Time'])
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\ops\common.py", line 81, in new_method
+    return method(self, other)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\arraylike.py", line 186, in __add__
+    return self._arith_method(other, operator.add)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\series.py", line 6112, in _arith_method
+    return base.IndexOpsMixin._arith_method(self, other, op)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\base.py", line 1348, in _arith_method
+    result = ops.arithmetic_op(lvalues, rvalues, op)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\ops\array_ops.py", line 224, in arithmetic_op
+    res_values = op(left, right)
+                 ^^^^^^^^^^^^^^^
+TypeError: unsupported operand type(s) for +: 'DatetimeArray' and 'str'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 322, in getAvgFlightInTime
+    logging.debug("Xception:getAvgFlightInTime="+e)
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+TypeError: can only concatenate str (not "TypeError") to str
+2024-06-23 08:24:31,831 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:24:31] "[35m[1mGET /getAvgFlightInTime HTTP/1.1[0m" 500 -
+2024-06-23 08:25:06,110 INFO root MainThread : Started
+2024-06-23 08:25:06,121 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-23 08:25:06,122 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-23 08:25:10,448 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:25:10] "POST /upload HTTP/1.1" 200 -
+2024-06-23 08:25:14,049 INFO root MainThread : /getAvgFlightInTime....
+2024-06-23 08:25:14,051 INFO root MainThread : >>----->>> START:getAvgFlightInTime:UUID:=0389d049-310c-11ef-aa03-005056c00008 <<<-----<<
+2024-06-23 08:25:14,052 ERROR app MainThread : Exception on /getAvgFlightInTime [GET]
+Traceback (most recent call last):
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 310, in getAvgFlightInTime
+    ts_arrival = sales_order_details['Date'] + ' ' + sales_order_details['Arrival Time']
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\ops\common.py", line 81, in new_method
+    return method(self, other)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\arraylike.py", line 186, in __add__
+    return self._arith_method(other, operator.add)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\series.py", line 6112, in _arith_method
+    return base.IndexOpsMixin._arith_method(self, other, op)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\base.py", line 1348, in _arith_method
+    result = ops.arithmetic_op(lvalues, rvalues, op)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\ops\array_ops.py", line 224, in arithmetic_op
+    res_values = op(left, right)
+                 ^^^^^^^^^^^^^^^
+TypeError: unsupported operand type(s) for +: 'DatetimeArray' and 'str'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 322, in getAvgFlightInTime
+    logging.debug("Xception:getAvgFlightInTime="+e)
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+TypeError: can only concatenate str (not "TypeError") to str
+2024-06-23 08:25:14,065 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:25:14] "[35m[1mGET /getAvgFlightInTime HTTP/1.1[0m" 500 -
+2024-06-23 08:26:02,451 INFO root MainThread : Started
+2024-06-23 08:26:02,476 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-23 08:26:02,476 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-23 08:26:05,161 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:26:05] "POST /upload HTTP/1.1" 200 -
+2024-06-23 08:26:06,511 INFO root MainThread : /getAvgFlightInTime....
+2024-06-23 08:26:06,512 INFO root MainThread : >>----->>> START:getAvgFlightInTime:UUID:=22cee132-310c-11ef-bfc5-005056c00008 <<<-----<<
+2024-06-23 08:26:06,554 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:26:06] "GET /getAvgFlightInTime HTTP/1.1" 200 -
+2024-06-23 08:27:28,561 INFO root MainThread : Started
+2024-06-23 08:27:28,583 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-23 08:27:28,583 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-23 08:27:31,929 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:27:31] "POST /upload HTTP/1.1" 200 -
+2024-06-23 08:27:33,111 INFO root MainThread : /getAvgFlightInTime....
+2024-06-23 08:27:33,112 INFO root MainThread : >>----->>> START:getAvgFlightInTime:UUID:=566ceb6f-310c-11ef-a79b-005056c00008 <<<-----<<
+2024-06-23 08:27:33,132 ERROR app MainThread : Exception on /getAvgFlightInTime [GET]
+Traceback (most recent call last):
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 311, in getAvgFlightInTime
+    print(pd.to_datetime(sales_order_details['Date'] + sales_order_details['Arrival Time']))
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\ops\common.py", line 81, in new_method
+    return method(self, other)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\arraylike.py", line 186, in __add__
+    return self._arith_method(other, operator.add)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\series.py", line 6112, in _arith_method
+    return base.IndexOpsMixin._arith_method(self, other, op)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\base.py", line 1348, in _arith_method
+    result = ops.arithmetic_op(lvalues, rvalues, op)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\ops\array_ops.py", line 224, in arithmetic_op
+    res_values = op(left, right)
+                 ^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\ops\common.py", line 81, in new_method
+    return method(self, other)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\arrays\datetimelike.py", line 1344, in __add__
+    result = self._addsub_object_array(other, operator.add)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\arrays\datetimelike.py", line 1299, in _addsub_object_array
+    res_values = op(self.astype("O"), np.asarray(other))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: unsupported operand type(s) for +: 'Timestamp' and 'datetime.time'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 323, in getAvgFlightInTime
+    logging.debug("Xception:getAvgFlightInTime="+e)
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+TypeError: can only concatenate str (not "TypeError") to str
+2024-06-23 08:27:33,145 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:27:33] "[35m[1mGET /getAvgFlightInTime HTTP/1.1[0m" 500 -
+2024-06-23 08:29:02,106 INFO root MainThread : Started
+2024-06-23 08:29:02,129 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-23 08:29:02,130 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-23 08:29:07,263 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:29:07] "POST /upload HTTP/1.1" 200 -
+2024-06-23 08:29:08,696 INFO root MainThread : /getAvgFlightInTime....
+2024-06-23 08:29:08,697 INFO root MainThread : >>----->>> START:getAvgFlightInTime:UUID:=8f662206-310c-11ef-aadf-005056c00008 <<<-----<<
+2024-06-23 08:29:08,709 ERROR app MainThread : Exception on /getAvgFlightInTime [GET]
+Traceback (most recent call last):
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 311, in getAvgFlightInTime
+    print(sales_order_details['Date'] + sales_order_details['Arrival Time'].map(pd.Timedelta.to_pytimedelta))
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\series.py", line 4397, in map
+    new_values = self._map_values(arg, na_action=na_action)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\base.py", line 924, in _map_values
+    new_values = map_f(values, mapper)
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "pandas\_libs\lib.pyx", line 2834, in pandas._libs.lib.map_infer
+TypeError: descriptor 'to_pytimedelta' for 'pandas._libs.tslibs.timedeltas._Timedelta' objects doesn't apply to a 'datetime.time' object
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 323, in getAvgFlightInTime
+    logging.debug("Xception:getAvgFlightInTime="+e)
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+TypeError: can only concatenate str (not "TypeError") to str
+2024-06-23 08:29:08,719 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:29:08] "[35m[1mGET /getAvgFlightInTime HTTP/1.1[0m" 500 -
+2024-06-23 08:31:48,878 INFO root MainThread : Started
+2024-06-23 08:31:48,889 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-23 08:31:48,889 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-23 08:31:53,938 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:31:53] "POST /upload HTTP/1.1" 200 -
+2024-06-23 08:31:55,714 INFO root MainThread : /getAvgFlightInTime....
+2024-06-23 08:31:55,715 INFO root MainThread : >>----->>> START:getAvgFlightInTime:UUID:=f2f2ff14-310c-11ef-8495-005056c00008 <<<-----<<
+2024-06-23 08:31:55,721 ERROR app MainThread : Exception on /getAvgFlightInTime [GET]
+Traceback (most recent call last):
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 311, in getAvgFlightInTime
+    print(sales_order_details['Date'].dt.strftime('%Y-%m-%d') + sales_order_details['Arrival Time'].dt.strftime('hh:mm:ss').map(pd.Timedelta.to_pytimedelta))
+                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\generic.py", line 5989, in __getattr__
+    return object.__getattribute__(self, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\accessor.py", line 224, in __get__
+    accessor_obj = self._accessor(obj)
+                   ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\indexes\accessors.py", line 580, in __new__
+    raise AttributeError("Can only use .dt accessor with datetimelike values")
+AttributeError: Can only use .dt accessor with datetimelike values
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 323, in getAvgFlightInTime
+    logging.debug("Xception:getAvgFlightInTime="+e)
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+TypeError: can only concatenate str (not "AttributeError") to str
+2024-06-23 08:31:55,743 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:31:55] "[35m[1mGET /getAvgFlightInTime HTTP/1.1[0m" 500 -
+2024-06-23 08:32:42,472 INFO root MainThread : Started
+2024-06-23 08:32:42,496 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-23 08:32:42,497 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-23 08:32:45,544 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:32:45] "POST /upload HTTP/1.1" 200 -
+2024-06-23 08:32:47,264 INFO root MainThread : /getAvgFlightInTime....
+2024-06-23 08:32:47,265 INFO root MainThread : >>----->>> START:getAvgFlightInTime:UUID:=11acee49-310d-11ef-8cc4-005056c00008 <<<-----<<
+2024-06-23 08:32:47,311 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:32:47] "GET /getAvgFlightInTime HTTP/1.1" 200 -
+2024-06-23 08:33:28,861 INFO root MainThread : Started
+2024-06-23 08:33:28,881 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-23 08:33:28,881 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-23 08:33:31,563 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:33:31] "POST /upload HTTP/1.1" 200 -
+2024-06-23 08:33:33,621 INFO root MainThread : /getAvgFlightInTime....
+2024-06-23 08:33:33,622 INFO root MainThread : >>----->>> START:getAvgFlightInTime:UUID:=2d4e4088-310d-11ef-965b-005056c00008 <<<-----<<
+2024-06-23 08:33:33,646 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:33:33] "GET /getAvgFlightInTime HTTP/1.1" 200 -
+2024-06-23 08:35:24,289 INFO root MainThread : Started
+2024-06-23 08:35:24,309 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-23 08:35:24,310 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-23 08:35:30,480 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:35:30] "POST /upload HTTP/1.1" 200 -
+2024-06-23 08:35:32,172 INFO root MainThread : /getAvgFlightInTime....
+2024-06-23 08:35:32,173 INFO root MainThread : >>----->>> START:getAvgFlightInTime:UUID:=73f7cd06-310d-11ef-a036-005056c00008 <<<-----<<
+2024-06-23 08:35:32,176 ERROR app MainThread : Exception on /getAvgFlightInTime [GET]
+Traceback (most recent call last):
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 311, in getAvgFlightInTime
+    ts_arrival.set_index('ts_arrival')
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\frame.py", line 5859, in set_index
+    raise KeyError(f"None of {missing} are in the columns")
+KeyError: "None of ['ts_arrival'] are in the columns"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 323, in getAvgFlightInTime
+    logging.debug("Xception:getAvgFlightInTime="+e)
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+TypeError: can only concatenate str (not "KeyError") to str
+2024-06-23 08:35:32,197 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:35:32] "[35m[1mGET /getAvgFlightInTime HTTP/1.1[0m" 500 -
+2024-06-23 08:36:20,780 INFO root MainThread : Started
+2024-06-23 08:36:20,793 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-23 08:36:20,794 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-23 08:36:25,053 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:36:25] "POST /upload HTTP/1.1" 200 -
+2024-06-23 08:36:27,038 INFO root MainThread : /getAvgFlightInTime....
+2024-06-23 08:36:27,039 INFO root MainThread : >>----->>> START:getAvgFlightInTime:UUID:=94abb0cc-310d-11ef-ac36-005056c00008 <<<-----<<
+2024-06-23 08:36:27,042 ERROR app MainThread : Exception on /getAvgFlightInTime [GET]
+Traceback (most recent call last):
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 310, in getAvgFlightInTime
+    ts_arrival = pd.DataFrame(sales_order_details['Date'].astype(str) +' '+ sales_order_details['Arrival Time'].astype(str), 'ts_arrival')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\frame.py", line 758, in __init__
+    mgr = ndarray_to_mgr(
+          ^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\internals\construction.py", line 251, in ndarray_to_mgr
+    values = values.reindex(index)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\series.py", line 4918, in reindex
+    return super().reindex(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\generic.py", line 5360, in reindex
+    return self._reindex_axes(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\generic.py", line 5375, in _reindex_axes
+    new_index, indexer = ax.reindex(
+                         ^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\indexes\base.py", line 4248, in reindex
+    target = ensure_index(target)
+             ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\indexes\base.py", line 7125, in ensure_index
+    return Index(index_like, copy=copy)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\indexes\base.py", line 516, in __new__
+    raise cls._raise_scalar_data_error(data)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\indexes\base.py", line 5065, in _raise_scalar_data_error
+    raise TypeError(
+TypeError: Index(...) must be called with a collection of some kind, 'ts_arrival' was passed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 323, in getAvgFlightInTime
+    logging.debug("Xception:getAvgFlightInTime="+e)
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+TypeError: can only concatenate str (not "TypeError") to str
+2024-06-23 08:36:27,075 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:36:27] "[35m[1mGET /getAvgFlightInTime HTTP/1.1[0m" 500 -
+2024-06-23 08:37:12,337 INFO root MainThread : Started
+2024-06-23 08:37:12,359 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-23 08:37:12,360 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-23 08:37:16,073 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:37:16] "POST /upload HTTP/1.1" 200 -
+2024-06-23 08:37:19,360 INFO root MainThread : /getAvgFlightInTime....
+2024-06-23 08:37:19,361 INFO root MainThread : >>----->>> START:getAvgFlightInTime:UUID:=b3db8229-310d-11ef-aea4-005056c00008 <<<-----<<
+2024-06-23 08:37:19,366 ERROR app MainThread : Exception on /getAvgFlightInTime [GET]
+Traceback (most recent call last):
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 311, in getAvgFlightInTime
+    ts_arrival.set_index(['ts_arrival'])
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\frame.py", line 5859, in set_index
+    raise KeyError(f"None of {missing} are in the columns")
+KeyError: "None of ['ts_arrival'] are in the columns"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 323, in getAvgFlightInTime
+    logging.debug("Xception:getAvgFlightInTime="+e)
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+TypeError: can only concatenate str (not "KeyError") to str
+2024-06-23 08:37:19,381 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:37:19] "[35m[1mGET /getAvgFlightInTime HTTP/1.1[0m" 500 -
+2024-06-23 08:39:09,538 INFO root MainThread : Started
+2024-06-23 08:39:09,559 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-23 08:39:09,560 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-23 08:39:13,685 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:39:13] "POST /upload HTTP/1.1" 200 -
+2024-06-23 08:39:15,664 INFO root MainThread : /getAvgFlightInTime....
+2024-06-23 08:39:15,665 INFO root MainThread : >>----->>> START:getAvgFlightInTime:UUID:=f92e1921-310d-11ef-ac2b-005056c00008 <<<-----<<
+2024-06-23 08:39:15,686 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:39:15] "GET /getAvgFlightInTime HTTP/1.1" 200 -
+2024-06-23 08:40:23,034 INFO root MainThread : Started
+2024-06-23 08:40:23,053 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-23 08:40:23,055 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-23 08:40:26,426 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:40:26] "POST /upload HTTP/1.1" 200 -
+2024-06-23 08:40:28,287 INFO root MainThread : /getAvgFlightInTime....
+2024-06-23 08:40:28,288 INFO root MainThread : >>----->>> START:getAvgFlightInTime:UUID:=247773e7-310e-11ef-9faf-005056c00008 <<<-----<<
+2024-06-23 08:40:28,307 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:40:28] "GET /getAvgFlightInTime HTTP/1.1" 200 -
+2024-06-23 08:42:25,236 INFO root MainThread : Started
+2024-06-23 08:42:25,255 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-23 08:42:25,256 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-23 08:42:28,435 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:42:28] "POST /upload HTTP/1.1" 200 -
+2024-06-23 08:42:29,419 INFO root MainThread : /getAvgFlightInTime....
+2024-06-23 08:42:29,420 INFO root MainThread : >>----->>> START:getAvgFlightInTime:UUID:=6caab119-310e-11ef-87af-005056c00008 <<<-----<<
+2024-06-23 08:42:29,448 ERROR app MainThread : Exception on /getAvgFlightInTime [GET]
+Traceback (most recent call last):
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 312, in getAvgFlightInTime
+    df['End'] = pd.to_datetime(ts_departure['ts_departure'])
+    ^^
+NameError: name 'df' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 325, in getAvgFlightInTime
+    logging.debug("Xception:getAvgFlightInTime="+e)
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+TypeError: can only concatenate str (not "NameError") to str
+2024-06-23 08:42:29,455 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:42:29] "[35m[1mGET /getAvgFlightInTime HTTP/1.1[0m" 500 -
+2024-06-23 08:43:22,402 INFO root MainThread : Started
+2024-06-23 08:43:22,413 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-23 08:43:22,413 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-23 08:43:25,825 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:43:25] "POST /upload HTTP/1.1" 200 -
+2024-06-23 08:43:27,017 INFO root MainThread : /getAvgFlightInTime....
+2024-06-23 08:43:27,018 INFO root MainThread : >>----->>> START:getAvgFlightInTime:UUID:=8eff6b5f-310e-11ef-8450-005056c00008 <<<-----<<
+2024-06-23 08:43:27,043 ERROR app MainThread : Exception on /getAvgFlightInTime [GET]
+Traceback (most recent call last):
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 315, in getAvgFlightInTime
+    print(df)
+          ^^
+NameError: name 'df' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 325, in getAvgFlightInTime
+    logging.debug("Xception:getAvgFlightInTime="+e)
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+TypeError: can only concatenate str (not "NameError") to str
+2024-06-23 08:43:27,048 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:43:27] "[35m[1mGET /getAvgFlightInTime HTTP/1.1[0m" 500 -
+2024-06-23 08:43:44,967 INFO root MainThread : Started
+2024-06-23 08:43:44,987 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-23 08:43:44,988 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-23 08:43:47,617 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:43:47] "POST /upload HTTP/1.1" 200 -
+2024-06-23 08:43:48,945 INFO root MainThread : /getAvgFlightInTime....
+2024-06-23 08:43:48,946 INFO root MainThread : >>----->>> START:getAvgFlightInTime:UUID:=9c117bb3-310e-11ef-94ae-005056c00008 <<<-----<<
+2024-06-23 08:43:48,958 ERROR app MainThread : Exception on /getAvgFlightInTime [GET]
+Traceback (most recent call last):
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 315, in getAvgFlightInTime
+    print(df)
+          ^^
+NameError: name 'df' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 325, in getAvgFlightInTime
+    logging.debug("Xception:getAvgFlightInTime="+e)
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+TypeError: can only concatenate str (not "NameError") to str
+2024-06-23 08:43:48,965 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:43:48] "[35m[1mGET /getAvgFlightInTime HTTP/1.1[0m" 500 -
+2024-06-23 08:44:02,471 INFO root MainThread : Started
+2024-06-23 08:44:02,488 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-23 08:44:02,489 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-23 08:44:06,568 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:44:06] "POST /upload HTTP/1.1" 200 -
+2024-06-23 08:44:08,010 INFO root MainThread : /getAvgFlightInTime....
+2024-06-23 08:44:08,011 INFO root MainThread : >>----->>> START:getAvgFlightInTime:UUID:=a76e8258-310e-11ef-9d71-005056c00008 <<<-----<<
+2024-06-23 08:44:08,077 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:44:08] "GET /getAvgFlightInTime HTTP/1.1" 200 -
+2024-06-23 08:45:47,773 INFO root MainThread : Started
+2024-06-23 08:45:47,791 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-23 08:45:47,792 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-23 08:45:51,513 INFO root MainThread : Started
+2024-06-23 08:45:51,524 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-23 08:45:51,525 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-23 08:45:54,503 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:45:54] "POST /upload HTTP/1.1" 200 -
+2024-06-23 08:45:56,577 INFO root MainThread : /getAvgFlightInTime....
+2024-06-23 08:45:56,578 INFO root MainThread : >>----->>> START:getAvgFlightInTime:UUID:=e8248436-310e-11ef-bfba-005056c00008 <<<-----<<
+2024-06-23 08:45:56,612 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:45:56] "GET /getAvgFlightInTime HTTP/1.1" 200 -
+2024-06-23 08:46:53,177 INFO root MainThread : Started
+2024-06-23 08:46:53,195 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-23 08:46:53,196 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-23 08:46:57,679 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:46:57] "POST /upload HTTP/1.1" 200 -
+2024-06-23 08:46:58,950 INFO root MainThread : /getAvgFlightInTime....
+2024-06-23 08:46:58,951 INFO root MainThread : >>----->>> START:getAvgFlightInTime:UUID:=0d51eec8-310f-11ef-a73f-005056c00008 <<<-----<<
+2024-06-23 08:46:58,982 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:46:58] "GET /getAvgFlightInTime HTTP/1.1" 200 -
+2024-06-23 08:48:17,121 INFO root MainThread : Started
+2024-06-23 08:48:17,142 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-23 08:48:17,143 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-23 08:48:20,039 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:48:20] "POST /upload HTTP/1.1" 200 -
+2024-06-23 08:48:21,193 INFO root MainThread : /getAvgFlightInTime....
+2024-06-23 08:48:21,194 INFO root MainThread : >>----->>> START:getAvgFlightInTime:UUID:=3e571c84-310f-11ef-a907-005056c00008 <<<-----<<
+2024-06-23 08:48:21,346 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:48:21] "GET /getAvgFlightInTime HTTP/1.1" 200 -
+2024-06-23 08:49:08,538 INFO root MainThread : Started
+2024-06-23 08:49:08,561 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-23 08:49:08,561 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-23 08:49:11,165 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:49:11] "POST /upload HTTP/1.1" 200 -
+2024-06-23 08:49:12,885 INFO root MainThread : /getAvgFlightInTime....
+2024-06-23 08:49:12,886 INFO root MainThread : >>----->>> START:getAvgFlightInTime:UUID:=5d26c15b-310f-11ef-9f10-005056c00008 <<<-----<<
+2024-06-23 08:49:13,011 ERROR app MainThread : Exception on /getAvgFlightInTime [GET]
+Traceback (most recent call last):
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 320, in getAvgFlightInTime
+    dataframe = json.loads(final_df.to_json(orient="records"))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\generic.py", line 2532, in to_json
+    return json.to_json(
+           ^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\io\json\_json.py", line 181, in to_json
+    s = writer(
+        ^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\io\json\_json.py", line 237, in __init__
+    self._format_axes()
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\io\json\_json.py", line 301, in _format_axes
+    raise ValueError(
+ValueError: DataFrame columns must be unique for orient='records'.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 327, in getAvgFlightInTime
+    logging.debug("Xception:getAvgFlightInTime="+e)
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+TypeError: can only concatenate str (not "ValueError") to str
+2024-06-23 08:49:13,033 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:49:13] "[35m[1mGET /getAvgFlightInTime HTTP/1.1[0m" 500 -
+2024-06-23 08:49:51,930 INFO root MainThread : Started
+2024-06-23 08:49:51,952 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-23 08:49:51,953 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-23 08:49:53,912 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:49:53] "POST /upload HTTP/1.1" 200 -
+2024-06-23 08:49:55,020 INFO root MainThread : /getAvgFlightInTime....
+2024-06-23 08:49:55,022 INFO root MainThread : >>----->>> START:getAvgFlightInTime:UUID:=76441be4-310f-11ef-8357-005056c00008 <<<-----<<
+2024-06-23 08:49:55,047 ERROR app MainThread : Exception on /getAvgFlightInTime [GET]
+Traceback (most recent call last):
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\indexes\base.py", line 551, in __new__
+    arr = sanitize_array(data, None, dtype=dtype, copy=copy)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\construction.py", line 607, in sanitize_array
+    subarr = _sanitize_ndim(subarr, data, dtype, index, allow_2d=allow_2d)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\construction.py", line 666, in _sanitize_ndim
+    raise ValueError(
+ValueError: Data must be 1-dimensional, got ndarray of shape (43, 1) instead
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 317, in getAvgFlightInTime
+    final_df = pd.DataFrame(ts_arrival['ts_arrival'], ts_departure['ts_departure'], average_time)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\frame.py", line 747, in __init__
+    mgr = dict_to_mgr(
+          ^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\internals\construction.py", line 431, in dict_to_mgr
+    arrays = Series(data, index=columns, dtype=object)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\series.py", line 425, in __init__
+    index = ensure_index(index)
+            ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\indexes\base.py", line 7125, in ensure_index
+    return Index(index_like, copy=copy)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\indexes\base.py", line 518, in __new__
+    return Index(np.asarray(data), dtype=dtype, copy=copy, name=name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\indexes\base.py", line 556, in __new__
+    raise ValueError("Index data must be 1-dimensional") from err
+ValueError: Index data must be 1-dimensional
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 327, in getAvgFlightInTime
+    logging.debug("Xception:getAvgFlightInTime="+e)
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+TypeError: can only concatenate str (not "ValueError") to str
+2024-06-23 08:49:55,065 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:49:55] "[35m[1mGET /getAvgFlightInTime HTTP/1.1[0m" 500 -
+2024-06-23 08:50:21,225 INFO root MainThread : Started
+2024-06-23 08:50:21,243 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-23 08:50:21,243 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-23 08:50:25,848 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:50:25] "POST /upload HTTP/1.1" 200 -
+2024-06-23 08:50:27,649 INFO root MainThread : /getAvgFlightInTime....
+2024-06-23 08:50:27,651 INFO root MainThread : >>----->>> START:getAvgFlightInTime:UUID:=89b6ef11-310f-11ef-bd29-005056c00008 <<<-----<<
+2024-06-23 08:50:27,709 ERROR app MainThread : Exception on /getAvgFlightInTime [GET]
+Traceback (most recent call last):
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\indexes\base.py", line 551, in __new__
+    arr = sanitize_array(data, None, dtype=dtype, copy=copy)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\construction.py", line 607, in sanitize_array
+    subarr = _sanitize_ndim(subarr, data, dtype, index, allow_2d=allow_2d)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\construction.py", line 666, in _sanitize_ndim
+    raise ValueError(
+ValueError: Data must be 1-dimensional, got ndarray of shape (43, 1) instead
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 318, in getAvgFlightInTime
+    final_df = pd.DataFrame(ts_arrival['ts_arrival'], ts_departure['ts_departure'], average_time)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\frame.py", line 747, in __init__
+    mgr = dict_to_mgr(
+          ^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\internals\construction.py", line 431, in dict_to_mgr
+    arrays = Series(data, index=columns, dtype=object)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\series.py", line 425, in __init__
+    index = ensure_index(index)
+            ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\indexes\base.py", line 7125, in ensure_index
+    return Index(index_like, copy=copy)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\indexes\base.py", line 518, in __new__
+    return Index(np.asarray(data), dtype=dtype, copy=copy, name=name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\indexes\base.py", line 556, in __new__
+    raise ValueError("Index data must be 1-dimensional") from err
+ValueError: Index data must be 1-dimensional
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 327, in getAvgFlightInTime
+    logging.debug("Xception:getAvgFlightInTime="+e)
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+TypeError: can only concatenate str (not "ValueError") to str
+2024-06-23 08:50:27,728 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:50:27] "[35m[1mGET /getAvgFlightInTime HTTP/1.1[0m" 500 -
+2024-06-23 08:51:13,285 INFO root MainThread : Started
+2024-06-23 08:51:13,303 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-23 08:51:13,304 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-23 08:51:16,379 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:51:16] "POST /upload HTTP/1.1" 200 -
+2024-06-23 08:51:17,746 INFO root MainThread : /getAvgFlightInTime....
+2024-06-23 08:51:17,747 INFO root MainThread : >>----->>> START:getAvgFlightInTime:UUID:=a7930672-310f-11ef-9794-005056c00008 <<<-----<<
+2024-06-23 08:51:17,869 ERROR app MainThread : Exception on /getAvgFlightInTime [GET]
+Traceback (most recent call last):
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 320, in getAvgFlightInTime
+    dataframe = json.loads(final_df.to_json(orient="records"))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\generic.py", line 2532, in to_json
+    return json.to_json(
+           ^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\io\json\_json.py", line 181, in to_json
+    s = writer(
+        ^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\io\json\_json.py", line 237, in __init__
+    self._format_axes()
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\io\json\_json.py", line 301, in _format_axes
+    raise ValueError(
+ValueError: DataFrame columns must be unique for orient='records'.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 327, in getAvgFlightInTime
+    logging.debug("Xception:getAvgFlightInTime="+e)
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+TypeError: can only concatenate str (not "ValueError") to str
+2024-06-23 08:51:17,883 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:51:17] "[35m[1mGET /getAvgFlightInTime HTTP/1.1[0m" 500 -
+2024-06-23 08:52:47,483 INFO root MainThread : Started
+2024-06-23 08:52:47,501 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-23 08:52:47,502 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-23 08:52:59,103 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:52:59] "POST /upload HTTP/1.1" 200 -
+2024-06-23 08:53:01,227 INFO root MainThread : /getAvgFlightInTime....
+2024-06-23 08:53:01,228 INFO root MainThread : >>----->>> START:getAvgFlightInTime:UUID:=e540ef58-310f-11ef-bc0d-005056c00008 <<<-----<<
+2024-06-23 08:53:01,269 ERROR app MainThread : Exception on /getAvgFlightInTime [GET]
+Traceback (most recent call last):
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 320, in getAvgFlightInTime
+    dataframe = json.loads(final_df.to_json(orient="records"))
+                           ^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'to_json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 327, in getAvgFlightInTime
+    logging.debug("Xception:getAvgFlightInTime="+e)
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+TypeError: can only concatenate str (not "AttributeError") to str
+2024-06-23 08:53:01,275 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:53:01] "[35m[1mGET /getAvgFlightInTime HTTP/1.1[0m" 500 -
+2024-06-23 08:54:10,807 INFO root MainThread : Started
+2024-06-23 08:54:10,828 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-23 08:54:10,829 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-23 08:54:13,958 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:54:13] "POST /upload HTTP/1.1" 200 -
+2024-06-23 08:54:14,770 INFO root MainThread : /getAvgFlightInTime....
+2024-06-23 08:54:14,771 INFO root MainThread : >>----->>> START:getAvgFlightInTime:UUID:=1116ac44-3110-11ef-8153-005056c00008 <<<-----<<
+2024-06-23 08:54:14,804 ERROR app MainThread : Exception on /getAvgFlightInTime [GET]
+Traceback (most recent call last):
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 318, in getAvgFlightInTime
+    final_df = pd.concat(ts_arrival['ts_arrival'], ts_departure['ts_departure'], average_time['average_time'])
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: concat() takes 1 positional argument but 3 were given
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 327, in getAvgFlightInTime
+    logging.debug("Xception:getAvgFlightInTime="+e)
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+TypeError: can only concatenate str (not "TypeError") to str
+2024-06-23 08:54:14,810 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:54:14] "[35m[1mGET /getAvgFlightInTime HTTP/1.1[0m" 500 -
+2024-06-23 08:55:04,084 INFO root MainThread : Started
+2024-06-23 08:55:04,102 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-23 08:55:04,102 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-23 08:55:07,889 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:55:07] "POST /upload HTTP/1.1" 200 -
+2024-06-23 08:55:08,911 INFO root MainThread : /getAvgFlightInTime....
+2024-06-23 08:55:08,912 INFO root MainThread : >>----->>> START:getAvgFlightInTime:UUID:=315c0e6d-3110-11ef-bdb3-005056c00008 <<<-----<<
+2024-06-23 08:55:08,965 ERROR app MainThread : Exception on /getAvgFlightInTime [GET]
+Traceback (most recent call last):
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 318, in getAvgFlightInTime
+    filght_ts = pd.concat(ts_arrival['ts_arrival'], ts_departure['ts_departure'])
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: concat() takes 1 positional argument but 2 were given
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 328, in getAvgFlightInTime
+    logging.debug("Xception:getAvgFlightInTime="+e)
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+TypeError: can only concatenate str (not "TypeError") to str
+2024-06-23 08:55:08,971 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:55:08] "[35m[1mGET /getAvgFlightInTime HTTP/1.1[0m" 500 -
+2024-06-23 08:55:34,629 INFO root MainThread : Started
+2024-06-23 08:55:34,649 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-23 08:55:34,650 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-23 08:55:37,996 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:55:37] "POST /upload HTTP/1.1" 200 -
+2024-06-23 08:55:38,631 INFO root MainThread : /getAvgFlightInTime....
+2024-06-23 08:55:38,632 INFO root MainThread : >>----->>> START:getAvgFlightInTime:UUID:=4312e9a0-3110-11ef-b9b0-005056c00008 <<<-----<<
+2024-06-23 08:55:38,652 ERROR app MainThread : Exception on /getAvgFlightInTime [GET]
+Traceback (most recent call last):
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 318, in getAvgFlightInTime
+    filght_ts = pd.concat(ts_arrival['ts_arrival'], ts_departure['ts_departure'])
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: concat() takes 1 positional argument but 2 were given
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 329, in getAvgFlightInTime
+    logging.debug("Xception:getAvgFlightInTime="+e)
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+TypeError: can only concatenate str (not "TypeError") to str
+2024-06-23 08:55:38,658 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:55:38] "[35m[1mGET /getAvgFlightInTime HTTP/1.1[0m" 500 -
+2024-06-23 08:56:09,472 INFO root MainThread : Started
+2024-06-23 08:56:09,495 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-23 08:56:09,496 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-23 08:56:11,556 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:56:11] "POST /upload HTTP/1.1" 200 -
+2024-06-23 08:56:12,065 INFO root MainThread : /getAvgFlightInTime....
+2024-06-23 08:56:12,066 INFO root MainThread : >>----->>> START:getAvgFlightInTime:UUID:=57008e14-3110-11ef-b5df-005056c00008 <<<-----<<
+2024-06-23 08:56:12,085 ERROR app MainThread : Exception on /getAvgFlightInTime [GET]
+Traceback (most recent call last):
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 318, in getAvgFlightInTime
+    filght_ts = pd.concat(ts_arrival, ts_departure)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: concat() takes 1 positional argument but 2 were given
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 329, in getAvgFlightInTime
+    logging.debug("Xception:getAvgFlightInTime="+e)
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+TypeError: can only concatenate str (not "TypeError") to str
+2024-06-23 08:56:12,090 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:56:12] "[35m[1mGET /getAvgFlightInTime HTTP/1.1[0m" 500 -
+2024-06-23 08:56:57,081 INFO root MainThread : Started
+2024-06-23 08:56:57,090 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-23 08:56:57,091 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-23 08:57:00,555 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:57:00] "POST /upload HTTP/1.1" 200 -
+2024-06-23 08:57:01,550 INFO root MainThread : /getAvgFlightInTime....
+2024-06-23 08:57:01,551 INFO root MainThread : >>----->>> START:getAvgFlightInTime:UUID:=747f5c8e-3110-11ef-be47-005056c00008 <<<-----<<
+2024-06-23 08:57:01,588 ERROR app MainThread : Exception on /getAvgFlightInTime [GET]
+Traceback (most recent call last):
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 319, in getAvgFlightInTime
+    final_df = pd.concat(filght_ts, average_time)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: concat() takes 1 positional argument but 2 were given
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 328, in getAvgFlightInTime
+    logging.debug("Xception:getAvgFlightInTime="+e)
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+TypeError: can only concatenate str (not "TypeError") to str
+2024-06-23 08:57:01,594 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:57:01] "[35m[1mGET /getAvgFlightInTime HTTP/1.1[0m" 500 -
+2024-06-23 08:57:35,186 INFO root MainThread : Started
+2024-06-23 08:57:35,199 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-23 08:57:35,200 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-23 08:57:37,442 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:57:37] "POST /upload HTTP/1.1" 200 -
+2024-06-23 08:57:38,572 INFO root MainThread : /getAvgFlightInTime....
+2024-06-23 08:57:38,573 INFO root MainThread : >>----->>> START:getAvgFlightInTime:UUID:=8a907c8d-3110-11ef-9240-005056c00008 <<<-----<<
+2024-06-23 08:57:38,680 ERROR app MainThread : Exception on /getAvgFlightInTime [GET]
+Traceback (most recent call last):
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 320, in getAvgFlightInTime
+    final_df = pd.concat(flight_ts, average_time)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: concat() takes 1 positional argument but 2 were given
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 329, in getAvgFlightInTime
+    logging.debug("Xception:getAvgFlightInTime="+e)
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+TypeError: can only concatenate str (not "TypeError") to str
+2024-06-23 08:57:38,687 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:57:38] "[35m[1mGET /getAvgFlightInTime HTTP/1.1[0m" 500 -
+2024-06-23 08:58:30,333 INFO root MainThread : Started
+2024-06-23 08:58:30,351 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-23 08:58:30,353 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-23 08:58:34,084 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:58:34] "POST /upload HTTP/1.1" 200 -
+2024-06-23 08:58:35,566 INFO root MainThread : /getAvgFlightInTime....
+2024-06-23 08:58:35,567 INFO root MainThread : >>----->>> START:getAvgFlightInTime:UUID:=ac8909ae-3110-11ef-b9cb-005056c00008 <<<-----<<
+2024-06-23 08:58:35,624 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:58:35] "GET /getAvgFlightInTime HTTP/1.1" 200 -
+2024-06-23 08:59:16,151 INFO root MainThread : Started
+2024-06-23 08:59:16,162 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-23 08:59:16,163 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-23 08:59:20,023 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:59:20] "POST /upload HTTP/1.1" 200 -
+2024-06-23 08:59:22,075 INFO root MainThread : /getAvgFlightInTime....
+2024-06-23 08:59:22,076 INFO root MainThread : >>----->>> START:getAvgFlightInTime:UUID:=c841b7a6-3110-11ef-8331-005056c00008 <<<-----<<
+2024-06-23 08:59:22,114 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 08:59:22] "GET /getAvgFlightInTime HTTP/1.1" 200 -
+2024-06-23 09:01:56,510 INFO root MainThread : Started
+2024-06-23 09:01:56,531 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-23 09:01:56,531 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-23 09:02:00,928 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 09:02:00] "POST /upload HTTP/1.1" 200 -
+2024-06-23 09:02:01,775 INFO root MainThread : /getAvgFlightInTime....
+2024-06-23 09:02:01,776 INFO root MainThread : >>----->>> START:getAvgFlightInTime:UUID:=2771ff12-3111-11ef-ad6b-005056c00008 <<<-----<<
+2024-06-23 09:02:01,808 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 09:02:01] "GET /getAvgFlightInTime HTTP/1.1" 200 -
+2024-06-23 09:03:29,515 INFO root MainThread : Started
+2024-06-23 09:03:29,537 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-23 09:03:29,538 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-23 09:03:32,580 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 09:03:32] "POST /upload HTTP/1.1" 200 -
+2024-06-23 09:03:34,077 INFO root MainThread : /getAvgFlightInTime....
+2024-06-23 09:03:34,079 INFO root MainThread : >>----->>> START:getAvgFlightInTime:UUID:=5e762186-3111-11ef-b902-005056c00008 <<<-----<<
+2024-06-23 09:03:34,093 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 09:03:34] "GET /getAvgFlightInTime HTTP/1.1" 200 -
+2024-06-23 09:04:36,007 INFO root MainThread : Started
+2024-06-23 09:04:36,031 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-23 09:04:36,032 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-23 09:04:40,125 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 09:04:40] "POST /upload HTTP/1.1" 200 -
+2024-06-23 09:04:41,546 INFO root MainThread : /getAvgFlightInTime....
+2024-06-23 09:04:41,547 INFO root MainThread : >>----->>> START:getAvgFlightInTime:UUID:=86ad19c2-3111-11ef-967e-005056c00008 <<<-----<<
+2024-06-23 09:04:41,567 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 09:04:41] "GET /getAvgFlightInTime HTTP/1.1" 200 -
+2024-06-23 09:07:33,774 INFO root MainThread : Started
+2024-06-23 09:07:33,796 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-23 09:07:33,797 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-23 09:07:36,344 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 09:07:36] "POST /upload HTTP/1.1" 200 -
+2024-06-23 09:07:37,483 INFO root MainThread : /getAvgFlightInTime....
+2024-06-23 09:07:37,484 INFO root MainThread : >>----->>> START:getAvgFlightInTime:UUID:=ef8b094d-3111-11ef-9470-005056c00008 <<<-----<<
+2024-06-23 09:07:37,485 ERROR app MainThread : Exception on /getAvgFlightInTime [GET]
+Traceback (most recent call last):
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 310, in getAvgFlightInTime
+    final_df = get_avg_flight_intime(sales_order_details)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Freelance\py-SaudiCaterers\commons.py", line 12, in get_avg_flight_intime
+    ts_arrival = pd.DataFrame(sales_order_details['Date'].astype(str) +' '+ sales_order_details['Arrival Time'].astype(str),columns = ["arrival"])
+                 ^^
+NameError: name 'pd' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 318, in getAvgFlightInTime
+    logging.debug("Xception:getAvgFlightInTime="+e)
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+TypeError: can only concatenate str (not "NameError") to str
+2024-06-23 09:07:37,493 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 09:07:37] "[35m[1mGET /getAvgFlightInTime HTTP/1.1[0m" 500 -
+2024-06-23 09:08:27,084 INFO root MainThread : Started
+2024-06-23 09:08:27,105 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-23 09:08:27,107 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-23 09:08:30,504 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 09:08:30] "POST /upload HTTP/1.1" 200 -
+2024-06-23 09:08:31,525 INFO root MainThread : /getAvgFlightInTime....
+2024-06-23 09:08:31,526 INFO root MainThread : >>----->>> START:getAvgFlightInTime:UUID:=0fc12ac1-3112-11ef-addb-005056c00008 <<<-----<<
+2024-06-23 09:08:31,544 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 09:08:31] "GET /getAvgFlightInTime HTTP/1.1" 200 -
+2024-06-23 09:08:52,046 INFO root MainThread : /getMealsPerDestinatin....
+2024-06-23 09:08:52,047 INFO root MainThread : >>----->>> START:getMealsPerDestinatin:UUID:=1bfc434b-3112-11ef-be06-005056c00008 <<<-----<<
+2024-06-23 09:08:52,064 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 09:08:52] "GET /getMealsPerDestinatin HTTP/1.1" 200 -
+2024-06-23 09:09:03,240 INFO root MainThread : /getMealsMonthly....
+2024-06-23 09:09:03,241 INFO root MainThread : >>----->>> START:getMealsMonthly:UUID:=22a8754f-3112-11ef-ab10-005056c00008 <<<-----<<
+2024-06-23 09:09:03,245 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 09:09:03] "GET /getMealsMonthly HTTP/1.1" 200 -
+2024-06-23 09:09:12,027 INFO root MainThread : /getCostOfOrdersPlaces....
+2024-06-23 09:09:12,028 INFO root MainThread : >>----->>> START:getCostOfOrdersPlaces:UUID:=27e53d46-3112-11ef-a7ce-005056c00008 <<<-----<<
+2024-06-23 09:09:12,030 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 09:09:12] "GET /getCostOfOrdersPlaces HTTP/1.1" 200 -
+2024-06-23 09:09:18,922 INFO root MainThread : /getMealCatStats....
+2024-06-23 09:09:18,924 INFO root MainThread : >>----->>> START:getMealCatStats:UUID:=2c019685-3112-11ef-9f76-005056c00008 <<<-----<<
+2024-06-23 09:09:18,928 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 09:09:18] "GET /getMealCatStats HTTP/1.1" 200 -
+2024-06-23 09:09:28,806 INFO root MainThread : /getAllRoutes....
+2024-06-23 09:09:28,807 INFO root MainThread : >>----->>> START:getAllRoutes:UUID:=31e583f4-3112-11ef-991f-005056c00008 <<<-----<<
+2024-06-23 09:09:28,811 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 09:09:28] "GET /getAllRoutes HTTP/1.1" 200 -
+2024-06-23 09:09:44,766 INFO root MainThread : /getAverageMealsServed....
+2024-06-23 09:09:44,767 INFO root MainThread : >>----->>> START:getAverageMealsServed:UUID:=3b68d768-3112-11ef-9948-005056c00008 <<<-----<<
+2024-06-23 09:09:44,769 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 09:09:44] "GET /getAverageMealsServed HTTP/1.1" 200 -
+2024-06-23 09:09:52,870 INFO root MainThread : /getAllSales....
+2024-06-23 09:09:52,871 INFO root MainThread : >>----->>> START:getAllSales:UUID:=403d6fed-3112-11ef-bd45-005056c00008 <<<-----<<
+2024-06-23 09:09:52,874 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 09:09:52] "GET /getAllSales HTTP/1.1" 200 -
+2024-06-23 09:10:05,292 INFO root MainThread : /seasonality....
+2024-06-23 09:10:05,293 INFO root MainThread : >>----->>> START:seasonality:UUID:=47a4e566-3112-11ef-8c67-005056c00008 <<<-----<<
+2024-06-23 09:10:05,295 INFO werkzeug MainThread : 127.0.0.1 - - [23/Jun/2024 09:10:05] "GET /seasonality HTTP/1.1" 200 -
+2024-06-23 09:10:12,594 INFO root MainThread : /trend....
+2024-06-23 09:10:12,595 INFO root MainThread : >>----->>> START:TREND:UUID:=4bff0289-3112-11ef-9cf8-005056c00008 <<<-----<<

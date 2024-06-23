@@ -9,7 +9,7 @@ from werkzeug.serving import run_simple
 import logging
 from logging.config import dictConfig
 from logging.handlers import RotatingFileHandler
-from commons import get_uuid
+from commons import get_uuid, get_avg_flight_intime
 from sales_filter import get_sales_data
 import numpy as np
 
@@ -294,6 +294,28 @@ def getMealsPerDestinatin():
     except Exception as e:
         print(e)
         logging.debug("Xception:getMealsPerDestinatin="+e)
+
+
+@app.route('/getAvgFlightInTime', methods=['GET'])    
+@cross_origin()
+def getAvgFlightInTime():
+    logging.info('/getAvgFlightInTime....')
+    cur_datetime, uid = get_uuid()
+    logging.info(">>----->>> START:getAvgFlightInTime:UUID:="+str(uid)+" <<<-----<<")
+    try:
+        global sales_order_details
+        if 'sales_order_details' not in globals():
+            return jsonify({"message": "No CSV file uploaded"}), 400
+
+        final_df = get_avg_flight_intime(sales_order_details)
+        dataframe = json.loads(final_df.to_json(orient="records"))
+        data = {
+          "data": dataframe
+        }
+        return Response(json.dumps(data),mimetype='application/json')
+    except Exception as e:
+        print(e)
+        logging.debug("Xception:getAvgFlightInTime="+e)
 
 
 if __name__ == '__main__':
