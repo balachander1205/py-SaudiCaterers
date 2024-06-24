@@ -194,7 +194,7 @@ def getAllRoutes():
         if 'sales_order_details' not in globals():
             return jsonify({"message": "No CSV file uploaded"}), 400
 
-        df2 = sales_order_details.groupby(['Route']).size().reset_index(name='Count')
+        df2 = sales_order_details.groupby(['Route','Latitude','Longitude']).size().reset_index(name='Count')
         dataframe = json.loads(df2.to_json(orient="records"))
         data = {
           "data": dataframe
@@ -260,13 +260,19 @@ def getMealsMonthly():
     
         # sales_order_details['Date'] = pd.to_datetime(sales_order_details['Date'])
         # totalSum = sales_order_details.groupby([pd.to_datetime(sales_order_details['Date']).dt.month, 'Date']).agg({'orders': sum})
-        final_df = sales_order_details[['Date', 'orders']]
+        sales_order_details['Date'] = pd.to_datetime(sales_order_details['Date'])
+        totalSum = sales_order_details.groupby(sales_order_details['Date'].dt.month)['orders'].sum().reset_index(name='orders')
+        final_df = totalSum.rename(columns={'Date': 'month'})
+        print(final_df)
+        # final_df = sales_order_details[['Date', 'orders']]
         # totalSum = final_df.groupby([pd.to_datetime(final_df['Date']).dt.month, 'Date']).agg({'orders': sum})
         # print(final_df)
         # print(totalSum)
         dataframe = json.loads(final_df.to_json(orient="records"))
+        # dataframe2 = json.loads(totalSum.to_json(orient="records"))
         data = {
-          "data": dataframe
+          "data": dataframe,
+          # "data": dataframe2
         }
         return Response(json.dumps(data),mimetype='application/json')
     except Exception as e:
@@ -307,15 +313,50 @@ def getAvgFlightInTime():
         if 'sales_order_details' not in globals():
             return jsonify({"message": "No CSV file uploaded"}), 400
 
-        final_df = get_avg_flight_intime(sales_order_details)
+        final_df, average_flight_in_time = get_avg_flight_intime(sales_order_details)
         dataframe = json.loads(final_df.to_json(orient="records"))
+        # average_flight_in_time = json.loads(average_flight_in_time.to_json(orient="records"))
         data = {
-          "data": dataframe
+          # "data": dataframe,
+          "avg_flight_in_time": str( average_flight_in_time)
         }
         return Response(json.dumps(data),mimetype='application/json')
     except Exception as e:
         print(e)
         logging.debug("Xception:getAvgFlightInTime="+e)
+
+@app.route('/getMaxOrdersPlacedTime', methods=['GET'])    
+@cross_origin()
+def getMaxOrdersPlacedTime():
+    logging.info('/getMaxOrdersPlacedTime....')
+    cur_datetime, uid = get_uuid()
+    logging.info(">>----->>> START:getMaxOrdersPlacedTime:UUID:="+str(uid)+" <<<-----<<")
+    try:
+        global sales_order_details
+        if 'sales_order_details' not in globals():
+            return jsonify({"message": "No CSV file uploaded"}), 400
+
+        total_orders = sales_order_details.groupby(['Flight Number','Latitude','Longitude','Route','Date','Arrival Time','Departure time','Arrival location'])['orders'].sum().reset_index().max()
+        print(total_orders)
+        dataframe = json.loads(total_orders.to_json(orient="records"))
+        # average_flight_in_time = json.loads(average_flight_in_time.to_json(orient="records"))
+        data = {
+          "data": {
+          "flight": total_orders[0],
+          "Latitude": total_orders[1],
+          "Longitude": total_orders[2],
+          "Route": total_orders[3],
+          "Date": str(total_orders[4]),
+          "Arrival": str(total_orders[5]),
+          "Departure": str(total_orders[6]),
+          # "Arrival_location": total_orders[7],
+          "orders": total_orders[8]
+          }
+        }
+        return Response(json.dumps(data),mimetype='application/json')
+    except Exception as e:
+        print(e)
+        logging.debug("Xception:getMaxOrdersPlacedTime="+e)
 
 
 if __name__ == '__main__':

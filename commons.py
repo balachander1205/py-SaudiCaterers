@@ -15,7 +15,11 @@ def get_avg_flight_intime(sales_order_details):
 	ts_departure = pd.DataFrame(sales_order_details['Date'].astype(str) +' '+ sales_order_details['Departure time'].astype(str),columns = ["departure"])
 	ts_departure['departure'] = pd.to_datetime(ts_departure['departure'])
 	ts_arrival['arrival'] = pd.to_datetime(ts_arrival['arrival'])
-	average_time = pd.DataFrame(ts_arrival['arrival'] - ts_departure['departure'],columns = ["average_time"])
-	flight_ts = [sales_order_details['Route'],sales_order_details['Flight Number'],ts_arrival['arrival'], ts_departure['departure'],average_time['average_time']]
+	average_time = pd.DataFrame(ts_arrival['arrival'] - ts_departure['departure'],columns = ["time_difference"])
+	total_flights = sales_order_details.groupby(['Flight Number']).size().reset_index(name='total_flights')
+	print("total_flights=",len(total_flights))
+	average_flight_in_time = average_time["time_difference"].mean()
+	print(average_flight_in_time)
+	flight_ts = [sales_order_details['Route'],sales_order_details['Flight Number'],ts_arrival['arrival'].astype(str), ts_departure['departure'].astype(str),average_time['time_difference'].astype(str)]
 	final_df = pd.concat(flight_ts, axis=1)
-	return final_df
+	return final_df, average_flight_in_time
