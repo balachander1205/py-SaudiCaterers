@@ -423,6 +423,39 @@
           }
         }
       }
+    },
+    "/getMealsPerDestinationFilter": {
+      "post": {
+        "tags": [
+          "Sales data api"
+        ],
+        "summary": "Get Meals Per Destination with Filter",
+        "requestBody": {
+          "description": "Get Meals Per Destination with Filter",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/salesInsightsRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/components/schemas/salesInsightsResponse"
+            }
+          },
+          "404": {
+            "description": "NOT FOUND",
+            "schema": {
+              "$ref": "#/components/schemas/salesInsightsResponse"
+            }
+          }
+        }
+      }
     }
   }
 }

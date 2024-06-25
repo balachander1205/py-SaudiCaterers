@@ -10,7 +10,7 @@ import logging
 from logging.config import dictConfig
 from logging.handlers import RotatingFileHandler
 from commons import get_uuid, get_avg_flight_intime
-from sales_filter import get_sales_data
+from sales_filter import get_sales_data, get_meals_per_destination_with_filter
 import numpy as np
 
 app = Flask(__name__)
@@ -130,7 +130,7 @@ def trend():
         
         month = trend.date
         trend_data = trend.Trend
-        dataset = pd.DataFrame({'date': month, 'trend': trend_data})
+        dataset = pd.DataFrame({'date': month.astype(str), 'trend': trend_data})
         dataframe = json.loads(dataset.to_json(orient="records"))
         data = {
           "data": dataframe
@@ -261,15 +261,12 @@ def getMealsMonthly():
         # sales_order_details['Date'] = pd.to_datetime(sales_order_details['Date'])
         # totalSum = sales_order_details.groupby([pd.to_datetime(sales_order_details['Date']).dt.month, 'Date']).agg({'orders': sum})
         sales_order_details['Date'] = pd.to_datetime(sales_order_details['Date'])
-        totalSum = sales_order_details.groupby(sales_order_details['Date'].dt.month)['orders'].sum().reset_index(name='orders')
+        # totalSum = sales_order_details.groupby(sales_order_details['Date'].dt.month)['orders'].sum().reset_index(name='orders')
+        totalSum = pd.DataFrame(sales_order_details.groupby([sales_order_details['Date'].dt.month,'Item category'])['orders'].sum().reset_index(name='orders'))
+        print("totalSum=\n",totalSum)
         final_df = totalSum.rename(columns={'Date': 'month'})
         print(final_df)
-        # final_df = sales_order_details[['Date', 'orders']]
-        # totalSum = final_df.groupby([pd.to_datetime(final_df['Date']).dt.month, 'Date']).agg({'orders': sum})
-        # print(final_df)
-        # print(totalSum)
         dataframe = json.loads(final_df.to_json(orient="records"))
-        # dataframe2 = json.loads(totalSum.to_json(orient="records"))
         data = {
           "data": dataframe,
           # "data": dataframe2
@@ -358,9 +355,31 @@ def getMaxOrdersPlacedTime():
         print(e)
         logging.debug("Xception:getMaxOrdersPlacedTime="+e)
 
+@app.route('/getMealsPerDestinationFilter', methods=['POST'])    
+@cross_origin()
+def getMealsPerDestinationFilter():
+    logging.info('/getMealsPerDestinationFilter....')
+    cur_datetime, uid = get_uuid()
+    logging.info(">>----->>> START:getMealsPerDestinationFilter:UUID:="+str(uid)+" <<<-----<<")
+    data = json.loads(request.data)
+    print(data)
+    try:
+        global sales_order_details
+        if 'sales_order_details' not in globals():
+            return jsonify({"message": "No CSV file uploaded"}), 400
+
+        data = get_meals_per_destination_with_filter(data, sales_order_details)
+        total_orders = data.groupby('Arrival location')['orders'].sum().reset_index(name='orders')
+        final_data = json.dumps(json.loads(total_orders.to_json(orient="records")))
+        print("data=\n",total_orders)
+        return Response(final_data , mimetype='application/json')
+    except Exception as e:
+        print(e)
+        logging.debug("Xception:getMealsPerDestinationFilter="+e)
 
 if __name__ == '__main__':
     logging.basicConfig(format='%(levelname)s:%(message)s', level=logging.DEBUG)    
     logging.info('Started')
+    print('Server Started at http://127.0.0.1:5001')
     # app.run(host='127.0.0.1', port=5001,debug=True, threaded=True)
     run_simple('127.0.0.1', 5001, app)
