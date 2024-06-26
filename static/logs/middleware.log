@@ -7935,3 +7935,120 @@ TypeError: can only concatenate str (not "SyntaxError") to str
 2024-06-25 21:59:55,460 INFO root MainThread : /getMealsPerDestinationFilter....
 2024-06-25 21:59:55,460 INFO root MainThread : >>----->>> START:getMealsPerDestinationFilter:UUID:=27f48f94-3310-11ef-9ab5-005056c00008 <<<-----<<
 2024-06-25 21:59:55,481 INFO werkzeug MainThread : 127.0.0.1 - - [25/Jun/2024 21:59:55] "POST /getMealsPerDestinationFilter HTTP/1.1" 200 -
+2024-06-26 19:31:23,398 INFO root MainThread : Started
+2024-06-26 19:31:23,409 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-26 19:31:23,410 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-26 19:31:27,986 INFO werkzeug MainThread : 127.0.0.1 - - [26/Jun/2024 19:31:27] "GET /swagger/ HTTP/1.1" 200 -
+2024-06-26 19:31:28,277 INFO werkzeug MainThread : 127.0.0.1 - - [26/Jun/2024 19:31:28] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+2024-06-26 19:31:28,322 INFO werkzeug MainThread : 127.0.0.1 - - [26/Jun/2024 19:31:28] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+2024-06-26 19:31:28,324 INFO werkzeug MainThread : 127.0.0.1 - - [26/Jun/2024 19:31:28] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2024-06-26 19:31:28,325 INFO werkzeug MainThread : 127.0.0.1 - - [26/Jun/2024 19:31:28] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2024-06-26 19:31:28,429 INFO werkzeug MainThread : 127.0.0.1 - - [26/Jun/2024 19:31:28] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+2024-06-26 19:31:28,768 INFO werkzeug MainThread : 127.0.0.1 - - [26/Jun/2024 19:31:28] "GET /static/swagger.json HTTP/1.1" 200 -
+2024-06-26 19:31:36,698 INFO werkzeug MainThread : 127.0.0.1 - - [26/Jun/2024 19:31:36] "POST /upload HTTP/1.1" 200 -
+2024-06-26 19:31:41,420 INFO root MainThread : /getKeyDemandDrivers....
+2024-06-26 19:31:41,421 INFO root MainThread : >>----->>> START:getKeyDemandDrivers:UUID:=9d1bb401-33c4-11ef-8e4e-005056c00008 <<<-----<<
+2024-06-26 19:31:41,432 INFO werkzeug MainThread : 127.0.0.1 - - [26/Jun/2024 19:31:41] "GET /getKeyDemandDrivers HTTP/1.1" 200 -
+2024-06-26 19:34:09,801 INFO root MainThread : Started
+2024-06-26 19:34:09,807 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-26 19:34:09,807 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-26 19:34:12,568 INFO werkzeug MainThread : 127.0.0.1 - - [26/Jun/2024 19:34:12] "GET /swagger/ HTTP/1.1" 200 -
+2024-06-26 19:34:12,614 INFO werkzeug MainThread : 127.0.0.1 - - [26/Jun/2024 19:34:12] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+2024-06-26 19:34:12,825 INFO werkzeug MainThread : 127.0.0.1 - - [26/Jun/2024 19:34:12] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+2024-06-26 19:34:12,888 INFO werkzeug MainThread : 127.0.0.1 - - [26/Jun/2024 19:34:12] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2024-06-26 19:34:12,889 INFO werkzeug MainThread : 127.0.0.1 - - [26/Jun/2024 19:34:12] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2024-06-26 19:34:13,276 INFO werkzeug MainThread : 127.0.0.1 - - [26/Jun/2024 19:34:13] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+2024-06-26 19:34:13,538 INFO werkzeug MainThread : 127.0.0.1 - - [26/Jun/2024 19:34:13] "GET /static/swagger.json HTTP/1.1" 200 -
+2024-06-26 19:34:13,615 INFO werkzeug MainThread : 127.0.0.1 - - [26/Jun/2024 19:34:13] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+2024-06-26 19:34:22,375 INFO werkzeug MainThread : 127.0.0.1 - - [26/Jun/2024 19:34:22] "POST /upload HTTP/1.1" 200 -
+2024-06-26 19:34:27,156 INFO root MainThread : /getAccuracyDetails....
+2024-06-26 19:34:27,156 INFO root MainThread : >>----->>> START:getAccuracyDetails:UUID:=ffe4bae6-33c4-11ef-bdc0-005056c00008 <<<-----<<
+2024-06-26 19:34:27,157 INFO werkzeug MainThread : 127.0.0.1 - - [26/Jun/2024 19:34:27] "GET /getAccuracyDetails HTTP/1.1" 200 -
+2024-06-26 19:35:16,446 INFO root MainThread : Started
+2024-06-26 19:35:16,451 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-26 19:35:16,452 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-26 19:35:19,975 INFO werkzeug MainThread : 127.0.0.1 - - [26/Jun/2024 19:35:19] "POST /upload HTTP/1.1" 200 -
+2024-06-26 19:35:21,623 INFO root MainThread : /getAccuracyDetails....
+2024-06-26 19:35:21,624 INFO root MainThread : >>----->>> START:getAccuracyDetails:UUID:=205bb9e8-33c5-11ef-9b34-005056c00008 <<<-----<<
+2024-06-26 19:35:21,634 INFO werkzeug MainThread : 127.0.0.1 - - [26/Jun/2024 19:35:21] "GET /getAccuracyDetails HTTP/1.1" 200 -
+2024-06-26 19:36:49,913 INFO root MainThread : Started
+2024-06-26 19:36:49,921 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-26 19:36:49,921 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-26 19:36:51,456 INFO werkzeug MainThread : 127.0.0.1 - - [26/Jun/2024 19:36:51] "GET /swagger/ HTTP/1.1" 200 -
+2024-06-26 19:36:51,500 INFO werkzeug MainThread : 127.0.0.1 - - [26/Jun/2024 19:36:51] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+2024-06-26 19:36:51,719 INFO werkzeug MainThread : 127.0.0.1 - - [26/Jun/2024 19:36:51] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+2024-06-26 19:36:51,782 INFO werkzeug MainThread : 127.0.0.1 - - [26/Jun/2024 19:36:51] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2024-06-26 19:36:51,784 INFO werkzeug MainThread : 127.0.0.1 - - [26/Jun/2024 19:36:51] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2024-06-26 19:36:52,184 INFO werkzeug MainThread : 127.0.0.1 - - [26/Jun/2024 19:36:52] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+2024-06-26 19:36:52,446 INFO werkzeug MainThread : 127.0.0.1 - - [26/Jun/2024 19:36:52] "GET /static/swagger.json HTTP/1.1" 200 -
+2024-06-26 19:36:52,508 INFO werkzeug MainThread : 127.0.0.1 - - [26/Jun/2024 19:36:52] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+2024-06-26 19:37:05,167 INFO werkzeug MainThread : 127.0.0.1 - - [26/Jun/2024 19:37:05] "POST /upload HTTP/1.1" 200 -
+2024-06-26 19:37:10,738 INFO root MainThread : /getBiasDetails....
+2024-06-26 19:37:10,740 INFO root MainThread : >>----->>> START:getBiasDetails:UUID:=6165a89e-33c5-11ef-a897-005056c00008 <<<-----<<
+2024-06-26 19:37:10,741 INFO werkzeug MainThread : 127.0.0.1 - - [26/Jun/2024 19:37:10] "GET /getBiasDetails HTTP/1.1" 200 -
+2024-06-26 20:20:24,396 INFO root MainThread : /getBiasDetails....
+2024-06-26 20:20:24,397 INFO root MainThread : >>----->>> START:getBiasDetails:UUID:=6b565c84-33cb-11ef-b1b8-005056c00008 <<<-----<<
+2024-06-26 20:20:24,407 INFO werkzeug MainThread : 127.0.0.1 - - [26/Jun/2024 20:20:24] "GET /getBiasDetails HTTP/1.1" 200 -
+2024-06-26 20:20:29,102 INFO root MainThread : /getAccuracyDetails....
+2024-06-26 20:20:29,103 INFO root MainThread : >>----->>> START:getAccuracyDetails:UUID:=6e247e75-33cb-11ef-90ee-005056c00008 <<<-----<<
+2024-06-26 20:20:29,104 INFO werkzeug MainThread : 127.0.0.1 - - [26/Jun/2024 20:20:29] "GET /getAccuracyDetails HTTP/1.1" 200 -
+2024-06-26 20:20:35,762 INFO root MainThread : /getKeyDemandDrivers....
+2024-06-26 20:20:35,762 INFO root MainThread : >>----->>> START:getKeyDemandDrivers:UUID:=721c7f65-33cb-11ef-a66d-005056c00008 <<<-----<<
+2024-06-26 20:20:35,763 INFO werkzeug MainThread : 127.0.0.1 - - [26/Jun/2024 20:20:35] "GET /getKeyDemandDrivers HTTP/1.1" 200 -
+2024-06-26 20:37:41,235 INFO root MainThread : Started
+2024-06-26 20:37:41,243 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-26 20:37:41,244 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-26 20:37:50,322 INFO werkzeug MainThread : 127.0.0.1 - - [26/Jun/2024 20:37:50] "GET /swagger/ HTTP/1.1" 200 -
+2024-06-26 20:37:50,378 INFO werkzeug MainThread : 127.0.0.1 - - [26/Jun/2024 20:37:50] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+2024-06-26 20:37:50,571 INFO werkzeug MainThread : 127.0.0.1 - - [26/Jun/2024 20:37:50] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+2024-06-26 20:37:50,647 INFO werkzeug MainThread : 127.0.0.1 - - [26/Jun/2024 20:37:50] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2024-06-26 20:37:50,648 INFO werkzeug MainThread : 127.0.0.1 - - [26/Jun/2024 20:37:50] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2024-06-26 20:37:51,061 INFO werkzeug MainThread : 127.0.0.1 - - [26/Jun/2024 20:37:51] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+2024-06-26 20:37:51,313 INFO werkzeug MainThread : 127.0.0.1 - - [26/Jun/2024 20:37:51] "GET /static/swagger.json HTTP/1.1" 200 -
+2024-06-26 20:37:51,390 INFO werkzeug MainThread : 127.0.0.1 - - [26/Jun/2024 20:37:51] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+2024-06-26 20:38:00,400 INFO werkzeug MainThread : 127.0.0.1 - - [26/Jun/2024 20:38:00] "POST /upload HTTP/1.1" 200 -
+2024-06-26 20:38:05,731 INFO root MainThread : /getDemandPerMealType....
+2024-06-26 20:38:05,732 INFO root MainThread : >>----->>> START:getDemandPerMealType:UUID:=e3f12dce-33cd-11ef-951e-005056c00008 <<<-----<<
+2024-06-26 20:38:05,760 INFO werkzeug MainThread : 127.0.0.1 - - [26/Jun/2024 20:38:05] "GET /getDemandPerMealType HTTP/1.1" 200 -
+2024-06-26 20:39:14,471 INFO root MainThread : Started
+2024-06-26 20:39:14,480 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-26 20:39:14,480 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-26 20:39:17,768 INFO werkzeug MainThread : 127.0.0.1 - - [26/Jun/2024 20:39:17] "POST /upload HTTP/1.1" 200 -
+2024-06-26 20:39:19,170 INFO root MainThread : /getDemandPerMealType....
+2024-06-26 20:39:19,170 INFO root MainThread : >>----->>> START:getDemandPerMealType:UUID:=0fb6f8e0-33ce-11ef-97a0-005056c00008 <<<-----<<
+2024-06-26 20:39:19,181 INFO werkzeug MainThread : 127.0.0.1 - - [26/Jun/2024 20:39:19] "GET /getDemandPerMealType HTTP/1.1" 200 -
+2024-06-26 20:39:42,105 INFO root MainThread : Started
+2024-06-26 20:39:42,114 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-26 20:39:42,114 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-26 20:39:45,063 INFO werkzeug MainThread : 127.0.0.1 - - [26/Jun/2024 20:39:45] "POST /upload HTTP/1.1" 200 -
+2024-06-26 20:39:47,112 INFO root MainThread : /getDemandPerMealType....
+2024-06-26 20:39:47,112 INFO root MainThread : >>----->>> START:getDemandPerMealType:UUID:=205e98ec-33ce-11ef-9135-005056c00008 <<<-----<<
+2024-06-26 20:39:47,119 INFO werkzeug MainThread : 127.0.0.1 - - [26/Jun/2024 20:39:47] "GET /getDemandPerMealType HTTP/1.1" 200 -
+2024-06-26 20:55:21,057 INFO root MainThread : /getMealsMonthly....
+2024-06-26 20:55:21,057 INFO root MainThread : >>----->>> START:getMealsMonthly:UUID:=4d0b5dfd-33d0-11ef-aa8b-005056c00008 <<<-----<<
+2024-06-26 20:55:21,078 INFO werkzeug MainThread : 127.0.0.1 - - [26/Jun/2024 20:55:21] "GET /getMealsMonthly HTTP/1.1" 200 -
+2024-06-26 21:27:16,201 INFO root MainThread : Started
+2024-06-26 21:27:16,206 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-26 21:27:16,206 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-26 21:27:22,878 INFO werkzeug MainThread : 127.0.0.1 - - [26/Jun/2024 21:27:22] "POST /upload HTTP/1.1" 200 -
+2024-06-26 21:27:28,250 INFO root MainThread : /getMealsMonthly....
+2024-06-26 21:27:28,252 INFO root MainThread : >>----->>> START:getMealsMonthly:UUID:=c9bddb99-33d4-11ef-9fa3-005056c00008 <<<-----<<
+2024-06-26 21:27:28,262 INFO werkzeug MainThread : 127.0.0.1 - - [26/Jun/2024 21:27:28] "GET /getMealsMonthly HTTP/1.1" 200 -
+2024-06-26 21:35:00,621 INFO root MainThread : Started
+2024-06-26 21:35:00,626 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-26 21:35:00,626 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-26 21:35:08,056 INFO werkzeug MainThread : 127.0.0.1 - - [26/Jun/2024 21:35:08] "POST /upload HTTP/1.1" 200 -
+2024-06-26 21:35:10,589 INFO root MainThread : /getMealsMonthly....
+2024-06-26 21:35:10,589 INFO root MainThread : >>----->>> START:getMealsMonthly:UUID:=dd50f79f-33d5-11ef-8cce-005056c00008 <<<-----<<
+2024-06-26 21:35:10,602 INFO werkzeug MainThread : 127.0.0.1 - - [26/Jun/2024 21:35:10] "GET /getMealsMonthly HTTP/1.1" 200 -
+2024-06-26 21:35:14,428 INFO root MainThread : /getDemandPerMealType....
+2024-06-26 21:35:14,429 INFO root MainThread : >>----->>> START:getDemandPerMealType:UUID:=df9ae6b8-33d5-11ef-a6e2-005056c00008 <<<-----<<

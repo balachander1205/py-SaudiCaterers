@@ -9,7 +9,7 @@ from werkzeug.serving import run_simple
 import logging
 from logging.config import dictConfig
 from logging.handlers import RotatingFileHandler
-from commons import get_uuid, get_avg_flight_intime
+from commons import get_uuid, get_avg_flight_intime, get_meals_monthly_formatted_data, get_demand_per_meal_type_formatted_data
 from sales_filter import get_sales_data, get_meals_per_destination_with_filter
 import numpy as np
 
@@ -63,12 +63,20 @@ def upload_file():
         global seasonality
         global trend
         global Sheet1
+        global Accuracy
+        global Bias
+        global key_demand_drivers
+        global demand_per_meal_type
 
         sales_order_details = pd.read_excel(path,sheet_name='Sales-Order details')
         palnned_flights = pd.read_excel(path,sheet_name='Palnned flights')
         seasonality = pd.read_excel(path,sheet_name='seasonality')
         trend = pd.read_excel(path,sheet_name='trend')
         Sheet1 = pd.read_excel(path,sheet_name='Sheet1')
+        Accuracy = pd.read_excel(path,sheet_name='Accuracy')
+        Bias = pd.read_excel(path,sheet_name='Bias')
+        key_demand_drivers = pd.read_excel(path,'Key Demand Drivers')
+        demand_per_meal_type = pd.read_excel(path,'Demand per meal type')
 
         return jsonify({"message": "File uploaded successfully", "filename": filename, "data":""}), 200
     else:
@@ -267,9 +275,9 @@ def getMealsMonthly():
         final_df = totalSum.rename(columns={'Date': 'month'})
         print(final_df)
         dataframe = json.loads(final_df.to_json(orient="records"))
+        new_df = get_meals_monthly_formatted_data(dataframe)
         data = {
-          "data": dataframe,
-          # "data": dataframe2
+          "data": new_df
         }
         return Response(json.dumps(data),mimetype='application/json')
     except Exception as e:
@@ -376,6 +384,95 @@ def getMealsPerDestinationFilter():
     except Exception as e:
         print(e)
         logging.debug("Xception:getMealsPerDestinationFilter="+e)
+
+@app.route('/getKeyDemandDrivers', methods=['GET'])    
+@cross_origin()
+def getKeyDemandDrivers():
+    logging.info('/getKeyDemandDrivers....')
+    cur_datetime, uid = get_uuid()
+    logging.info(">>----->>> START:getKeyDemandDrivers:UUID:="+str(uid)+" <<<-----<<")
+    try:
+        global key_demand_drivers
+        if 'key_demand_drivers' not in globals():
+            return jsonify({"message": "No CSV file uploaded"}), 400
+
+        # df2 = key_demand_drivers.groupby(['Route','Latitude','Longitude']).size().reset_index(name='Count')
+        dataframe = json.loads(key_demand_drivers.to_json(orient="records"))
+        data = {
+          "data": dataframe
+        }
+        return Response(json.dumps(data),mimetype='application/json')
+    except Exception as e:
+        print(e)
+        logging.debug("Xception:getKeyDemandDrivers="+e)
+
+@app.route('/getAccuracyDetails', methods=['GET'])    
+@cross_origin()
+def getAccuracyDetails():
+    logging.info('/getAccuracyDetails....')
+    cur_datetime, uid = get_uuid()
+    logging.info(">>----->>> START:getAccuracyDetails:UUID:="+str(uid)+" <<<-----<<")
+    try:
+        global Accuracy
+        if 'Accuracy' not in globals():
+            return jsonify({"message": "No CSV file uploaded"}), 400
+
+        Accuracy['Date'] = Accuracy['Date'].astype(str)
+        dataframe = json.loads(Accuracy.to_json(orient="records"))
+        data = {
+          "data": dataframe
+        }
+        return Response(json.dumps(data),mimetype='application/json')
+    except Exception as e:
+        print(e)
+        logging.debug("Xception:getAccuracyDetails="+e)
+
+@app.route('/getBiasDetails', methods=['GET'])    
+@cross_origin()
+def getBiasDetails():
+    logging.info('/getBiasDetails....')
+    cur_datetime, uid = get_uuid()
+    logging.info(">>----->>> START:getBiasDetails:UUID:="+str(uid)+" <<<-----<<")
+    try:
+        global Bias
+        if 'Bias' not in globals():
+            return jsonify({"message": "No CSV file uploaded"}), 400
+
+        Bias['Date'] = Bias['Date'].astype(str)
+        dataframe = json.loads(Bias.to_json(orient="records"))
+        data = {
+          "data": dataframe
+        }
+        return Response(json.dumps(data),mimetype='application/json')
+    except Exception as e:
+        print(e)
+        logging.debug("Xception:getBiasDetails="+e)
+
+@app.route('/getDemandPerMealType', methods=['GET'])    
+@cross_origin()
+def getDemandPerMealType():
+    logging.info('/getDemandPerMealType....')
+    cur_datetime, uid = get_uuid()
+    logging.info(">>----->>> START:getDemandPerMealType:UUID:="+str(uid)+" <<<-----<<")
+    try:
+        global demand_per_meal_type
+        if 'demand_per_meal_type' not in globals():
+            return jsonify({"message": "No CSV file uploaded"}), 400
+    
+        demand_per_meal_type['Date'] = pd.to_datetime(demand_per_meal_type['Date'])
+        totalSum = pd.DataFrame(demand_per_meal_type.groupby([demand_per_meal_type['Date'],'Type'])['Forecast'].sum().reset_index(name='Forecast'))
+        totalSum['Date'] = totalSum['Date'].astype(str)
+        print("getDemandPerMealType:totalSum=\n",totalSum)
+        dataframe = json.loads(totalSum.to_json(orient="records"))
+        new_df = get_demand_per_meal_type_formatted_data(dataframe)
+        data = {
+          "data": new_df,
+          # "data": dataframe2
+        }
+        return Response(json.dumps(data),mimetype='application/json')
+    except Exception as e:
+        print(e)
+        logging.debug("Xception:getDemandPerMealType="+e)
 
 if __name__ == '__main__':
     logging.basicConfig(format='%(levelname)s:%(message)s', level=logging.DEBUG)    
