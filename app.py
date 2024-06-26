@@ -343,19 +343,19 @@ def getMaxOrdersPlacedTime():
 
         total_orders = sales_order_details.groupby(['Flight Number','Latitude','Longitude','Route','Date','Arrival Time','Departure time','Arrival location'])['orders'].sum().reset_index().max()
         print(total_orders)
-        dataframe = json.loads(total_orders.to_json(orient="records"))
+        # dataframe = json.loads(total_orders.to_json(orient="records"))
         # average_flight_in_time = json.loads(average_flight_in_time.to_json(orient="records"))
         data = {
           "data": {
-          "flight": total_orders[0],
-          "Latitude": total_orders[1],
-          "Longitude": total_orders[2],
-          "Route": total_orders[3],
+          "flight": str(total_orders[0]),
+          "Latitude": str(total_orders[1]),
+          "Longitude": str(total_orders[2]),
+          "Route": str(total_orders[3]),
           "Date": str(total_orders[4]),
           "Arrival": str(total_orders[5]),
           "Departure": str(total_orders[6]),
           # "Arrival_location": total_orders[7],
-          "orders": total_orders[8]
+          "orders": str(total_orders[8])
           }
         }
         return Response(json.dumps(data),mimetype='application/json')

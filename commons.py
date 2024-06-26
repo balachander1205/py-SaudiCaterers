@@ -28,13 +28,6 @@ def get_avg_flight_intime(sales_order_details):
 	return final_df, avg_flight_time
 
 def get_meals_monthly_formatted_data(dataframe):
-	# path = "C:/Users/balac/Downloads/SaudiCaterers Data template-V1.xlsx"
-	# sales_order_details = pd.read_excel(path,sheet_name='Sales-Order details')
-	# sales_order_details['Date'] = pd.to_datetime(sales_order_details['Date'])
-	# totalSum = pd.DataFrame(sales_order_details.groupby([sales_order_details['Date'].dt.month,'Item category'])['orders'].sum().reset_index(name='orders'))
-	# final_df = totalSum.rename(columns={'Date': 'month'})
-	# dataframe = json.loads(final_df.to_json(orient="records"))
-	# print("dataframe=\n",dataframe)
 	month_labels = get_month_label()
 	new_data = []
 	try:
@@ -54,20 +47,11 @@ def get_meals_monthly_formatted_data(dataframe):
 		for new_item in new_data:
 			if field_key in new_item:
 				new_item['month'] = month_labels[new_item['month']]
-		print("new_data=\n",new_data)
 		return new_data
 	except Exception as e:
 		raise e
 
 def get_demand_per_meal_type_formatted_data(dataframe):
-	# path = "C:/Users/balac/Downloads/SaudiCaterers Data template-V1.xlsx"
-	# demand_per_meal_type = pd.read_excel(path,sheet_name='Demand per meal type')
-	# demand_per_meal_type['Date'] = pd.to_datetime(demand_per_meal_type['Date'])
-	# totalSum = pd.DataFrame(demand_per_meal_type.groupby([demand_per_meal_type['Date'],'Type'])['Forecast'].sum().reset_index(name='Forecast'))
-	# totalSum['Date'] = totalSum['Date'].astype(str)
-	# dataframe = json.loads(totalSum.to_json(orient="records"))
-	# print("dataframe=\n",dataframe)
-	# month_labels = get_month_label()
 	new_data = []
 	try:
 		not_found = True
@@ -81,7 +65,6 @@ def get_demand_per_meal_type_formatted_data(dataframe):
 			if not_found:
 				data = {'Date':item['Date'], item["Type"]:item['Forecast']}
 				new_data.append(data)
-		print("new_data=\n",new_data)
 		return new_data
 	except Exception as e:
 		raise e
@@ -102,6 +85,3 @@ def get_month_label():
 		12:"December",
 	}
 	return month_labels
-
-# get_demand_per_meal_type_formatted_data()
-# get_meals_monthly_formatted_data()
