@@ -8239,3 +8239,761 @@ TypeError: can only concatenate str (not "TypeError") to str
 2024-06-26 21:47:54,883 INFO root MainThread : /getMaxOrdersPlacedTime....
 2024-06-26 21:47:54,885 INFO root MainThread : >>----->>> START:getMaxOrdersPlacedTime:UUID:=a4df3455-33d7-11ef-8c67-005056c00008 <<<-----<<
 2024-06-26 21:47:54,898 INFO werkzeug MainThread : 127.0.0.1 - - [26/Jun/2024 21:47:54] "GET /getMaxOrdersPlacedTime HTTP/1.1" 200 -
+2024-06-28 21:40:58,970 INFO root MainThread : Started
+2024-06-28 21:40:58,984 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-28 21:40:58,985 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-28 21:40:59,168 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 21:40:59] "GET /swagger/ HTTP/1.1" 200 -
+2024-06-28 21:40:59,477 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 21:40:59] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+2024-06-28 21:40:59,528 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 21:40:59] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+2024-06-28 21:40:59,532 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 21:40:59] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2024-06-28 21:40:59,537 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 21:40:59] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2024-06-28 21:40:59,842 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 21:40:59] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+2024-06-28 21:41:00,213 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 21:41:00] "GET /static/swagger.json HTTP/1.1" 200 -
+2024-06-28 21:41:00,259 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 21:41:00] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+2024-06-28 21:41:15,978 ERROR app MainThread : Exception on /upload [POST]
+Traceback (most recent call last):
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 77, in upload_file
+    Sheet1 = pd.read_excel(path,sheet_name='Sheet1')
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\io\excel\_base.py", line 486, in read_excel
+    data = io.parse(
+           ^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\io\excel\_base.py", line 1551, in parse
+    return self._reader.parse(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\io\excel\_base.py", line 746, in parse
+    sheet = self.get_sheet_by_name(asheetname)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\io\excel\_openpyxl.py", line 569, in get_sheet_by_name
+    self.raise_if_bad_sheet_by_name(name)
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\io\excel\_base.py", line 597, in raise_if_bad_sheet_by_name
+    raise ValueError(f"Worksheet named '{name}' not found")
+ValueError: Worksheet named 'Sheet1' not found
+2024-06-28 21:41:15,988 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 21:41:15] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+2024-06-28 21:43:18,241 INFO root MainThread : Started
+2024-06-28 21:43:18,261 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-28 21:43:18,262 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-28 21:43:21,424 ERROR app MainThread : Exception on /upload [POST]
+Traceback (most recent call last):
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 78, in upload_file
+    Sheet1 = pd.read_excel(path,sheet_name='Sheet1')
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\io\excel\_base.py", line 486, in read_excel
+    data = io.parse(
+           ^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\io\excel\_base.py", line 1551, in parse
+    return self._reader.parse(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\io\excel\_base.py", line 746, in parse
+    sheet = self.get_sheet_by_name(asheetname)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\io\excel\_openpyxl.py", line 569, in get_sheet_by_name
+    self.raise_if_bad_sheet_by_name(name)
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\io\excel\_base.py", line 597, in raise_if_bad_sheet_by_name
+    raise ValueError(f"Worksheet named '{name}' not found")
+ValueError: Worksheet named 'Sheet1' not found
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 89, in upload_file
+    logging.debug("Xception:upload="+e)
+                  ~~~~~~~~~~~~~~~~~~^~
+TypeError: can only concatenate str (not "ValueError") to str
+2024-06-28 21:43:21,432 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 21:43:21] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+2024-06-28 21:44:20,605 INFO root MainThread : Started
+2024-06-28 21:44:20,625 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-28 21:44:20,626 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-28 21:44:25,007 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 21:44:25] "POST /upload HTTP/1.1" 200 -
+2024-06-28 21:44:43,857 INFO root MainThread : /stockDetails....
+2024-06-28 21:44:43,858 INFO root MainThread : >>----->>> START:UUID:=87d6492e-3569-11ef-bfc4-005056c00008 <<<-----<<
+2024-06-28 21:44:43,876 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 21:44:43] "POST /stockDetails HTTP/1.1" 200 -
+2024-06-28 21:45:16,896 INFO root MainThread : /bomDetails....
+2024-06-28 21:45:16,897 INFO root MainThread : >>----->>> START:UUID:=9b87b2a1-3569-11ef-99e6-005056c00008 <<<-----<<
+2024-06-28 21:45:16,904 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 21:45:16] "POST /bomDetails HTTP/1.1" 200 -
+2024-06-28 21:46:04,965 INFO root MainThread : Started
+2024-06-28 21:46:04,982 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-28 21:46:04,983 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-28 21:46:10,555 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 21:46:10] "POST /upload HTTP/1.1" 200 -
+2024-06-28 21:46:13,299 INFO root MainThread : /stockDetails....
+2024-06-28 21:46:13,300 INFO root MainThread : >>----->>> START:UUID:=bd2627c4-3569-11ef-84e0-005056c00008 <<<-----<<
+2024-06-28 21:46:13,333 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 21:46:13] "POST /stockDetails HTTP/1.1" 200 -
+2024-06-28 21:46:32,344 INFO root MainThread : /bomDetails....
+2024-06-28 21:46:32,345 INFO root MainThread : >>----->>> START:UUID:=c88025ef-3569-11ef-b9ba-005056c00008 <<<-----<<
+2024-06-28 21:46:32,385 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 21:46:32] "POST /bomDetails HTTP/1.1" 200 -
+2024-06-28 21:49:02,126 INFO root MainThread : Started
+2024-06-28 21:49:02,138 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-28 21:49:02,139 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-28 21:49:06,904 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 21:49:06] "POST /upload HTTP/1.1" 200 -
+2024-06-28 21:49:11,347 INFO root MainThread : /stockDetails....
+2024-06-28 21:49:11,348 INFO root MainThread : >>----->>> START:UUID:=2746242a-356a-11ef-a7c2-005056c00008 <<<-----<<
+2024-06-28 21:49:11,378 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 21:49:11] "POST /stockDetails HTTP/1.1" 200 -
+2024-06-28 21:49:45,460 INFO root MainThread : /bomDetails....
+2024-06-28 21:49:45,461 INFO root MainThread : >>----->>> START:UUID:=3b9b518b-356a-11ef-81f4-005056c00008 <<<-----<<
+2024-06-28 21:49:45,491 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 21:49:45] "POST /bomDetails HTTP/1.1" 200 -
+2024-06-28 21:50:09,914 INFO root MainThread : /bomDetails....
+2024-06-28 21:50:09,916 INFO root MainThread : >>----->>> START:UUID:=4a2ea4b2-356a-11ef-9ffd-005056c00008 <<<-----<<
+2024-06-28 21:50:09,943 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 21:50:09] "POST /bomDetails HTTP/1.1" 200 -
+2024-06-28 21:50:21,940 INFO root MainThread : /stockDetails....
+2024-06-28 21:50:21,941 INFO root MainThread : >>----->>> START:UUID:=5159b5d9-356a-11ef-a01b-005056c00008 <<<-----<<
+2024-06-28 21:50:21,962 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 21:50:21] "POST /stockDetails HTTP/1.1" 200 -
+2024-06-28 21:51:16,874 INFO root MainThread : /getMealsPerDestinationFilter....
+2024-06-28 21:51:16,875 INFO root MainThread : >>----->>> START:getMealsPerDestinationFilter:UUID:=72180304-356a-11ef-a2a4-005056c00008 <<<-----<<
+2024-06-28 21:51:16,928 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 21:51:16] "POST /getMealsPerDestinationFilter HTTP/1.1" 200 -
+2024-06-28 21:51:25,258 INFO root MainThread : /sales....
+2024-06-28 21:51:25,260 INFO root MainThread : >>----->>> START:UUID:=77177498-356a-11ef-be63-005056c00008 <<<-----<<
+2024-06-28 21:51:25,269 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 21:51:25] "POST /sales HTTP/1.1" 200 -
+2024-06-28 21:51:35,260 INFO root MainThread : /seasonality....
+2024-06-28 21:51:35,261 INFO root MainThread : >>----->>> START:seasonality:UUID:=7d0d612c-356a-11ef-b0d0-005056c00008 <<<-----<<
+2024-06-28 21:51:35,264 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 21:51:35] "GET /seasonality HTTP/1.1" 200 -
+2024-06-28 21:51:41,795 INFO root MainThread : /trend....
+2024-06-28 21:51:41,796 INFO root MainThread : >>----->>> START:TREND:UUID:=80f2a4e0-356a-11ef-bf2c-005056c00008 <<<-----<<
+2024-06-28 21:51:41,808 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 21:51:41] "GET /trend HTTP/1.1" 200 -
+2024-06-28 21:51:47,154 INFO root MainThread : /getAllSales....
+2024-06-28 21:51:47,155 INFO root MainThread : >>----->>> START:getAllSales:UUID:=8424320e-356a-11ef-978b-005056c00008 <<<-----<<
+2024-06-28 21:51:47,162 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 21:51:47] "GET /getAllSales HTTP/1.1" 200 -
+2024-06-28 21:51:57,775 INFO root MainThread : /getAverageMealsServed....
+2024-06-28 21:51:57,777 INFO root MainThread : >>----->>> START:getAverageMealsServed:UUID:=8a792b05-356a-11ef-afbb-005056c00008 <<<-----<<
+2024-06-28 21:51:57,788 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 21:51:57] "GET /getAverageMealsServed HTTP/1.1" 200 -
+2024-06-28 21:52:05,935 INFO root MainThread : /getAllRoutes....
+2024-06-28 21:52:05,936 INFO root MainThread : >>----->>> START:getAllRoutes:UUID:=8f562c33-356a-11ef-9383-005056c00008 <<<-----<<
+2024-06-28 21:52:05,937 ERROR app MainThread : Exception on /getAllRoutes [GET]
+Traceback (most recent call last):
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 213, in getAllRoutes
+    df2 = sales_order_details.groupby(['Route','Latitude','Longitude']).size().reset_index(name='Count')
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\frame.py", line 8252, in groupby
+    return DataFrameGroupBy(
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\groupby\groupby.py", line 931, in __init__
+    grouper, exclusions, obj = get_grouper(
+                               ^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\groupby\grouper.py", line 985, in get_grouper
+    raise KeyError(gpr)
+KeyError: 'Latitude'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 221, in getAllRoutes
+    logging.debug("Xception:getAllRoutes="+e)
+                  ~~~~~~~~~~~~~~~~~~~~~~~~^~
+TypeError: can only concatenate str (not "KeyError") to str
+2024-06-28 21:52:05,955 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 21:52:05] "[35m[1mGET /getAllRoutes HTTP/1.1[0m" 500 -
+2024-06-28 21:52:39,257 INFO root MainThread : /getMealCatStats....
+2024-06-28 21:52:39,258 INFO root MainThread : >>----->>> START:getMealCatStats:UUID:=a332a57b-356a-11ef-b6b6-005056c00008 <<<-----<<
+2024-06-28 21:52:39,261 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 21:52:39] "GET /getMealCatStats HTTP/1.1" 200 -
+2024-06-28 21:52:46,127 INFO root MainThread : /getCostOfOrdersPlaces....
+2024-06-28 21:52:46,129 INFO root MainThread : >>----->>> START:getCostOfOrdersPlaces:UUID:=a74b12e3-356a-11ef-b9a0-005056c00008 <<<-----<<
+2024-06-28 21:52:46,130 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 21:52:46] "GET /getCostOfOrdersPlaces HTTP/1.1" 200 -
+2024-06-28 21:54:44,534 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 21:54:44] "POST /upload HTTP/1.1" 200 -
+2024-06-28 21:54:59,577 INFO root MainThread : Started
+2024-06-28 21:54:59,588 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-28 21:54:59,590 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-28 21:55:07,553 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 21:55:07] "POST /upload HTTP/1.1" 200 -
+2024-06-28 21:55:09,750 INFO root MainThread : /sales....
+2024-06-28 21:55:09,751 INFO root MainThread : >>----->>> START:UUID:=fce60778-356a-11ef-bc0c-005056c00008 <<<-----<<
+2024-06-28 21:55:09,766 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 21:55:09] "POST /sales HTTP/1.1" 200 -
+2024-06-28 21:55:13,805 INFO root MainThread : /getMealsPerDestinationFilter....
+2024-06-28 21:55:13,806 INFO root MainThread : >>----->>> START:getMealsPerDestinationFilter:UUID:=ff50c65b-356a-11ef-8340-005056c00008 <<<-----<<
+2024-06-28 21:55:13,822 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 21:55:13] "POST /getMealsPerDestinationFilter HTTP/1.1" 200 -
+2024-06-28 21:55:17,585 INFO root MainThread : /seasonality....
+2024-06-28 21:55:17,586 INFO root MainThread : >>----->>> START:seasonality:UUID:=01919433-356b-11ef-ab73-005056c00008 <<<-----<<
+2024-06-28 21:55:17,589 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 21:55:17] "GET /seasonality HTTP/1.1" 200 -
+2024-06-28 21:55:21,141 INFO root MainThread : /trend....
+2024-06-28 21:55:21,143 INFO root MainThread : >>----->>> START:TREND:UUID:=03b041f7-356b-11ef-86ef-005056c00008 <<<-----<<
+2024-06-28 21:55:21,146 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 21:55:21] "GET /trend HTTP/1.1" 200 -
+2024-06-28 21:55:25,469 INFO root MainThread : /getAllSales....
+2024-06-28 21:55:25,470 INFO root MainThread : >>----->>> START:getAllSales:UUID:=0644823e-356b-11ef-8d50-005056c00008 <<<-----<<
+2024-06-28 21:55:25,475 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 21:55:25] "GET /getAllSales HTTP/1.1" 200 -
+2024-06-28 21:55:29,055 INFO root MainThread : /getAverageMealsServed....
+2024-06-28 21:55:29,056 INFO root MainThread : >>----->>> START:getAverageMealsServed:UUID:=0867c53e-356b-11ef-a168-005056c00008 <<<-----<<
+2024-06-28 21:55:29,058 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 21:55:29] "GET /getAverageMealsServed HTTP/1.1" 200 -
+2024-06-28 21:55:32,124 INFO root MainThread : /getAllRoutes....
+2024-06-28 21:55:32,125 INFO root MainThread : >>----->>> START:getAllRoutes:UUID:=0a3c0cd6-356b-11ef-a2e0-005056c00008 <<<-----<<
+2024-06-28 21:55:32,134 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 21:55:32] "GET /getAllRoutes HTTP/1.1" 200 -
+2024-06-28 21:55:38,688 INFO root MainThread : /getMealCatStats....
+2024-06-28 21:55:38,689 INFO root MainThread : >>----->>> START:getMealCatStats:UUID:=0e25ab02-356b-11ef-ae76-005056c00008 <<<-----<<
+2024-06-28 21:55:38,694 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 21:55:38] "GET /getMealCatStats HTTP/1.1" 200 -
+2024-06-28 21:55:41,921 INFO root MainThread : /getCostOfOrdersPlaces....
+2024-06-28 21:55:41,922 INFO root MainThread : >>----->>> START:getCostOfOrdersPlaces:UUID:=1012ec0c-356b-11ef-b3d6-005056c00008 <<<-----<<
+2024-06-28 21:55:41,923 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 21:55:41] "GET /getCostOfOrdersPlaces HTTP/1.1" 200 -
+2024-06-28 21:55:48,365 INFO root MainThread : /getMealsMonthly....
+2024-06-28 21:55:48,365 INFO root MainThread : >>----->>> START:getMealsMonthly:UUID:=13ea1143-356b-11ef-96e3-005056c00008 <<<-----<<
+2024-06-28 21:55:48,371 ERROR app MainThread : Exception on /getMealsMonthly [GET]
+Traceback (most recent call last):
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 279, in getMealsMonthly
+    sales_order_details['Date'] = pd.to_datetime(sales_order_details['Date'])
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\tools\datetimes.py", line 1050, in to_datetime
+    values = convert_listlike(arg._values, format)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\tools\datetimes.py", line 453, in _convert_listlike_datetimes
+    return _array_strptime_with_fallback(arg, name, utc, format, exact, errors)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\tools\datetimes.py", line 484, in _array_strptime_with_fallback
+    result, timezones = array_strptime(arg, fmt, exact=exact, errors=errors, utc=utc)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas\_libs\tslibs\strptime.pyx", line 530, in pandas._libs.tslibs.strptime.array_strptime
+  File "pandas\_libs\tslibs\strptime.pyx", line 355, in pandas._libs.tslibs.strptime.array_strptime
+ValueError: unconverted data remains when parsing with format "%Y-%m": "3", at position 12. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 293, in getMealsMonthly
+    logging.debug("Xception:getMealsMonthly="+e)
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+TypeError: can only concatenate str (not "ValueError") to str
+2024-06-28 21:55:48,381 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 21:55:48] "[35m[1mGET /getMealsMonthly HTTP/1.1[0m" 500 -
+2024-06-28 22:05:36,298 INFO root MainThread : /getMealsMonthly....
+2024-06-28 22:05:36,299 INFO root MainThread : >>----->>> START:getMealsMonthly:UUID:=72599ede-356c-11ef-b930-005056c00008 <<<-----<<
+2024-06-28 22:05:36,301 ERROR app MainThread : Exception on /getMealsMonthly [GET]
+Traceback (most recent call last):
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 279, in getMealsMonthly
+    sales_order_details['Date'] = pd.to_datetime(sales_order_details['Date'])
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\tools\datetimes.py", line 1050, in to_datetime
+    values = convert_listlike(arg._values, format)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\tools\datetimes.py", line 453, in _convert_listlike_datetimes
+    return _array_strptime_with_fallback(arg, name, utc, format, exact, errors)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\tools\datetimes.py", line 484, in _array_strptime_with_fallback
+    result, timezones = array_strptime(arg, fmt, exact=exact, errors=errors, utc=utc)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas\_libs\tslibs\strptime.pyx", line 530, in pandas._libs.tslibs.strptime.array_strptime
+  File "pandas\_libs\tslibs\strptime.pyx", line 355, in pandas._libs.tslibs.strptime.array_strptime
+ValueError: unconverted data remains when parsing with format "%Y-%m": "3", at position 12. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 293, in getMealsMonthly
+    logging.debug("Xception:getMealsMonthly="+e)
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+TypeError: can only concatenate str (not "ValueError") to str
+2024-06-28 22:05:36,305 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 22:05:36] "[35m[1mGET /getMealsMonthly HTTP/1.1[0m" 500 -
+2024-06-28 22:06:07,334 INFO root MainThread : Started
+2024-06-28 22:06:07,354 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-28 22:06:07,354 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-28 22:06:44,017 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 22:06:44] "GET /swagger/ HTTP/1.1" 200 -
+2024-06-28 22:06:44,159 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 22:06:44] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+2024-06-28 22:06:44,269 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 22:06:44] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+2024-06-28 22:06:44,382 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 22:06:44] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2024-06-28 22:06:44,384 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 22:06:44] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2024-06-28 22:06:44,880 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 22:06:44] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+2024-06-28 22:06:45,141 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 22:06:45] "[36mGET /static/swagger.json HTTP/1.1[0m" 304 -
+2024-06-28 22:06:45,234 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 22:06:45] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+2024-06-28 22:06:53,448 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 22:06:53] "POST /upload HTTP/1.1" 200 -
+2024-06-28 22:06:59,567 INFO root MainThread : /getMealsMonthly....
+2024-06-28 22:06:59,568 INFO root MainThread : >>----->>> START:getMealsMonthly:UUID:=a3fb78b8-356c-11ef-ab77-005056c00008 <<<-----<<
+2024-06-28 22:06:59,609 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 22:06:59] "GET /getMealsMonthly HTTP/1.1" 200 -
+2024-06-28 22:07:06,542 INFO root MainThread : /getMealsPerDestinatin....
+2024-06-28 22:07:06,544 INFO root MainThread : >>----->>> START:getMealsPerDestinatin:UUID:=a823f200-356c-11ef-99e6-005056c00008 <<<-----<<
+2024-06-28 22:07:06,548 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 22:07:06] "GET /getMealsPerDestinatin HTTP/1.1" 200 -
+2024-06-28 22:07:12,780 INFO root MainThread : /getAvgFlightInTime....
+2024-06-28 22:07:12,781 INFO root MainThread : >>----->>> START:getAvgFlightInTime:UUID:=abdbbd57-356c-11ef-9928-005056c00008 <<<-----<<
+2024-06-28 22:07:12,801 ERROR app MainThread : Exception on /getAvgFlightInTime [GET]
+Traceback (most recent call last):
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 329, in getAvgFlightInTime
+    final_df, average_flight_in_time = get_avg_flight_intime(sales_order_details)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Freelance\py-SaudiCaterers\commons.py", line 18, in get_avg_flight_intime
+    ts_departure['departure'] = pd.to_datetime(ts_departure['departure'])
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\tools\datetimes.py", line 1050, in to_datetime
+    values = convert_listlike(arg._values, format)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\tools\datetimes.py", line 453, in _convert_listlike_datetimes
+    return _array_strptime_with_fallback(arg, name, utc, format, exact, errors)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\tools\datetimes.py", line 484, in _array_strptime_with_fallback
+    result, timezones = array_strptime(arg, fmt, exact=exact, errors=errors, utc=utc)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas\_libs\tslibs\strptime.pyx", line 530, in pandas._libs.tslibs.strptime.array_strptime
+  File "pandas\_libs\tslibs\strptime.pyx", line 351, in pandas._libs.tslibs.strptime.array_strptime
+ValueError: time data "NaT nan" doesn't match format "%Y-%m-%d %H:%M:%S", at position 72. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 339, in getAvgFlightInTime
+    logging.debug("Xception:getAvgFlightInTime="+e)
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+TypeError: can only concatenate str (not "ValueError") to str
+2024-06-28 22:07:12,810 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 22:07:12] "[35m[1mGET /getAvgFlightInTime HTTP/1.1[0m" 500 -
+2024-06-28 22:09:10,329 INFO root MainThread : /getMaxOrdersPlacedTime....
+2024-06-28 22:09:10,330 INFO root MainThread : >>----->>> START:getMaxOrdersPlacedTime:UUID:=f1ec3de7-356c-11ef-a9d2-005056c00008 <<<-----<<
+2024-06-28 22:09:10,353 ERROR app MainThread : Exception on /getMaxOrdersPlacedTime [GET]
+Traceback (most recent call last):
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 352, in getMaxOrdersPlacedTime
+    total_orders = sales_order_details.groupby(['Flight Number','longitude_source','longitude_destination','Route','Date','Arrival Time','Departure time','Arrival location'])['orders'].sum().reset_index().max()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\generic.py", line 11646, in max
+    return NDFrame.max(self, axis, skipna, numeric_only, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\generic.py", line 11185, in max
+    return self._stat_function(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\generic.py", line 11158, in _stat_function
+    return self._reduce(
+           ^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\frame.py", line 10519, in _reduce
+    res = df._mgr.reduce(blk_func)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\internals\managers.py", line 1534, in reduce
+    nbs = blk.reduce(func)
+          ^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\internals\blocks.py", line 339, in reduce
+    result = func(self.values)
+             ^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\frame.py", line 10482, in blk_func
+    return op(values, axis=axis, skipna=skipna, **kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\nanops.py", line 158, in f
+    result = alt(values, axis=axis, skipna=skipna, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\nanops.py", line 421, in new_func
+    result = func(values, axis=axis, skipna=skipna, mask=mask, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\nanops.py", line 1094, in reduction
+    result = getattr(values, meth)(axis)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\numpy\core\_methods.py", line 41, in _amax
+    return umr_maximum(a, axis, None, out, keepdims, initial, where)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: '>=' not supported between instances of 'str' and 'float'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 372, in getMaxOrdersPlacedTime
+    logging.debug("Xception:getMaxOrdersPlacedTime="+e)
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+TypeError: can only concatenate str (not "TypeError") to str
+2024-06-28 22:09:10,376 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 22:09:10] "[35m[1mGET /getMaxOrdersPlacedTime HTTP/1.1[0m" 500 -
+2024-06-28 22:09:15,416 INFO root MainThread : /getKeyDemandDrivers....
+2024-06-28 22:09:15,417 INFO root MainThread : >>----->>> START:getKeyDemandDrivers:UUID:=f4f466f7-356c-11ef-89f8-005056c00008 <<<-----<<
+2024-06-28 22:09:15,419 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 22:09:15] "GET /getKeyDemandDrivers HTTP/1.1" 200 -
+2024-06-28 22:09:24,308 INFO root MainThread : /getAccuracyDetails....
+2024-06-28 22:09:24,309 INFO root MainThread : >>----->>> START:getAccuracyDetails:UUID:=fa4141f5-356c-11ef-a439-005056c00008 <<<-----<<
+2024-06-28 22:09:24,312 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 22:09:24] "GET /getAccuracyDetails HTTP/1.1" 200 -
+2024-06-28 22:09:29,695 INFO root MainThread : /getBiasDetails....
+2024-06-28 22:09:29,696 INFO root MainThread : >>----->>> START:getBiasDetails:UUID:=fd774c6d-356c-11ef-b6fd-005056c00008 <<<-----<<
+2024-06-28 22:09:29,699 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 22:09:29] "GET /getBiasDetails HTTP/1.1" 200 -
+2024-06-28 22:09:36,329 INFO root MainThread : /getDemandPerMealType....
+2024-06-28 22:09:36,330 INFO root MainThread : >>----->>> START:getDemandPerMealType:UUID:=016b930f-356d-11ef-8999-005056c00008 <<<-----<<
+2024-06-28 22:09:36,345 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 22:09:36] "GET /getDemandPerMealType HTTP/1.1" 200 -
+2024-06-28 22:09:49,181 INFO root MainThread : /stockDetails....
+2024-06-28 22:09:49,182 INFO root MainThread : >>----->>> START:UUID:=09149e66-356d-11ef-b799-005056c00008 <<<-----<<
+2024-06-28 22:09:49,210 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 22:09:49] "POST /stockDetails HTTP/1.1" 200 -
+2024-06-28 22:10:05,441 INFO root MainThread : /bomDetails....
+2024-06-28 22:10:05,442 INFO root MainThread : >>----->>> START:UUID:=12c5aece-356d-11ef-93fe-005056c00008 <<<-----<<
+2024-06-28 22:10:05,470 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 22:10:05] "POST /bomDetails HTTP/1.1" 200 -
+2024-06-28 22:15:49,921 INFO root MainThread : Started
+2024-06-28 22:15:49,932 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-28 22:15:49,932 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-28 22:15:57,671 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 22:15:57] "GET /swagger/ HTTP/1.1" 200 -
+2024-06-28 22:15:58,048 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 22:15:58] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+2024-06-28 22:15:58,051 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 22:15:58] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+2024-06-28 22:15:58,055 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 22:15:58] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2024-06-28 22:15:58,059 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 22:15:58] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2024-06-28 22:15:58,604 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 22:15:58] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+2024-06-28 22:15:58,864 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 22:15:58] "[36mGET /static/swagger.json HTTP/1.1[0m" 304 -
+2024-06-28 22:15:58,975 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 22:15:58] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+2024-06-28 22:16:00,577 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 22:16:00] "GET /swagger/ HTTP/1.1" 200 -
+2024-06-28 22:16:00,883 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 22:16:00] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+2024-06-28 22:16:00,929 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 22:16:00] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+2024-06-28 22:16:00,932 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 22:16:00] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2024-06-28 22:16:00,935 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 22:16:00] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2024-06-28 22:16:01,297 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 22:16:01] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+2024-06-28 22:16:01,559 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 22:16:01] "[36mGET /static/swagger.json HTTP/1.1[0m" 304 -
+2024-06-28 22:16:09,683 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 22:16:09] "POST /upload HTTP/1.1" 200 -
+2024-06-28 22:16:16,312 INFO root MainThread : /getAvgFlightInTime....
+2024-06-28 22:16:16,313 INFO root MainThread : >>----->>> START:getAvgFlightInTime:UUID:=efd421fc-356d-11ef-9405-005056c00008 <<<-----<<
+2024-06-28 22:16:16,347 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 22:16:16] "GET /getAvgFlightInTime HTTP/1.1" 200 -
+2024-06-28 22:16:29,401 INFO root MainThread : /getMealsMonthly....
+2024-06-28 22:16:29,403 INFO root MainThread : >>----->>> START:getMealsMonthly:UUID:=f7a16a40-356d-11ef-b55c-005056c00008 <<<-----<<
+2024-06-28 22:16:29,448 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 22:16:29] "GET /getMealsMonthly HTTP/1.1" 200 -
+2024-06-28 22:16:34,562 INFO root MainThread : /getCostOfOrdersPlaces....
+2024-06-28 22:16:34,563 INFO root MainThread : >>----->>> START:getCostOfOrdersPlaces:UUID:=fab4c2c0-356d-11ef-bfec-005056c00008 <<<-----<<
+2024-06-28 22:16:34,565 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 22:16:34] "GET /getCostOfOrdersPlaces HTTP/1.1" 200 -
+2024-06-28 22:16:41,980 INFO root MainThread : /getAllRoutes....
+2024-06-28 22:16:41,981 INFO root MainThread : >>----->>> START:getAllRoutes:UUID:=ff20b44e-356d-11ef-97e4-005056c00008 <<<-----<<
+2024-06-28 22:16:41,987 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 22:16:41] "GET /getAllRoutes HTTP/1.1" 200 -
+2024-06-28 22:16:46,030 INFO root MainThread : /getAverageMealsServed....
+2024-06-28 22:16:46,031 INFO root MainThread : >>----->>> START:getAverageMealsServed:UUID:=018aaaf2-356e-11ef-b233-005056c00008 <<<-----<<
+2024-06-28 22:16:46,034 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 22:16:46] "GET /getAverageMealsServed HTTP/1.1" 200 -
+2024-06-28 22:16:55,973 INFO root MainThread : /getMaxOrdersPlacedTime....
+2024-06-28 22:16:55,974 INFO root MainThread : >>----->>> START:getMaxOrdersPlacedTime:UUID:=0777c340-356e-11ef-89b9-005056c00008 <<<-----<<
+2024-06-28 22:16:55,987 ERROR app MainThread : Exception on /getMaxOrdersPlacedTime [GET]
+Traceback (most recent call last):
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 352, in getMaxOrdersPlacedTime
+    total_orders = sales_order_details.groupby(['Flight Number','longitude_source','longitude_destination','Route','Date','Arrival Time','Departure time','Arrival location'])['orders'].sum().reset_index().max()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\generic.py", line 11646, in max
+    return NDFrame.max(self, axis, skipna, numeric_only, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\generic.py", line 11185, in max
+    return self._stat_function(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\generic.py", line 11158, in _stat_function
+    return self._reduce(
+           ^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\frame.py", line 10519, in _reduce
+    res = df._mgr.reduce(blk_func)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\internals\managers.py", line 1534, in reduce
+    nbs = blk.reduce(func)
+          ^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\internals\blocks.py", line 339, in reduce
+    result = func(self.values)
+             ^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\frame.py", line 10482, in blk_func
+    return op(values, axis=axis, skipna=skipna, **kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\nanops.py", line 158, in f
+    result = alt(values, axis=axis, skipna=skipna, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\nanops.py", line 421, in new_func
+    result = func(values, axis=axis, skipna=skipna, mask=mask, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\nanops.py", line 1094, in reduction
+    result = getattr(values, meth)(axis)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\numpy\core\_methods.py", line 41, in _amax
+    return umr_maximum(a, axis, None, out, keepdims, initial, where)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: '>=' not supported between instances of 'str' and 'float'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 372, in getMaxOrdersPlacedTime
+    logging.debug("Xception:getMaxOrdersPlacedTime="+e)
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+TypeError: can only concatenate str (not "TypeError") to str
+2024-06-28 22:16:56,006 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 22:16:56] "[35m[1mGET /getMaxOrdersPlacedTime HTTP/1.1[0m" 500 -
+2024-06-28 22:17:21,244 INFO root MainThread : /getKeyDemandDrivers....
+2024-06-28 22:17:21,245 INFO root MainThread : >>----->>> START:getKeyDemandDrivers:UUID:=1687e695-356e-11ef-bdf5-005056c00008 <<<-----<<
+2024-06-28 22:17:21,247 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 22:17:21] "GET /getKeyDemandDrivers HTTP/1.1" 200 -
+2024-06-28 22:17:27,576 INFO root MainThread : /getAccuracyDetails....
+2024-06-28 22:17:27,578 INFO root MainThread : >>----->>> START:getAccuracyDetails:UUID:=1a4e3e79-356e-11ef-9486-005056c00008 <<<-----<<
+2024-06-28 22:17:27,581 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 22:17:27] "GET /getAccuracyDetails HTTP/1.1" 200 -
+2024-06-28 22:17:32,262 INFO root MainThread : /getBiasDetails....
+2024-06-28 22:17:32,263 INFO root MainThread : >>----->>> START:getBiasDetails:UUID:=1d19247f-356e-11ef-86d5-005056c00008 <<<-----<<
+2024-06-28 22:17:32,266 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 22:17:32] "GET /getBiasDetails HTTP/1.1" 200 -
+2024-06-28 22:17:38,743 INFO root MainThread : /getDemandPerMealType....
+2024-06-28 22:17:38,744 INFO root MainThread : >>----->>> START:getDemandPerMealType:UUID:=20f61e15-356e-11ef-a1fd-005056c00008 <<<-----<<
+2024-06-28 22:17:38,762 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 22:17:38] "GET /getDemandPerMealType HTTP/1.1" 200 -
+2024-06-28 22:17:54,344 INFO root MainThread : /getMaxOrdersPlacedTime....
+2024-06-28 22:17:54,345 INFO root MainThread : >>----->>> START:getMaxOrdersPlacedTime:UUID:=2a42906f-356e-11ef-8617-005056c00008 <<<-----<<
+2024-06-28 22:17:54,356 ERROR app MainThread : Exception on /getMaxOrdersPlacedTime [GET]
+Traceback (most recent call last):
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 352, in getMaxOrdersPlacedTime
+    total_orders = sales_order_details.groupby(['Flight Number','longitude_source','longitude_destination','Route','Date','Arrival Time','Departure time','Arrival location'])['orders'].sum().reset_index().max()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\generic.py", line 11646, in max
+    return NDFrame.max(self, axis, skipna, numeric_only, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\generic.py", line 11185, in max
+    return self._stat_function(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\generic.py", line 11158, in _stat_function
+    return self._reduce(
+           ^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\frame.py", line 10519, in _reduce
+    res = df._mgr.reduce(blk_func)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\internals\managers.py", line 1534, in reduce
+    nbs = blk.reduce(func)
+          ^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\internals\blocks.py", line 339, in reduce
+    result = func(self.values)
+             ^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\frame.py", line 10482, in blk_func
+    return op(values, axis=axis, skipna=skipna, **kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\nanops.py", line 158, in f
+    result = alt(values, axis=axis, skipna=skipna, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\nanops.py", line 421, in new_func
+    result = func(values, axis=axis, skipna=skipna, mask=mask, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\nanops.py", line 1094, in reduction
+    result = getattr(values, meth)(axis)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\numpy\core\_methods.py", line 41, in _amax
+    return umr_maximum(a, axis, None, out, keepdims, initial, where)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: '>=' not supported between instances of 'str' and 'float'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 372, in getMaxOrdersPlacedTime
+    logging.debug("Xception:getMaxOrdersPlacedTime="+e)
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+TypeError: can only concatenate str (not "TypeError") to str
+2024-06-28 22:17:54,362 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 22:17:54] "[35m[1mGET /getMaxOrdersPlacedTime HTTP/1.1[0m" 500 -
+2024-06-28 22:19:44,469 INFO root MainThread : Started
+2024-06-28 22:19:44,491 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-28 22:19:44,492 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-28 22:19:49,628 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 22:19:49] "POST /upload HTTP/1.1" 200 -
+2024-06-28 22:19:54,112 INFO root MainThread : /getMaxOrdersPlacedTime....
+2024-06-28 22:19:54,113 INFO root MainThread : >>----->>> START:getMaxOrdersPlacedTime:UUID:=71a5af80-356e-11ef-8d5d-005056c00008 <<<-----<<
+2024-06-28 22:19:54,131 ERROR app MainThread : Exception on /getMaxOrdersPlacedTime [GET]
+Traceback (most recent call last):
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 352, in getMaxOrdersPlacedTime
+    total_orders = sales_order_details.groupby(['Flight Number','longitude_source','longitude_destination','Route','Date','Arrival Time','Departure time','Arrival location'])['orders'].sum().reset_index().max()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\generic.py", line 11646, in max
+    return NDFrame.max(self, axis, skipna, numeric_only, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\generic.py", line 11185, in max
+    return self._stat_function(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\generic.py", line 11158, in _stat_function
+    return self._reduce(
+           ^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\frame.py", line 10519, in _reduce
+    res = df._mgr.reduce(blk_func)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\internals\managers.py", line 1534, in reduce
+    nbs = blk.reduce(func)
+          ^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\internals\blocks.py", line 339, in reduce
+    result = func(self.values)
+             ^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\frame.py", line 10482, in blk_func
+    return op(values, axis=axis, skipna=skipna, **kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\nanops.py", line 158, in f
+    result = alt(values, axis=axis, skipna=skipna, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\nanops.py", line 421, in new_func
+    result = func(values, axis=axis, skipna=skipna, mask=mask, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\nanops.py", line 1094, in reduction
+    result = getattr(values, meth)(axis)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\numpy\core\_methods.py", line 41, in _amax
+    return umr_maximum(a, axis, None, out, keepdims, initial, where)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: '>=' not supported between instances of 'str' and 'float'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balac\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Freelance\py-SaudiCaterers\app.py", line 372, in getMaxOrdersPlacedTime
+    logging.debug("Xception:getMaxOrdersPlacedTime="+e)
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+TypeError: can only concatenate str (not "TypeError") to str
+2024-06-28 22:19:54,152 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 22:19:54] "[35m[1mGET /getMaxOrdersPlacedTime HTTP/1.1[0m" 500 -
+2024-06-28 22:21:10,459 INFO root MainThread : Started
+2024-06-28 22:21:10,481 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-06-28 22:21:10,482 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-06-28 22:21:15,253 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 22:21:15] "POST /upload HTTP/1.1" 200 -
+2024-06-28 22:21:18,033 INFO root MainThread : /getMaxOrdersPlacedTime....
+2024-06-28 22:21:18,033 INFO root MainThread : >>----->>> START:getMaxOrdersPlacedTime:UUID:=a3aad7da-356e-11ef-a496-005056c00008 <<<-----<<
+2024-06-28 22:21:18,058 INFO werkzeug MainThread : 127.0.0.1 - - [28/Jun/2024 22:21:18] "GET /getMaxOrdersPlacedTime HTTP/1.1" 200 -

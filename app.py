@@ -10,7 +10,7 @@ import logging
 from logging.config import dictConfig
 from logging.handlers import RotatingFileHandler
 from commons import get_uuid, get_avg_flight_intime, get_meals_monthly_formatted_data, get_demand_per_meal_type_formatted_data
-from sales_filter import get_sales_data, get_meals_per_destination_with_filter
+from sales_filter import get_sales_data, get_meals_per_destination_with_filter, get_stock_details_with_filter, get_bom_per_demand_with_filter
 import numpy as np
 
 app = Flask(__name__)
@@ -53,32 +53,40 @@ def upload_file():
     if file.filename == '':
         return jsonify({"error": "No file selected"}), 400
     if file:
-        filename = secure_filename(file.filename)
-        path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
-        print("PATH=",path)
-        file.save(path)
+        try:
+            filename = secure_filename(file.filename)
+            path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+            print("PATH=",path)
+            file.save(path)
 
-        global sales_order_details
-        global palnned_flights
-        global seasonality
-        global trend
-        global Sheet1
-        global Accuracy
-        global Bias
-        global key_demand_drivers
-        global demand_per_meal_type
+            global sales_order_details
+            global palnned_flights
+            global seasonality
+            global trend
+            # global Sheet1
+            global Accuracy
+            global Bias
+            global key_demand_drivers
+            global demand_per_meal_type
+            global stock_details
+            global bom_per_demand
 
-        sales_order_details = pd.read_excel(path,sheet_name='Sales-Order details')
-        palnned_flights = pd.read_excel(path,sheet_name='Palnned flights')
-        seasonality = pd.read_excel(path,sheet_name='seasonality')
-        trend = pd.read_excel(path,sheet_name='trend')
-        Sheet1 = pd.read_excel(path,sheet_name='Sheet1')
-        Accuracy = pd.read_excel(path,sheet_name='Accuracy')
-        Bias = pd.read_excel(path,sheet_name='Bias')
-        key_demand_drivers = pd.read_excel(path,'Key Demand Drivers')
-        demand_per_meal_type = pd.read_excel(path,'Demand per meal type')
+            sales_order_details = pd.read_excel(path,sheet_name='Sales-Order details')
+            palnned_flights = pd.read_excel(path,sheet_name='Palnned flights')
+            seasonality = pd.read_excel(path,sheet_name='seasonality')
+            trend = pd.read_excel(path,sheet_name='trend')
+            # Sheet1 = pd.read_excel(path,sheet_name='Sheet1')
+            Accuracy = pd.read_excel(path,sheet_name='Accuracy')
+            Bias = pd.read_excel(path,sheet_name='Bias')
+            key_demand_drivers = pd.read_excel(path,'Key Demand Drivers')
+            demand_per_meal_type = pd.read_excel(path,'Demand per meal type')
+            stock_details = pd.read_excel(path,'stock')
+            bom_per_demand = pd.read_excel(path,'BOM per demand')
 
-        return jsonify({"message": "File uploaded successfully", "filename": filename, "data":""}), 200
+            return jsonify({"message": "File uploaded successfully", "filename": filename, "data":""}), 200
+        except Exception as e:
+            print(e)
+            logging.debug("Xception:upload="+e)
     else:
         return jsonify({"error": "Invalid file format. Only PDFs are allowed."}), 400
 
@@ -202,7 +210,7 @@ def getAllRoutes():
         if 'sales_order_details' not in globals():
             return jsonify({"message": "No CSV file uploaded"}), 400
 
-        df2 = sales_order_details.groupby(['Route','Latitude','Longitude']).size().reset_index(name='Count')
+        df2 = sales_order_details.groupby(['Route','longitude_source','longitude_destination']).size().reset_index(name='Count')
         dataframe = json.loads(df2.to_json(orient="records"))
         data = {
           "data": dataframe
@@ -340,16 +348,17 @@ def getMaxOrdersPlacedTime():
         global sales_order_details
         if 'sales_order_details' not in globals():
             return jsonify({"message": "No CSV file uploaded"}), 400
-
-        total_orders = sales_order_details.groupby(['Flight Number','Latitude','Longitude','Route','Date','Arrival Time','Departure time','Arrival location'])['orders'].sum().reset_index().max()
-        print(total_orders)
+        sales_order_details['longitude_source'] = sales_order_details['longitude_source'].astype(str)
+        sales_order_details['longitude_destination'] = sales_order_details['longitude_destination'].astype(str)
+        total_orders = sales_order_details.groupby(['Flight Number','longitude_source','longitude_destination','Route','Date','Arrival Time','Departure time','Arrival location'])['orders'].sum().reset_index().max()
+        print("total_orders=",total_orders)
         # dataframe = json.loads(total_orders.to_json(orient="records"))
         # average_flight_in_time = json.loads(average_flight_in_time.to_json(orient="records"))
         data = {
           "data": {
           "flight": str(total_orders[0]),
-          "Latitude": str(total_orders[1]),
-          "Longitude": str(total_orders[2]),
+          "longitude_source": (total_orders[1]),
+          "longitude_destination": (total_orders[2]),
           "Route": str(total_orders[3]),
           "Date": str(total_orders[4]),
           "Arrival": str(total_orders[5]),
@@ -473,6 +482,54 @@ def getDemandPerMealType():
     except Exception as e:
         print(e)
         logging.debug("Xception:getDemandPerMealType="+e)
+
+@app.route('/stockDetails', methods=['POST'])    
+@cross_origin()
+def stockDetails():
+    logging.info('/stockDetails....')
+    cur_datetime, uid = get_uuid()
+    logging.info(">>----->>> START:UUID:="+str(uid)+" <<<-----<<")
+    data = json.loads(request.data)
+    # REQUEST BODY
+    print(data)
+    try:
+        global stock_details
+        if 'stock_details' not in globals():
+            return jsonify({"message": "No CSV file uploaded"}), 400
+
+        stock_df = get_stock_details_with_filter(data, stock_details)
+        dataframe = json.loads(stock_df.to_json(orient="records"))
+        data = {
+          "data": dataframe
+        }
+        return Response(json.dumps(data),mimetype='application/json')
+    except Exception as e:
+        print(e)
+        logging.debug("Xception:stockDetails="+e)
+
+@app.route('/bomDetails', methods=['POST'])    
+@cross_origin()
+def bomDetails():
+    logging.info('/bomDetails....')
+    cur_datetime, uid = get_uuid()
+    logging.info(">>----->>> START:UUID:="+str(uid)+" <<<-----<<")
+    data = json.loads(request.data)
+    # REQUEST BODY
+    print(data)
+    try:
+        global bom_per_demand
+        if 'bom_per_demand' not in globals():
+            return jsonify({"message": "No CSV file uploaded"}), 400
+            
+        bom_df = get_bom_per_demand_with_filter(data, bom_per_demand)
+        dataframe = json.loads(bom_df.to_json(orient="records"))
+        data = {
+          "data": dataframe
+        }
+        return Response(json.dumps(data),mimetype='application/json')
+    except Exception as e:
+        print(e)
+        logging.debug("Xception:bomDetails="+e)
 
 if __name__ == '__main__':
     logging.basicConfig(format='%(levelname)s:%(message)s', level=logging.DEBUG)    

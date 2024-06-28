@@ -96,9 +96,37 @@ def get_meals_per_destination_with_filter(data, sales_order_details):
 		if query.startswith(" & "):
 			print("query startswith  & ")
 			query = query[3:]
-		print(query)
+		print("get_meals_per_destination_with_filter:query=",query)
 
 		new_df = sales_order_details.query(query)
+		return new_df
+	except Exception as e:
+		raise e
+
+# get stock details with filter
+def get_stock_details_with_filter(data, stock_details):
+	try:
+		item = data.get('item', '')
+		query = ""
+		if item != "":
+			query+='Item.str.contains("'+item+'")'
+		print("get_stock_details_with_filter:query=",query)
+		new_df = stock_details.query(query)
+		print("stock_details=\n",new_df)
+		return new_df
+	except Exception as e:
+		raise e
+
+# get BOM details with filter
+def get_bom_per_demand_with_filter(data, bom_details):
+	try:
+		item = data.get('item', '')
+		query = ""
+		if item != "":
+			query+='Item.str.contains("'+item+'")'
+		print("get_bom_per_demand_with_filter:query=",query)
+		new_df = bom_details.query(query)
+		print("bom_details=\n",new_df)
 		return new_df
 	except Exception as e:
 		raise e
