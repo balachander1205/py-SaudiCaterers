@@ -10,7 +10,7 @@ import logging
 from logging.config import dictConfig
 from logging.handlers import RotatingFileHandler
 from commons import get_uuid, get_avg_flight_intime, get_meals_monthly_formatted_data, get_demand_per_meal_type_formatted_data
-from sales_filter import get_sales_data, get_meals_per_destination_with_filter, get_stock_details_with_filter, get_bom_per_demand_with_filter
+from sales_filter import get_sales_data, get_meals_per_destination_with_filter, get_stock_details_with_filter, get_bom_per_demand_with_filter, get_demand_per_meal_with_filter, get_all_demand_per_meal
 import numpy as np
 
 app = Flask(__name__)
@@ -210,7 +210,7 @@ def getAllRoutes():
         if 'sales_order_details' not in globals():
             return jsonify({"message": "No CSV file uploaded"}), 400
 
-        df2 = sales_order_details.groupby(['Route','longitude_source','longitude_destination']).size().reset_index(name='Count')
+        df2 = sales_order_details.groupby(['Route','longitude_source','longitude_destination','latitude_source','latitude_destination']).size().reset_index(name='Count')
         dataframe = json.loads(df2.to_json(orient="records"))
         data = {
           "data": dataframe
@@ -231,7 +231,7 @@ def getMealCatStats():
         if 'sales_order_details' not in globals():
             return jsonify({"message": "No CSV file uploaded"}), 400
 
-        df2 = sales_order_details.groupby(['Item category']).size().reset_index(name='Count')
+        df2 = sales_order_details.groupby(['Item category','Item','Item type']).size().reset_index(name='Count')
         dataframe = json.loads(df2.to_json(orient="records"))
         data = {
           "data": dataframe
@@ -278,7 +278,7 @@ def getMealsMonthly():
         # totalSum = sales_order_details.groupby([pd.to_datetime(sales_order_details['Date']).dt.month, 'Date']).agg({'orders': sum})
         sales_order_details['Date'] = pd.to_datetime(sales_order_details['Date'])
         # totalSum = sales_order_details.groupby(sales_order_details['Date'].dt.month)['orders'].sum().reset_index(name='orders')
-        totalSum = pd.DataFrame(sales_order_details.groupby([sales_order_details['Date'].dt.month,'Item category'])['orders'].sum().reset_index(name='orders'))
+        totalSum = pd.DataFrame(sales_order_details.groupby([sales_order_details['Date'].dt.month,'Item category','Item'])['orders'].sum().reset_index(name='orders'))
         print("totalSum=\n",totalSum)
         final_df = totalSum.rename(columns={'Date': 'month'})
         print(final_df)
@@ -350,7 +350,10 @@ def getMaxOrdersPlacedTime():
             return jsonify({"message": "No CSV file uploaded"}), 400
         sales_order_details['longitude_source'] = sales_order_details['longitude_source'].astype(str)
         sales_order_details['longitude_destination'] = sales_order_details['longitude_destination'].astype(str)
-        total_orders = sales_order_details.groupby(['Flight Number','longitude_source','longitude_destination','Route','Date','Arrival Time','Departure time','Arrival location'])['orders'].sum().reset_index().max()
+        sales_order_details['latitude_source'] = sales_order_details['latitude_source'].astype(str)
+        sales_order_details['latitude_destination'] = sales_order_details['latitude_destination'].astype(str)
+
+        total_orders = sales_order_details.groupby(['Flight Number','longitude_source','longitude_destination','Route','Date','Arrival Time','Departure time','Arrival location','latitude_source','latitude_destination'])['orders'].sum().reset_index().max()
         print("total_orders=",total_orders)
         # dataframe = json.loads(total_orders.to_json(orient="records"))
         # average_flight_in_time = json.loads(average_flight_in_time.to_json(orient="records"))
@@ -364,7 +367,9 @@ def getMaxOrdersPlacedTime():
           "Arrival": str(total_orders[5]),
           "Departure": str(total_orders[6]),
           # "Arrival_location": total_orders[7],
-          "orders": str(total_orders[8])
+          "latitude_source": str(total_orders[7]),
+          "latitude_destination": str(total_orders[8]),
+          "orders": str(total_orders[9])
           }
         }
         return Response(json.dumps(data),mimetype='application/json')
@@ -475,8 +480,7 @@ def getDemandPerMealType():
         dataframe = json.loads(totalSum.to_json(orient="records"))
         new_df = get_demand_per_meal_type_formatted_data(dataframe)
         data = {
-          "data": new_df,
-          # "data": dataframe2
+          "data": new_df
         }
         return Response(json.dumps(data),mimetype='application/json')
     except Exception as e:
@@ -498,14 +502,20 @@ def stockDetails():
             return jsonify({"message": "No CSV file uploaded"}), 400
 
         stock_df = get_stock_details_with_filter(data, stock_details)
-        dataframe = json.loads(stock_df.to_json(orient="records"))
-        data = {
-          "data": dataframe
-        }
-        return Response(json.dumps(data),mimetype='application/json')
+        
+        # Group the DataFrame by 'Ingredient in Kgs'
+        grouped = stock_df.groupby('Ingredient in Kgs')
+        
+        # Create the structured response
+        data = {}
+        for ingredient, group in grouped:
+            data[ingredient] = json.loads(group.to_json(orient='records'))
+        
+        return Response(json.dumps({"data": data}), mimetype='application/json')
     except Exception as e:
         print(e)
-        logging.debug("Xception:stockDetails="+e)
+        logging.debug("Exception in stockDetails: " + str(e))
+        return jsonify({"message": "An error occurred", "error": str(e)}), 500
 
 @app.route('/bomDetails', methods=['POST'])    
 @cross_origin()
@@ -522,6 +532,36 @@ def bomDetails():
             return jsonify({"message": "No CSV file uploaded"}), 400
             
         bom_df = get_bom_per_demand_with_filter(data, bom_per_demand)
+        
+        # Group the DataFrame by 'Ingredient in Kgs'
+        grouped = bom_df.groupby('Ingredient in Kgs')
+        
+        # Create the structured response
+        data = {}
+        for ingredient, group in grouped:
+            data[ingredient] = json.loads(group.to_json(orient='records'))
+        
+        return Response(json.dumps({"data": data}), mimetype='application/json')
+    except Exception as e:
+        print(e)
+        logging.debug("Exception in bomDetails: " + str(e))
+        return jsonify({"message": "An error occurred", "error": str(e)}), 500
+
+@app.route('/demandPerMeal', methods=['POST'])    
+@cross_origin()
+def demandPerMeal():
+    logging.info('/demandPerMeal....')
+    cur_datetime, uid = get_uuid()
+    logging.info(">>----->>> START:UUID:="+str(uid)+" <<<-----<<")
+    data = json.loads(request.data)
+    # REQUEST BODY
+    print(data)
+    try:
+        global sales_order_details
+        if 'sales_order_details' not in globals():
+            return jsonify({"message": "No CSV file uploaded"}), 400
+            
+        bom_df = get_demand_per_meal_with_filter(data, sales_order_details)
         dataframe = json.loads(bom_df.to_json(orient="records"))
         data = {
           "data": dataframe
@@ -529,7 +569,29 @@ def bomDetails():
         return Response(json.dumps(data),mimetype='application/json')
     except Exception as e:
         print(e)
-        logging.debug("Xception:bomDetails="+e)
+        logging.debug("Xception:demandPerMeal="+e)
+
+@app.route('/getAlldemandPerMeal', methods=['GET'])    
+@cross_origin()
+def getAlldemandPerMeal():
+    logging.info('/getAlldemandPerMeal....')
+    cur_datetime, uid = get_uuid()
+    logging.info(">>----->>> START:UUID:="+str(uid)+" <<<-----<<")
+    try:
+        global sales_order_details
+        if 'sales_order_details' not in globals():
+            return jsonify({"message": "No CSV file uploaded"}), 400
+            
+        # get_demand_per_meal = get_all_demand_per_meal(sales_order_details)
+        sales_order_details['Date'] = sales_order_details['Date'].astype(str)
+        dataframe = json.loads(sales_order_details.to_json(orient="records"))
+        data = {
+          "data": dataframe
+        }
+        return Response(json.dumps(data),mimetype='application/json')
+    except Exception as e:
+        print(e)
+        logging.debug("Xception:getAlldemandPerMeal="+e)
 
 if __name__ == '__main__':
     logging.basicConfig(format='%(levelname)s:%(message)s', level=logging.DEBUG)    

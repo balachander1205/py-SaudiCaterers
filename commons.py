@@ -40,7 +40,7 @@ def get_meals_monthly_formatted_data(dataframe):
 					month[item["Item category"]] = item['orders']
 					break
 			if not_found:
-				data = {'month':item['month'], item["Item category"]:item['orders']}
+				data = {'month':item['month'], item["Item category"]:item['orders'],'Item':item['Item']}
 				new_data.append(data)
 		# update month to text label
 		field_key = 'month'

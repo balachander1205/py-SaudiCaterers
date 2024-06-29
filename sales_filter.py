@@ -112,6 +112,7 @@ def get_stock_details_with_filter(data, stock_details):
 			query+='Item.str.contains("'+item+'")'
 		print("get_stock_details_with_filter:query=",query)
 		new_df = stock_details.query(query)
+		new_df['Date'] = new_df['Date'].astype(str)
 		print("stock_details=\n",new_df)
 		return new_df
 	except Exception as e:
@@ -120,13 +121,53 @@ def get_stock_details_with_filter(data, stock_details):
 # get BOM details with filter
 def get_bom_per_demand_with_filter(data, bom_details):
 	try:
+		bom_details['Date'] = pd.to_datetime(bom_details['Date'])
 		item = data.get('item', '')
+		date = data.get('date', '')
+		
 		query = ""
 		if item != "":
 			query+='Item.str.contains("'+item+'")'
+
 		print("get_bom_per_demand_with_filter:query=",query)
 		new_df = bom_details.query(query)
+		new_df = new_df[new_df['Date'].dt.strftime('%d-%m-%Y') == date].astype(str)
+		new_df['Date'] = new_df['Date'].astype(str)
+
 		print("bom_details=\n",new_df)
 		return new_df
+	except Exception as e:
+		raise e
+
+# get demand per meal details with filter
+def get_demand_per_meal_with_filter(data, sales_order_details):
+	try:
+		sales_order_details['Date'] = pd.to_datetime(sales_order_details['Date'])
+		item = data.get('item', '')
+		date = data.get('date', '')
+		
+		query = ""
+		if item != "":
+			query+='Item.str.contains("'+item+'")'
+
+		print("get_demand_per_meal_with_filter:query=",query)
+		group_by_item_df = sales_order_details.query(query)
+		print("group_by_item_df=\n",group_by_item_df)
+		final_df = group_by_item_df[group_by_item_df['Date'].dt.strftime('%d-%m-%Y') == date].astype(str)
+		# final_df = pd.DataFrame(final_df['Date'],final_df['Item'],final_df['forecast'])
+		print("final_df=\n",final_df)
+		return final_df
+	except Exception as e:
+		raise e
+
+
+# get demand per meal details with filter
+def get_all_demand_per_meal(sales_order_details):
+	try:
+		sales_order_details['Date'] = pd.to_datetime(sales_order_details['Date'])
+		final_df = sales_order_details.groupby('Item')
+		print("group_by_item_df=\n",final_df)
+		print("final_df=\n",final_df)
+		return final_df
 	except Exception as e:
 		raise e
